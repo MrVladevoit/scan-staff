@@ -1,0 +1,123 @@
+/* Form order ================ */
+
+@import "./src/lib/core/variables";
+
+$form-group-gap: 30px;
+
+.form__group {
+  position: relative;
+
+  + .form__group {
+    margin-top: $form-group-gap;
+
+    @include mq("tablet", "max") {
+      margin-top: 15px;
+    }
+  }
+}
+
+.form__message {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+
+  @include mq("tablet", "max") {
+    margin-top: 20px;
+  }
+}
+
+.form__link-forget {
+
+  @include buttonReset();
+
+  display: inline-flex;
+  margin-top: 18px;
+  color: $color-gray-dark;
+  font-size: 12px;
+  text-decoration: underline;
+
+  @include mq("tablet-large", "max") {
+    color: $color-white;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.form--login {
+  display: none;
+
+  .form__message {
+
+    @include mq("tablet-large", "max") {
+      color: $color-white;
+    }
+  }
+
+  .form__group {
+
+    + .form__group {
+      margin-top: 20px;
+
+      @include mq("tablet", "max") {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .form-input {
+    height: 45px;
+  }
+
+  .form__button {
+    width: 234px;
+
+    @include mq("tablet-large", "max") {
+      border-color: $button-border-color-secondary;
+      color: $button-color-secondary;
+      background-color: $button-background-color-secondary;
+      box-shadow: none;
+
+      &:hover {
+        border-color: $button-border-color-secondary-hover;
+        color: $button-color-secondary-hover;
+        background-color: $button-background-color-secondary-hover;
+      }
+
+      &:active {
+        border-color: $button-border-color-secondary-active;
+        color: $button-color-secondary-active;
+        background-color: $button-background-color-secondary-active;
+      }
+    }
+  }
+
+  span.error {
+    font-size: 12px;
+  }
+}
+
+.form--show {
+  display: block;
+}
+
+.form--subscribe {
+
+  //@include mq("tablet", "max") {
+  //  max-width: 240px;
+  //}
+}
+
+.form__link-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: $color-white;
+}
+/* ================ end form order */

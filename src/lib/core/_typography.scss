@@ -1,0 +1,110 @@
+/* Typography ======================= */
+
+$font-family-main: "Montserrat";
+
+$text-xs: 10px;
+$text-s: 14px;
+$text-m: 16px;
+$text-l: 18px;
+$text-xl: 36px;
+$text-xxl: 48px;
+
+$text-weight-light: 300;
+$text-weight-regular: 400;
+$text-weight-bold: 700;
+$text-weight-extraBold: 900;
+
+$line-height-main: 1.5;
+$line-height-title: 1.5;
+
+$text-color: $gray-300;
+$title-color: $gray-500;
+
+@mixin font(
+  $color: $text-color,
+  $weight: $text-weight-regular,
+  $size: $text-m,
+  $lineHeight: $line-height-main
+) {
+  color: $color;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lineHeight;
+}
+
+body {
+
+  @include font();
+  font-family: $font-family-main;
+}
+
+h1,
+.h1 {
+
+  @include font(
+    $title-color,
+    $text-weight-light,
+    $text-xxl,
+    $line-height-title
+  );
+}
+
+h2,
+.h2 {
+
+  @include font(
+    $title-color,
+    $text-weight-bold,
+    $text-xl,
+    $line-height-title
+  );
+}
+
+h3,
+.h3 {
+
+  @include font(
+    $title-color,
+    $text-weight-bold,
+    $text-l,
+    $line-height-title
+  );
+}
+
+h4,
+.h4 {
+
+  @include font(
+    $title-color,
+    $text-weight-regular,
+    $text-m,
+    $line-height-title
+  );
+}
+
+p {
+  margin-top: 0;
+  line-height: $line-height-main;
+}
+
+//blockquote {
+//  padding-right: 10px;
+//  padding-left: 12px;
+//  margin-right: 0;
+//  margin-left: 0;
+//  border-left: 4px solid $color-secondary;
+//  font-weight: $text-weight-bold;
+//  font-size: $text-size-xxs;
+//  line-height: 1.4;
+//}
+
+a {
+  line-height: $line-height-main;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary-500;
+    text-decoration: underline;
+  }
+}
+/* ================ end typography  */

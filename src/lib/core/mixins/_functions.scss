@@ -1,0 +1,43 @@
+@mixin mq($width, $type: min) {
+
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+
+    @if $type == max {
+      $width: $width - 1px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+/////////
+// example
+// //////
+// .site-header {
+//   padding: 2rem;
+//   font-size: 1.8rem;
+//   @include mq('tablet-wide') {
+//    padding-top: 4rem;
+//    font-size: 2.4rem;
+//   }
+// }
+
+// _functions.scss
+@function z($key) {
+
+  @if map-has-key($z-layers, $key) {
+
+    @return map-get($z-layers, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $z-layers.";
+
+  @return null;
+}
+
+// _component.scss
+// .overlay {
+//   z-index: z(overlay);
+// }

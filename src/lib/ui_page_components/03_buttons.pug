@@ -1,0 +1,51 @@
+//- ui section
+section.ui-section
+  .ui-section__container.container
+    .ui-buttons
+      //- text, size, skin, iconLeft, iconRight, className
+      +buttonComponent(
+        "Найти",
+        "s",
+        "primary"
+      )(class="button--text-uppercase")
+      +buttonComponent(
+        "Подобрать мне тур",
+        "s",
+        "secondary",
+        "local"
+      )(data-popup="open" data-popup-id="#popup-call")
+      +buttonComponent(
+        "Оставить отзыв",
+        "s",
+        "secondary"
+      )(data-popup="open" data-popup-id="#popup-review")
+      +buttonComponent(
+        "Special popup",
+        "s",
+        "secondary"
+      )(data-popup="open" data-popup-id="#popup-special")
+      +buttonComponent(
+        "Турция",
+        "s",
+        "primary",
+        "local",
+        "caret"
+      )
+      +buttonComponent(
+        "Я турист",
+        "s",
+        "secondary"
+      )
+      +buttonComponent(
+        "Я турагент",
+        "s",
+        "secondary-light"
+      )
+      +buttonComponent(
+        "Все события"
+      )
+      +buttonComponent(
+        "Отправить",
+        "m",
+        "secondary"
+      )

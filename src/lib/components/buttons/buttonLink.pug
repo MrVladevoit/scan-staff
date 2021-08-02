@@ -1,0 +1,30 @@
+mixin buttonLinkComponent(href, text, size="s", skin="primary", iconLeft, iconRight, anchor)
+
+  //- button options
+  - var buttonClass = "button"
+
+  if(size)
+    - var size = buttonClass + "--" + size
+
+  if(skin)
+    - var skin = buttonClass + "--" + skin
+
+  if(iconRight)
+    - var anchor = buttonClass + "--with-anchor"
+  else
+    - var anchor = ""
+
+
+  //- button component
+  a(href= href, class= buttonClass + " " + size + " " + skin + " " + anchor + "")&attributes(attributes)
+
+    //- left icon
+    if(iconLeft)
+      +icon(iconLeft, "button__icon")
+
+    //- button text
+    span.button__text= text
+
+    //- right icon
+    if(iconRight)
+      +icon(iconRight, "button__icon button__icon--right")

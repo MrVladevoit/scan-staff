@@ -1,0 +1,13 @@
+// popup
+#popup-call.popup
+  .popup__overlay
+  //- container
+  .popup__container
+    //close
+    button(type="button", data-popup="close", class="popup__close"): +icon("close")
+    //- content
+    .popup__content
+      .popup__header
+        h2.popup__title Введите Ваш номер телефона
+        p.popup__subtitle Наш менеджер свяжется с Вами
+      include ../../components/form/form_call

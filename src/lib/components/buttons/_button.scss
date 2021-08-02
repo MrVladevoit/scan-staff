@@ -1,0 +1,207 @@
+/* Button styles ================ */
+
+$button-min-width: 100px;
+$button-padding-horizontal: 40px;
+$button-font-weight: $text-weight-regular;
+
+$button-s-font-size: $text-size-xxs;
+$button-m-font-size: $text-size-m;
+
+$button-s-height: 50px;
+$button-m-height: 68px;
+
+$button-border-radius: 30px;
+
+// button primary ------
+$button-background-color: $color-primary;
+$button-background-color-hover: $color-white;
+$button-background-color-active: lighten($color-primary, 20%);
+
+$button-border-color: $button-background-color;
+$button-border-color-hover: $button-background-color;
+$button-border-color-active: $button-background-color-active;
+
+$button-color: $color-white;
+$button-color-hover: $color-primary;
+$button-color-active: $color-white;
+
+// button secondary ------
+$button-background-color-secondary: $color-secondary;
+$button-background-color-secondary-hover: $color-white;
+$button-background-color-secondary-active: lighten($color-secondary, 20%);
+
+$button-border-color-secondary: $button-background-color-secondary;
+$button-border-color-secondary-hover: $button-background-color-secondary;
+$button-border-color-secondary-active: $button-background-color-secondary-active;
+
+$button-color-secondary: $color-white;
+$button-color-secondary-hover: $color-secondary;
+$button-color-secondary-active: $color-white;
+
+// button secondary light ------
+$button-background-color-secondary-light: $color-secondary-light;
+$button-background-color-secondary-light-hover: $color-secondary;
+$button-background-color-secondary-light-active: lighten($color-secondary-light, 20%);
+
+$button-border-color-secondary-light: $button-background-color-secondary-light;
+$button-border-color-secondary-light-hover: $button-background-color-secondary-light-hover;
+$button-border-color-secondary-light-active: $button-background-color-secondary-light-active;
+
+$button-color-secondary-light: $color-white;
+$button-color-secondary-light-hover: $color-white;
+$button-color-secondary-light-active: $color-white;
+
+.button {
+  position: relative; // for button__icon
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: $button-min-width;
+  max-width: 100%;
+  height: $button-s-height;
+  padding-right: $button-padding-horizontal;
+  padding-left: $button-padding-horizontal;
+
+  border: 1px solid $button-border-color;
+  border-radius: $button-border-radius;
+  overflow: hidden;
+
+  color: $button-color;
+  font-weight: $button-font-weight;
+  font-size: $button-s-font-size;
+  text-align: center;
+  text-decoration: none;
+
+  background-color: $button-background-color;
+
+  cursor: pointer;
+  transition: all $transition-time $transition-type;
+  -webkit-appearance: inherit;
+  user-select: none;
+  touch-action: manipulation;
+
+  &:hover {
+    border-color: $button-border-color-hover;
+    color: $button-color-hover;
+    text-decoration: none;
+    background-color: $button-background-color-hover;
+  }
+
+  &:focus {
+    outline-width: 4px;
+    outline-color: $color-primary;
+  }
+
+  &:active {
+    border-color: $button-border-color-active;
+    color: $button-color-active;
+    background-color: $button-background-color-active;
+  }
+
+  &.button--full-width {
+    width: 100%;
+  }
+
+  &.button--text-uppercase {
+
+    @include mq("laptop-small") {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.button--with-anchor {
+  justify-content: left;
+  text-align: left;
+}
+
+.button--m {
+
+  @include mq("tablet") {
+    height: $button-m-height;
+    font-size: $button-m-font-size;
+  }
+}
+
+.button__text {
+  overflow: hidden;
+  color: currentColor;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  + .button__icon {
+    margin-left: 10px;
+  }
+}
+
+.button__icon {
+  max-width: 24px;
+  max-height: 24px;
+
+  + .button__text {
+    margin-left: 10px;
+  }
+}
+
+.button__icon--right {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+// button secondary ------
+.button--secondary {
+  border-color: $button-border-color-secondary;
+  color: $button-color-secondary;
+  background-color: $button-background-color-secondary;
+  box-shadow: none;
+
+  &:hover {
+    border-color: $button-border-color-secondary-hover;
+    color: $button-color-secondary-hover;
+    background-color: $button-background-color-secondary-hover;
+  }
+
+  &:active {
+    border-color: $button-border-color-secondary-active;
+    color: $button-color-secondary-active;
+    background-color: $button-background-color-secondary-active;
+  }
+}
+
+// button secondary light ------
+.button--secondary-light {
+  border-color: $button-border-color-secondary-light;
+  color: $button-color-secondary-light;
+  background-color: $button-background-color-secondary-light;
+  box-shadow: none;
+
+  &:hover {
+    border-color: $button-border-color-secondary-light-hover;
+    color: $button-color-secondary-light-hover;
+    background-color: $button-background-color-secondary-light-hover;
+  }
+
+  &:active {
+    border-color: $button-border-color-secondary-light-active;
+    color: $button-color-secondary-light-active;
+    background-color: $button-background-color-secondary-light-active;
+  }
+}
+
+/* disabled styles */
+.button--disabled,
+.button[disabled],
+fieldset[disabled] .button {
+  box-shadow: none;
+  opacity: .32;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+button[type = "button"] {
+  cursor: pointer;
+}
+/* ================ end button styles */

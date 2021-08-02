@@ -1,0 +1,37 @@
+// Breadcrumbs --------------
+
+.breadcrumb {
+
+  @include mq("tablet-small", "max") {
+    display: none;
+  }
+}
+
+.breadcrumb__list {
+  display: flex;
+}
+
+.breadcrumb__item {
+  color: $color-gray-light;
+  font-size: $text-size-m;
+
+  &:not(:last-child) {
+
+    &::after {
+      content: "/";
+      display: inline-flex;
+      margin: 0 5px;
+    }
+  }
+}
+
+.breadcrumb__link {
+  //color: #828282;
+  color: $color-gray-light;
+  font-size: $text-size-m;
+}
+
+.breadcrumb__link--current {
+  color: $color-gray-dark;
+}
+// -------------- end breadcrumbs

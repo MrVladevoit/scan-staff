@@ -1,0 +1,29 @@
+//mixins
+@import "./src/lib/core/mixins/text_truncate";
+@import "./src/lib/core/mixins/button_reset";
+
+@import-normalize;
+
+// global variables
+@import "./src/lib/core/palette";
+@import "./src/lib/core/variables";
+
+// core
+@import "./src/lib/core/fonts";
+@import "./src/lib/core/base";
+@import "./src/lib/core/typography";
+
+@import "./src/lib/sprite/sprite";
+
+// components
+//@import "./src/lib/components/buttons/button";
+//@import "./src/lib/components/form/input/input";
+//@import "./src/lib/components/form/textarea/textarea";
+//@import "./src/lib/components/form/checkbox/checkbox";
+//@import "../../lib/components/form/form";
+//@import "./src/lib/components/popup/popup";
+//@import "./src/lib/components/header/header";
+//@import "./src/lib/components/menu/menu";
+//@import "./src/lib/components/footer/footer";
+//@import "./src/lib/components/popup_countries/popup_countries";
+//@import "./src/lib/components/breadcrumb/breadcrumb";

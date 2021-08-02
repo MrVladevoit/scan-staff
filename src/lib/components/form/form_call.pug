@@ -1,0 +1,20 @@
+form(
+  id="form-call",
+  class="form popup__form"
+)
+  .form__group
+    +inputComponent(
+      "text",
+      "Ваш телефон"
+    )(class="js-mask-phone" name="form-call-name" data-msg="Заполните это поле")
+  .form__group
+    +checkboxCompomnent(
+      "Я принимаю условия соглашения об обработке персональных данных",
+      name="form-call-checkbox"
+    )(class="checkbox--white")
+  .form__group
+    +buttonComponent(
+      "Отправить",
+      "m",
+      "secondary"
+    )(class="popup__button" type="submit")

@@ -1,0 +1,19 @@
+//- ui section
+section.ui-section.ui-section--gap(style="background-color: #13216a;")
+  .ui-section__container.container
+    .ui-inputs
+      .ui-inputs__item
+        +inputComponent(
+          "text",
+          "Ваш телефон"
+        )(class="js-mask-phone")
+
+//- ui section
+section.ui-section.ui-section--gap
+  .ui-section__container.container
+    .ui-inputs
+      .ui-inputs__item
+        +inputComponent(
+          "text",
+          "+7 (___) ___ - ___"
+        )(class="form-input--phone-large js-mask-phone")

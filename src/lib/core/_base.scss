@@ -1,0 +1,98 @@
+// ! Base styles --------------------------------
+
+$body-background: $white-400;
+
+:root {
+  @include cssVariables();
+}
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 300px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: $body-background;
+  -webkit-overflow-scrolling: touch; // for smooth scroll on iOS
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+
+  @media screen and (max-width: 318px) {
+    overflow-x: auto;
+  }
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li {
+    list-style: none;
+  }
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea {
+  -webkit-overflow-scrolling: touch;
+}
+
+address {
+  font-style: normal;
+}
+
+input:not([type = "checkbox"]):not([type = "radio"]),
+textarea,
+select {
+  appearance: none;
+}
+
+input[type = "text"],
+input[type = "number"],
+select,
+textarea {
+
+  @include mq("tablet", "max") {
+    font-size: 16px;
+  }
+}
+
+mark {
+  font-weight: bold;
+  background-color: transparent;
+}
+
+// ::selection {
+//   background: lighten($color-secondary, 30%);
+// }
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+
+  * {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+// -------------------------------- end base styles

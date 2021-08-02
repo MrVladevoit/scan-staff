@@ -1,0 +1,54 @@
+/* Textarea ================ */
+
+$textarea-height: 92px;
+$textarea-padding: 20px;
+$textarea-border-radius: $border-radius-main;
+$textarea-font-size: $text-size-xs;
+$textarea-color: $color-gray-dark;
+$textarea-border: 1px solid $color-white;
+$textarea-background-color: $color-white-dark;
+
+$textarea-placeholder-color: lighten($color-gray-dark, 10%);
+
+.form-textarea {
+  width: 100%;
+  height: $textarea-height;
+  padding: $textarea-padding;
+  border: $textarea-border;
+  border-radius: $textarea-border-radius;
+  color: $textarea-color;
+  font-size: $textarea-font-size;
+  background-color: $textarea-background-color;
+  transition: all $transition-time $transition-type;
+  resize: none;
+
+  &::placeholder {
+    color: $textarea-placeholder-color;
+  }
+
+  &:focus {
+    outline: none;
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &.error {
+    border-color: $color-error;
+    box-shadow: 0 0 8px 1px $color-error inset;
+  }
+}
+
+span.error {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  display: block;
+  width: 100%;
+  padding-left: 15px;
+  color: $color-error;
+  font-size: $text-size-xs;
+  text-align: right;
+}
+/* ================ end textarea */

@@ -1,0 +1,14 @@
+//- palette
+mixin paletteItem(color, variable)
+  li.ui-palette__item
+    .ui-palette__color
+      .ui-palette__picker(style="background:" + color + ";")
+      .ui-palette__color-name= color
+    .ui-palette__variable= variable
+
+//- ui section
+section.ui-section
+  .ui-section__container.container
+    ui.ui-section__list.ui-palette
+      - for( var i = 0; i < PALETTE.length; i++)
+        +paletteItem(PALETTE[i].color, PALETTE[i].variable)

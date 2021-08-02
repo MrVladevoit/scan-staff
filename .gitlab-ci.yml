@@ -1,0 +1,17 @@
+image: node:12.14.1
+
+pages:
+  cache:
+    paths:
+    - node_modules/
+
+  script:
+  - npm install gulp -g
+  - npm install
+  - gulp prod
+  - mv build public
+  artifacts:
+    paths:
+    - public
+  only:
+    - master

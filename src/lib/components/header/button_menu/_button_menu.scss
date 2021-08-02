@@ -1,0 +1,125 @@
+@import "./src/lib/mixins/button_reset";
+
+/* Button menu ================ */
+.button-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $color-white;
+
+  @include buttonReset();
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    transform: translate(-50%, -50%);
+
+    @include mq("laptop-small", "max") {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .icon-menu {
+    position: relative;
+    width: 40px;
+    height: 29px;
+
+    @include mq("laptop-small", "max") {
+      width: 32px;
+      height: 20px;
+    }
+
+    @include mq("tablet", "max") {
+      width: 28px;
+      height: 20px;
+    }
+
+    @include mq("phone", "max") {
+      width: 24px;
+    }
+  }
+
+  .icon-menu__line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $color-white;
+    transform: translateY(-50%);
+    transition: all $transition-time $transition-type;
+
+    @include mq("laptop-small", "max") {
+      height: 2px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: $color-white;
+      transition: all $transition-time $transition-type;
+
+      @include mq("laptop-small", "max") {
+        height: 2px;
+      }
+    }
+
+    &::before {
+      top: -10px;
+
+      @include mq("laptop-small", "max") {
+        top: -8px;
+      }
+    }
+
+    &::after {
+      top: 10px;
+
+      @include mq("laptop-small", "max") {
+        top: 8px;
+      }
+    }
+  }
+}
+
+.button-menu__text {
+  margin-top: 4px;
+}
+
+.button-menu--active {
+
+  .icon-menu__line {
+    background-color: transparent;
+
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+
+      @include mq("laptop-small", "max") {
+        top: 0;
+      }
+    }
+
+    &::after {
+      top: 0;
+      transform: rotate(-45deg);
+
+      @include mq("laptop-small", "max") {
+        top: 0;
+      }
+    }
+  }
+}
+/* ================ end button menu */

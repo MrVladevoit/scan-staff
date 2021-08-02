@@ -1,0 +1,12 @@
+# NPM
+node_modules
+
+# Directory created by gulp
+build
+.gulp
+
+# JetBrains IDEs
+.idea/
+.DS_Store
+
+temp/

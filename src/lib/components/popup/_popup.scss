@@ -1,0 +1,238 @@
+/* Popups ================ */
+
+@import "./src/lib/core/variables";
+
+$popup-background-color: $color-primary;
+$popup-border-radius: $border-radius-main;
+
+$popup-container-width: 97%;
+$popup-container-max-width: 600px;
+$popup-container-z-index: 2;
+
+$popup-content-padding-vertical: 60px;
+$popup-content-padding-horizontal: 30px;
+$popup-content-color: $color-white;
+
+$popup-form-max-width: 450px;
+
+$popup-title-font-size: 42px;
+$popup-title-color: $color-white;
+
+$popup-overlay-background-color: rgba($color-black, .8);
+$popup-overlay-z-index: 1;
+
+$popup-button-close-size: 20px;
+$popup-button-close-icon-size: 16px;
+$popup-button-close-color: $color-white;
+$popup-button-close-color-hover: $color-secondary;
+$popup-button-close-positions: 20px;
+$popup-button-close-z-index: 2;
+
+.popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: z(popup);
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  transition: $transition-type $transition-time;
+  pointer-events: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.popup--open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+
+  .popup__overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .popup__container {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.popup__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: $popup-overlay-z-index;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: $popup-overlay-background-color;
+  visibility: hidden;
+  opacity: 0;
+  transition: $transition-type $transition-time;
+}
+
+.popup__container {
+  position: relative;
+  z-index: $popup-container-z-index;
+  display: flex;
+  align-items: center;
+  width: $popup-container-width;
+  max-width: $popup-container-max-width;
+  height: auto;
+  min-height: 300px;
+  max-height: 100%;
+  margin: auto;
+  border-radius: $popup-border-radius;
+  overflow-y: auto;
+  background-color: $popup-background-color;
+  opacity: 0;
+  transform: scale(.7);
+  transition: $transition-type $transition-time;
+  -webkit-overflow-scrolling: touch;
+}
+
+.popup__close {
+  position: absolute;
+  top: $popup-button-close-positions;
+  right: $popup-button-close-positions;
+  z-index: $popup-button-close-z-index;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $popup-button-close-size;
+  height: $popup-button-close-size;
+  padding: 0;
+  border: 0;
+  color: $popup-button-close-color;
+  font-size: 0;
+  background: transparent;
+
+  &:hover {
+    color: $popup-button-close-color-hover;
+  }
+
+  .icon {
+    width: $popup-button-close-icon-size;
+    height: $popup-button-close-icon-size;
+  }
+}
+
+.popup__content {
+  width: 100%;
+  height: 100%;
+  padding:
+    $popup-content-padding-vertical
+    $popup-content-padding-horizontal;
+  color: $popup-content-color;
+  text-align: center;
+
+  @include mq("tablet", "max") {
+    max-width: 400px;
+    padding: 30px 20px;
+    margin: 0 auto;
+  }
+}
+
+.popup__header {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+
+  & + .popup__form {
+    margin-top: 45px;
+  }
+}
+
+.popup__form {
+  max-width: $popup-form-max-width;
+  margin: 0 auto;
+}
+
+.popup__title {
+  padding: 0 15px;
+  margin-bottom: 15px;
+  color: $popup-title-color;
+  font-weight: $text-weight-regular;
+  font-size: $popup-title-font-size;
+
+  @include mq("tablet", "max") {
+    padding: 0;
+    font-size: 32px;
+  }
+}
+
+.popup__subtitle {
+  color: $text-size-xs;
+
+  @include mq("tablet", "max") {
+    font-size: 18px;
+  }
+}
+
+.popup__button {
+
+  @include mq("tablet") {
+    min-width: 320px;
+  }
+
+  @include mq("phone") {
+    min-width: 220px;
+  }
+}
+
+.popup--special {
+
+  .popup__container {
+    width: 90%;
+    max-width: 1200px;
+    max-height: 650px;
+    background-color: $color-white;
+
+    @include mq("tablet-large", "max") {
+      max-height: 540px;
+    }
+  }
+
+  .popup__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 40px;
+    padding-bottom: 0;
+
+    @include mq("tablet", "max") {
+      max-width: 100%;
+      padding: 0 30px;
+    }
+
+    @include mq("tablet-small", "max") {
+      padding: 30px;
+    }
+  }
+
+  .popup__close {
+    color: $color-gray-light;
+
+    @include mq("tablet-small") {
+      width: 30px;
+      height: 30px;
+
+      .icon {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .popup__content {
+    border-radius: 0;
+  }
+}
+
+@import "consultant_popup";
+/* ================ end popups */

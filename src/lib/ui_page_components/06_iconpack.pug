@@ -1,0 +1,11 @@
+//- iconpack
+mixin iconItem(name)
+  li.ui-iconpack__item
+    +icon(name)
+
+//- ui section
+section.ui-section
+  .ui-section__container.container
+    ui.ui-section__list.ui-iconpack
+      - for( var i = 0; i < ICONS.length; i++)
+        +iconItem(ICONS[i])

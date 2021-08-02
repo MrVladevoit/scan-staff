@@ -1,0 +1,31 @@
+@import "mixins/functions";
+
+$transition-time: .375s;
+$transition-type: ease-in-out;
+
+$container-max-width-sm: 768px;
+$container-max-width-lg: 1024px;
+$container-max-width-xl: 1280px;
+
+// breakpoints ------------------------
+$breakpoints: (
+  "phone-small": 320px,
+  "phone": 440px,
+  "phone-large": 600px,
+  "tablet-small": 768px,
+  "tablet": 1024px,
+  "tablet-large": 1200px,
+  "laptop-small": 1280px,
+  "laptop": 1366px,
+  "desktop": 1600px,
+  "desktop-large": 1920px,
+);
+
+// Z-index
+$z-layers: (
+  back: -1,
+  default: 1,
+  header: 5,
+  menu: 4,
+  popup: 10
+);
