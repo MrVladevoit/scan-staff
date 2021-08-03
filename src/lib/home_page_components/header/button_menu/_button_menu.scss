@@ -1,12 +1,10 @@
-@import "./src/lib/mixins/button_reset";
-
 /* Button menu ================ */
 .button-menu {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: $color-white;
+  color: var(--black-100);
 
   @include buttonReset();
 
@@ -15,34 +13,15 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 70px;
-    height: 70px;
+    width: 20px;
+    height: 20px;
     transform: translate(-50%, -50%);
-
-    @include mq("laptop-small", "max") {
-      width: 40px;
-      height: 40px;
-    }
   }
 
   .icon-menu {
     position: relative;
-    width: 40px;
-    height: 29px;
-
-    @include mq("laptop-small", "max") {
-      width: 32px;
-      height: 20px;
-    }
-
-    @include mq("tablet", "max") {
-      width: 28px;
-      height: 20px;
-    }
-
-    @include mq("phone", "max") {
-      width: 24px;
-    }
+    width: 18px;
+    height: 12px;
   }
 
   .icon-menu__line {
@@ -50,15 +29,10 @@
     top: 50%;
     left: 0;
     width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: $color-white;
+    height: 2px;
+    background-color: var(--black-100);
     transform: translateY(-50%);
     transition: all $transition-time $transition-type;
-
-    @include mq("laptop-small", "max") {
-      height: 2px;
-    }
 
     &::before,
     &::after {
@@ -66,36 +40,19 @@
       position: absolute;
       left: 0;
       width: 100%;
-      height: 4px;
-      border-radius: 2px;
-      background-color: $color-white;
+      height: 2px;
+      background-color: var(--black-100);
       transition: all $transition-time $transition-type;
-
-      @include mq("laptop-small", "max") {
-        height: 2px;
-      }
     }
 
     &::before {
-      top: -10px;
-
-      @include mq("laptop-small", "max") {
-        top: -8px;
-      }
+      top: -5px;
     }
 
     &::after {
-      top: 10px;
-
-      @include mq("laptop-small", "max") {
-        top: 8px;
-      }
+      top: 5px;
     }
   }
-}
-
-.button-menu__text {
-  margin-top: 4px;
 }
 
 .button-menu--active {

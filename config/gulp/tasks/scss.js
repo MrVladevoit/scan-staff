@@ -18,9 +18,8 @@ const processors = [
     gridColumns: 12,
     gridGutterWidth: '20px',
     containerMaxWidths: {
-      sm: '728px',
-      lg: '984px',
-      xl: '1000px', // > 980 - 20 * 2
+      sm: '720px',
+      xl: '1000px', // > 1000 - 20 * 2
       xxl: '1620px' // > 1620 - 20 * 2
     },
     gridBreakpoints: {

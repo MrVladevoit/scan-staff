@@ -15,11 +15,14 @@ header.header.page__header.page__header--fixed
         li.menu__item: a(href="#" class="menu__link") Отчет
         li.menu__item: a(class="menu__link") Клиенты
         li.menu__item: a(class="menu__link") Контакты
-    //- phone
-    a(href="tel:88005553322" class="header__phone phone-block")
-      .phone-block__icon
-        +icon('phone')
-      .phone-block__content
-        .phone-block__num 8-800-555-33-22
-        .phone-block__text бесплатно по рф
+    .header__group
+      //- phone
+      a(href="tel:88005553322" class="header__phone phone-block")
+        .phone-block__icon
+          +icon('phone')
+        .phone-block__content
+          .phone-block__num 8-800-555-33-22
+          .phone-block__text бесплатно по рф
+      //- button menu
+      include button_menu/button_menu
 

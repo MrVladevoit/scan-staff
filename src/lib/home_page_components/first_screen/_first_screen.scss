@@ -9,6 +9,16 @@
   @include mq("desktop", "max") {
     padding-top: 140px;
   }
+
+  @include mq("tablet", "max") {
+    padding-top: 120px;
+
+  }
+
+  @media (max-width: 780px) {
+    background: url("../images/magnifying-glass-768.jpg") no-repeat top;
+    background-size: cover;
+  }
 }
 
 .first-screen__content {
@@ -35,6 +45,10 @@
     @include mq("desktop", "max") {
       margin-top: 32px;
     }
+
+    @include mq("tablet", "max") {
+      margin-top: 60px;
+    }
   }
 }
 
@@ -55,11 +69,19 @@
     @include mq("desktop", "max") {
       margin-top: 14px;
     }
+
+    @include mq("tablet", "max") {
+      margin-top: 40px;
+    }
   }
 }
 
 .first-screen__advantages {
   margin-top: 90px;
+
+  @include mq("tablet", "max") {
+    margin-top: 50px;
+  }
 }
 
 @import "advantages_list/advantages_list";
