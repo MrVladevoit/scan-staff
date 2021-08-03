@@ -99,12 +99,14 @@ p {
 //}
 
 a {
+  color: $text-color;
   line-height: $line-height-main;
-  text-decoration: none;
+  text-decoration: underline;
+  cursor: pointer;
 
   &:hover {
-    color: $primary-500;
-    text-decoration: underline;
+    color: var(--primary-500);
+    text-decoration: none;
   }
 }
 /* ================ end typography  */
