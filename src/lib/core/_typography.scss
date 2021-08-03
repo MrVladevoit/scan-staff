@@ -37,6 +37,10 @@ body {
 
   @include font();
   font-family: $font-family-main;
+
+  @include mq("desktop", "max") {
+    font-size: $text-s;
+  }
 }
 
 h1,

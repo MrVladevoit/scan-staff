@@ -14,14 +14,25 @@
   padding-bottom: 30px;
   padding-left: 40px;
   background-color: var(--white-200);
+
+  @include mq("desktop", "max") {
+    padding-top: 30px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+  }
 }
 
 .advantages-list__title {
   @include font(
     var(--primary-500),
     $text-weight-bold,
-    24px
+    $text-l-bigger
   );
+
+  @include mq("desktop", "max") {
+    font-size: $text-l;
+  }
 }
 
 .advantages-list__text {
@@ -32,6 +43,10 @@
     $text-weight-regular,
     $text-l
   );
+
+  @include mq("desktop", "max") {
+    font-size: $text-s;
+  }
 }
 
 /* ================ end advantages list  */

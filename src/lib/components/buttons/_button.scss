@@ -92,6 +92,13 @@ $button-third-color-hover: var(--white-100);
   &.button--full-width {
     width: 100%;
   }
+
+  @include mq("desktop", "max") {
+    height: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: $text-m;
+  }
 }
 
 .button__text {
@@ -105,6 +112,10 @@ $button-third-color-hover: var(--white-100);
   max-width: 22px;
   max-height: 22px;
   margin-right: 20px;
+
+  @include mq("desktop", "max") {
+    margin-right: 16px;
+  }
 }
 
 // secondary

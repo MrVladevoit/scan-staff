@@ -20,14 +20,16 @@ const processors = [
     containerMaxWidths: {
       sm: '728px',
       lg: '984px',
-      xl: '1620px' // > 1620 - 20 * 2
+      xl: '1000px', // > 980 - 20 * 2
+      xxl: '1620px' // > 1620 - 20 * 2
     },
     gridBreakpoints: {
       xs: '600px',
       sm: '768px',
       md: '980px',
       lg: '1024px',
-      xl: '1280px'
+      xl: '1280px',
+      xxl: '1600px'
     }
   }),
   require('postcss-pxtorem')({
