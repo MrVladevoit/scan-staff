@@ -1,5 +1,6 @@
 // SASS VARIABLES
 $black-100: #000000;
+$black-100-a30: rgba(0, 0, 0, .3);
 $black-100-a25: rgba(0, 0, 0, .25);
 
 $black-90: lighten($black-100, 10%);
@@ -41,6 +42,7 @@ $secondary-200: #ff0000;
 
   --black-100: #{$black-100};
   --black-100-a25: #{$black-100-a25};
+  --black-100-a30: #{$black-100-a30};
 
   --white-100: #{$white-100};
   --white-200: #{$white-200};

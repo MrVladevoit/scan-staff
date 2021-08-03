@@ -22,6 +22,47 @@
   $(".js-mask-date").mask("00.00.0000");
 
   /*----------------------------------------
+    ABOUT ALPHABET
+  ----------------------------------------*/
+  jQuery('<div class="numeric__button numeric__button--down">-</div>').insertBefore('.numeric__input');
+  jQuery('<div class="numeric__button numeric__button--up">+</div>').insertAfter('.numeric__input');
+
+  jQuery('.numeric').each(function() {
+    var
+      spinner = jQuery(this),
+      input = spinner.find('.numeric__input'),
+      btnUp = spinner.find('.numeric__button--up'),
+      btnDown = spinner.find('.numeric__button--down'),
+      min = input.attr('min'),
+      max = input.attr('max');
+
+    btnUp.click(function() {
+      let oldValue = parseFloat(input.val());
+
+      if (oldValue >= max) {
+        var newVal = oldValue;
+      } else {
+        var newVal = oldValue + 1;
+      }
+
+      spinner.find("input").val(newVal);
+      spinner.find("input").trigger("change");
+    });
+
+    btnDown.click(function() {
+      let oldValue = parseFloat(input.val());
+
+      if (oldValue <= min) {
+        var newVal = oldValue;
+      } else {
+        var newVal = oldValue - 1;
+      }
+      spinner.find("input").val(newVal);
+      spinner.find("input").trigger("change");
+    });
+  });
+
+  /*----------------------------------------
    CAROUSELS
   ----------------------------------------*/
 
@@ -176,5 +217,7 @@
   //     },
   //   ]
   // });
+
+
 })(jQuery);
 

@@ -1,0 +1,60 @@
+/* Custom input number ================ */
+$numeric-width: 220px;
+$numeric-height: 50px;
+
+$numeric-input-border: 1px solid var(--white-600);
+$numeric-input-color: var(--black-100);
+$numeric-input-font-size: 28px;
+$numeric-input-background-color: var(--white-400);
+$numeric-input-box-shadow: inset 0 4px 10px var(--black-100-a25);
+
+$numeric-button-width: 50px;
+$numeric-button-color: var(--black-100-a30);
+$numeric-button-font-size: 45px;
+$numeric-button-border: 1px solid var(--white-600);
+$numeric-button-background: linear-gradient(360deg, #eeeeee 0%, #d8d8d8 70%);
+
+.numeric {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: $numeric-width;
+  height: $numeric-height;
+  padding: 1px;
+  text-align: center;
+}
+
+.numeric--full-width {
+  width: 100%;
+}
+
+.numeric__input {
+  flex-grow: 1;
+  height: 100%;
+  border: $numeric-input-border;
+  color: $numeric-input-color;
+  font-size: $numeric-input-font-size;
+  text-align: center;
+  background-color: $numeric-input-background-color;
+  box-shadow: $numeric-input-box-shadow;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.numeric__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $numeric-button-width;
+  height: 100%;
+  border: $numeric-button-border;
+  color: $numeric-button-color;
+  font-weight: $text-weight-regular;
+  font-size: $numeric-button-font-size;
+  background: $numeric-button-background;
+  cursor: pointer;
+  user-select: none;
+}
+/* ================ end custom input number */
