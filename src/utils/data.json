@@ -48,56 +48,6 @@
     "check",
     "checkbox_mark",
     "copy-paste"
-  ],
-  "PALETTE": [
-    {
-      "color": "#000000",
-      "variable": "$color-black"
-    },
-    {
-      "color": "#ffffff",
-      "variable": "$color-white"
-    },
-    {
-      "color": "#f4f6f5",
-      "variable": "$color-white-dark"
-    },
-    {
-      "color": "#d2d2d2",
-      "variable": "$color-gray-lighten"
-    },
-    {
-      "color": "#959595",
-      "variable": "$color-gray-light"
-    },
-    {
-      "color": "#706f6f",
-      "variable": "$color-gray"
-    },
-    {
-      "color": "#3e3d40",
-      "variable": "$color-gray-dark"
-    },
-    {
-      "color": "#0b4091",
-      "variable": "$color-primary"
-    },
-    {
-      "color": "#13216a",
-      "variable": "$color-primary-dark"
-    },
-    {
-      "color": "#7bb833",
-      "variable": "$color-secondary-light"
-    },
-    {
-      "color": "#61b258",
-      "variable": "$color-secondary"
-    },
-    {
-      "color": "#ea4336",
-      "variable": "$color-error"
-    }
   ]
 }
 

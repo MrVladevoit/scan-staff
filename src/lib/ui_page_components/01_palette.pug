@@ -2,13 +2,129 @@
 mixin paletteItem(color, variable)
   li.ui-palette__item
     .ui-palette__color
-      .ui-palette__picker(style="background:" + color + ";")
+      .ui-palette__picker(style="background: var(" + variable + ");")
       .ui-palette__color-name= color
     .ui-palette__variable= variable
+
+-
+  var palette = [
+    {
+      "color": "#000000",
+      "variable": "--black-100"
+    },
+    {
+      "color": "rgba(0, 0, 0, .25)",
+      "variable": "--black-100-a25"
+    },
+    {
+      "color": "#ffffff",
+      "variable": "--white-100"
+    },
+    {
+      "color": "#fafafa",
+      "variable": "--white-200"
+    },
+    {
+      "color": "#f8f8f8",
+      "variable": "--white-300"
+    },
+    {
+      "color": "#eeeeee",
+      "variable": "--white-400"
+    },
+    {
+      "color": "#e3e3e3",
+      "variable": "--white-500"
+    },
+    {
+      "color": "#c4c4c4",
+      "variable": "--white-600"
+    },
+    {
+      "color": "#000000",
+      "variable": "--white-700"
+    },
+    {
+      "color": "#b3b3b3",
+      "variable": "--black-100"
+    },
+    {
+      "color": "#7f8e94",
+      "variable": "--gray-100"
+    },
+    {
+      "color": "#6f6f6f",
+      "variable": "--gray-200"
+    },
+    {
+      "color": "#5c5c5c",
+      "variable": "--gray-300"
+    },
+    {
+      "color": "#4a555b",
+      "variable": "--gray-400"
+    },
+    {
+      "color": "#46515a",
+      "variable": "--gray-500"
+    },
+    {
+      "color": "#4d4d4d",
+      "variable": "--gray-600"
+    },
+    {
+      "color": "#4e4e4e",
+      "variable": "--gray-700"
+    },
+    {
+      "color": "#2b2b2b",
+      "variable": "--gray-800"
+    },
+    {
+      "color": "#2b2b2b",
+      "variable": "--primary-100"
+    },
+    {
+      "color": "#75d6ff",
+      "variable": "--primary-200"
+    },
+    {
+      "color": "#51aae8",
+      "variable": "--primary-300"
+    },
+    {
+      "color": "#29abe2",
+      "variable": "--primary-400"
+    },
+    {
+      "color": "#207cc8",
+      "variable": "--primary-500"
+    },
+    {
+      "color": "#1367af",
+      "variable": "--primary-600"
+    },
+    {
+      "color": "#304557",
+      "variable": "--primary-700"
+    },
+    {
+      "color": "#2d383d",
+      "variable": "--primary-800"
+    },
+    {
+      "color": "#ff516a",
+      "variable": "--secondary-100"
+    },
+    {
+      "color": "#ff0000",
+      "variable": "--secondary-200"
+    }
+  ]
 
 //- ui section
 section.ui-section
   .ui-section__container.container
     ui.ui-section__list.ui-palette
-      - for( var i = 0; i < PALETTE.length; i++)
-        +paletteItem(PALETTE[i].color, PALETTE[i].variable)
+      - for( var i = 0; i < palette.length; i++)
+        +paletteItem(palette[i].color, palette[i].variable)

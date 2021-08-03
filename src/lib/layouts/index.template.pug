@@ -8,13 +8,14 @@ html(lang="ru")
   include head
   body(class="page " + pageClass)
     //- header
-    //include ../../lib/components/header/header
-    //include ../../lib/components/menu/menu
+    include ../../lib/components/header/header
+
     //- page content
     .page__wrapper
       block content
+
     //- footer
-    //include ../../lib/components/footer/footer
+    include ../../lib/components/footer/footer
     //-popups
     //include ../../lib/components/popup/popup_call
     block popups
