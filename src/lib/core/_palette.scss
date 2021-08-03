@@ -36,6 +36,8 @@ $secondary-110: darken($secondary-100, 5%);
 $secondary-120: darken($secondary-100, 10%);
 $secondary-200: #ff0000;
 
+$success-100: #26a559;
+
 // CSS VARIABLES
 @mixin cssVariables() {
   --black-90: #{$black-90};
@@ -74,4 +76,6 @@ $secondary-200: #ff0000;
   --secondary-200: #{$secondary-200};
   --secondary-110: #{$secondary-110};
   --secondary-120: #{$secondary-120};
+
+  --success-100: #{$success-100};
 }

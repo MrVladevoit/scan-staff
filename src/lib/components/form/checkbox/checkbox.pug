@@ -1,8 +1,8 @@
 mixin checkboxCompomnent(labelText, name, chackedAttr= false)
   label(
-    class="checkbox",
-    chacked= chackedAttr
+    class="checkbox"
   )&attributes(attributes)
-    input(type="checkbox" class="checkbox__input" required="required", name, data-msg="Необходимо принять условие соглашения")
+    input(type="checkbox" class="checkbox__input" required="required", name, chacked= chackedAttr)
     span.checkbox__icon
+      +icon('checkbox-mark')
     span.checkbox__label= labelText

@@ -1,6 +1,7 @@
 //mixins
 @import "./src/lib/core/mixins/text_truncate";
 @import "./src/lib/core/mixins/button_reset";
+@import "./src/lib/core/mixins/visabilityHidden";
 
 @import-normalize;
 @bootstrap-4-grid;
@@ -21,9 +22,10 @@
 @import "./src/lib/components/form/label/label_form";
 @import "./src/lib/components/form/input/input";
 @import "./src/lib/components/form/numeric/numeric";
-//@import "./src/lib/components/form/textarea/textarea";
-//@import "./src/lib/components/form/checkbox/checkbox";
-//@import "../../lib/components/form/form";
+@import "./src/lib/components/form/checkbox/checkbox";
+@import "./src/lib/components/form/form";
+
+// Other
 //@import "./src/lib/components/popup/popup";
 //@import "./src/lib/components/header/header";
 //@import "./src/lib/components/menu/menu";

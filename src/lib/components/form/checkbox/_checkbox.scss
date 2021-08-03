@@ -1,39 +1,27 @@
 /* Checkbox ================ */
-
-@import "../../../core/_variables.scss";
-
-$checkbox-icon-size: 15px;
-
-$checkbox-color: $color-primary-dark;
-$checkbox-color-white: $color-white;
-
-$checkbox-font-size: $text-size-xs;
+$checkbox-icon-size: 44px;
 
 .checkbox {
   position: relative;
   display: inline-flex;
   align-items: center;
-  padding-left: 10px + $checkbox-icon-size;
+  padding-left: 32px + $checkbox-icon-size;
   text-align: left;
   cursor: pointer;
 
   &:focus {
-    outline: 1px solid $color-secondary;
+    outline: 1px solid var(--primary-400);
   }
 }
 
 .checkbox__input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
+  @include visabilityHidden();
 
   &:checked {
 
     ~ .checkbox__icon {
 
-      &::after {
+      .icon {
         opacity: 1;
       }
     }
@@ -42,61 +30,40 @@ $checkbox-font-size: $text-size-xs;
   &:focus {
 
     ~ .checkbox__icon {
-      border-color: $color-secondary;
+      //border-color: $color-secondary;
     }
   }
 
   ~ span.error {
     display: none !important;
   }
-
-  &.error {
-
-    ~ .checkbox__icon {
-      border-color: $color-error;
-    }
-  }
 }
 
 .checkbox__icon {
   position: absolute;
-  top: 2px;
+  top: 50%;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: $checkbox-icon-size;
   height: $checkbox-icon-size;
-  border: 1px solid $checkbox-color;
-  border-radius: 4px;
+  border: 2px solid var(--primary-300);
+  color: var(--success-100);
+  transform: translateY(-50%);
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    bottom: 2px;
-    left: 2px;
-    background-color: $checkbox-color;
+  .icon {
+    width: 22px;
+    height: 16px;
     opacity: 0;
   }
 }
 
 .checkbox__label {
-  color: $checkbox-color;
-  font-size: $checkbox-font-size;
+  color: var(--white-100);
+  font-size: $text-s;
   text-align: left;
 }
 
-.checkbox--white {
 
-  .checkbox__icon {
-    border-color: $checkbox-color-white;
-
-    &::after {
-      background-color: $checkbox-color-white;
-    }
-  }
-
-  .checkbox__label {
-    color: $checkbox-color-white;
-  }
-}
 /* ================ end checkbox styles */
