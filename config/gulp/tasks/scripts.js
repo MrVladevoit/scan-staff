@@ -1,15 +1,19 @@
 let scriptsPath = {
   'src': 'src/scripts/*.js',
   'dest': 'build/js',
-  // 'srcLibs' : [
-  //   './node_modules/jquery/dist/jquery.min.js',
-  //   './node_modules/jquery-mask-plugin/dist/jquery.mask.js',
-  //   './node_modules/jquery-validation/dist/jquery.validate.js',
-  //   './node_modules/slick-carousel/slick/slick.js',
-  //   'src/lib/vendors/pace/pace.min.js',
-  //   './node_modules/aos/dist/aos.js'
-  // ]
+  'srcLibs' : [
+    './node_modules/jquery/dist/jquery.min.js',
+    './node_modules/jquery-mask-plugin/dist/jquery.mask.js',
+    './node_modules/slick-carousel/slick/slick.js'
+  ]
 };
+
+// './node_modules/jquery/dist/jquery.min.js',
+// './node_modules/jquery-mask-plugin/dist/jquery.mask.js',
+// './node_modules/jquery-validation/dist/jquery.validate.js',
+// './node_modules/slick-carousel/slick/slick.js',
+// 'src/lib/vendors/pace/pace.min.js',
+// './node_modules/aos/dist/aos.js'
 
 module.exports = () =>  {
 

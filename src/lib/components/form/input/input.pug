@@ -1,7 +1,8 @@
-mixin inputComponent(type="text", placeholder="Ваш телефон", requiredAttr= true)
+mixin inputComponent(type="text", id, placeholder, requiredAttr= true)
   input(
     type= type,
+    id= id
     placeholder= placeholder,
-    class="form-input",
+    class="input",
     required= requiredAttr
   )&attributes(attributes)

@@ -76,5 +76,10 @@
     "stylelint-no-unsupported-browser-features": "^5.0.1",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.20.1"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "jquery-mask-plugin": "^1.14.16",
+    "slick-carousel": "^1.8.1"
   }
 }

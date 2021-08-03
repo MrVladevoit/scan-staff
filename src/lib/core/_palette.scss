@@ -2,6 +2,8 @@
 $black-100: #000000;
 $black-100-a25: rgba(0, 0, 0, .25);
 
+$black-90: lighten($black-100, 10%);
+
 $white-100: #ffffff;
 $white-200: #fafafa;
 $white-300: #f8f8f8;
@@ -35,6 +37,8 @@ $secondary-200: #ff0000;
 
 // CSS VARIABLES
 @mixin cssVariables() {
+  --black-90: #{$black-90};
+
   --black-100: #{$black-100};
   --black-100-a25: #{$black-100-a25};
 

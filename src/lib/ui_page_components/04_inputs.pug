@@ -1,19 +1,44 @@
 //- ui section
-section.ui-section.ui-section--gap(style="background-color: #13216a;")
-  .ui-section__container.container
-    .ui-inputs
-      .ui-inputs__item
-        +inputComponent(
-          "text",
-          "Ваш телефон"
-        )(class="js-mask-phone")
-
-//- ui section
 section.ui-section.ui-section--gap
   .ui-section__container.container
-    .ui-inputs
-      .ui-inputs__item
+    form.form.ui-inputs
+      //- group
+      .form__group
+        //- id, text
+        +labelComponent('#report-email', "E-mail (обязательно)")(class="form__label")
+        //- type,id, placeholder, requiredAttr
         +inputComponent(
           "text",
+          "#report-email",
+          "yourmail@mailserver.ru"
+        )(class="form__input input--text-center")
+      //- group
+      .form__group
+        label(for='#report-phone', class="label-form form__label")
+          | Телефон
+          +icon('viber', 'label-form__icon')
+          +icon('telegram', 'label-form__icon')
+        //- type,id, placeholder, requiredAttr
+        +inputComponent(
+          "text",
+          "#report-phone",
           "+7 (___) ___ - ___"
-        )(class="form-input--phone-large js-mask-phone")
+        )(class="js-mask-phone form__input input--text-center")
+      //- group
+      .form__group
+        //- id, text
+        +labelComponent('#report-promo', "Промо-код:")(class="form__label")
+        //- type,id, placeholder, requiredAttr
+        +inputComponent(
+          "text",
+          "#report-promo",
+          ""
+        )(class="form__input input--text-center")
+      //- group
+      .form__group
+        //- type,id, placeholder, requiredAttr
+        +inputComponent(
+          "text",
+          "#report-lastName",
+          "Введите Фамилию"
+        )(class="form__input")

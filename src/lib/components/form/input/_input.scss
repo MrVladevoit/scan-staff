@@ -1,18 +1,15 @@
 /* INPUT ================ */
-
-@import "../../../core/variables";
-
 $input-height: 50px;
 $input-padding-horizontal: 20px;
-$input-border-radius: $border-radius-main;
-$input-font-size: $text-size-xs;
-$input-color: $color-gray-dark;
-$input-border: 1px solid $color-white;
-$input-background-color: $color-white-dark;
+$input-border-radius: 0;
+$input-font-size: $text-l;
+$input-color: var(--black-100);
+$input-border: 1px solid var(--white-600);
+$input-background-color: var(--white-400);
 
-$input-placeholder-color: lighten($color-gray-dark, 10%);
+$input-placeholder-color: var(--black-90);
 
-.form-input {
+.input {
   width: 100%;
   height: $input-height;
   padding-right: $input-padding-horizontal;
@@ -35,23 +32,10 @@ $input-placeholder-color: lighten($color-gray-dark, 10%);
       color: transparent;
     }
   }
-
-  &.error {
-    border-color: $color-error;
-    box-shadow: 0 0 8px 1px $color-error inset;
-  }
 }
 
-span.error {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  display: block;
-  width: 100%;
-  padding-left: 15px;
-  color: $color-error;
-  font-size: $text-size-xs;
-  text-align: right;
+.input--text-center {
+  text-align: center;
 }
 
 .js-mask-phone {
@@ -61,16 +45,6 @@ span.error {
     &::placeholder {
       color: $input-color;
     }
-  }
-}
-
-input.form-input--phone-large {
-  border: none;
-  font-size: $text-size-xl;
-  background-color: transparent;
-
-  @include mq("tablet", "max") {
-    font-size: $text-size-xl;
   }
 }
 /* ================ end input */
