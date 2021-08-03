@@ -1,0 +1,25 @@
+// header
+header.header.page__header.page__header--fixed
+  .container.header__container
+    //- logo
+    a(href="index.html" class="logo")
+      img(src="images/logo.svg")
+    //- menu
+    nav.menu
+      ul.menu__list
+        li.menu__item: a(href="#" class="menu__link") О Сервисе
+        li.menu__item: a(href="#" class="menu__link") Как работает
+        li.menu__item: a(href="#" class="menu__link") Тарифы
+        li.menu__item: a(href="#" class="menu__link") Кого проверять
+        li.menu__item: a(href="#" class="menu__link") Источники
+        li.menu__item: a(href="#" class="menu__link") Отчет
+        li.menu__item: a(class="menu__link") Клиенты
+        li.menu__item: a(class="menu__link") Контакты
+    //- phone
+    a(href="tel:88005553322" class="header__phone phone-block")
+      .phone-block__icon
+        +icon('phone')
+      .phone-block__content
+        .phone-block__num 8-800-555-33-22
+        .phone-block__text бесплатно по рф
+

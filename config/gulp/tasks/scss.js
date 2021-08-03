@@ -20,7 +20,7 @@ const processors = [
     containerMaxWidths: {
       sm: '728px',
       lg: '984px',
-      xl: '1240px' // > 1280 - 20 * 2
+      xl: '1620px' // > 1620 - 20 * 2
     },
     gridBreakpoints: {
       xs: '600px',

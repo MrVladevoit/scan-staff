@@ -1,0 +1,13 @@
+section.first-screen
+  .first-screen__container.container
+    .first-screen__content
+      h1.first-screen__title Комплексная проверка персонала
+      p.first-screen__text Мы помогаем обезопасить бизнес от нежелательных или недобросовестных сотрудников. В полтора клика!
+      //- href, text, iconLeft
+      +buttonLinkComponent(
+        "#",
+        "Запустить проверку",
+        "doc"
+      )(class="first-screen__button")
+  //-advantages-list
+  include advantages_list/advantages_list

@@ -1,0 +1,42 @@
+/* First Screen ================ */
+.first-screen {
+  min-height: 700px;
+  padding-top: 200px;
+  background: url("../images/magnifying-glass.jpg") no-repeat center;
+  background-color: #bdcad5;
+  background-size: cover;
+}
+
+.first-screen__content {
+  max-width: 700px;
+}
+
+.first-screen__title {
+  margin: 0;
+  font-size: 90px;
+  line-height: .9;
+  text-transform: uppercase;
+
+  + .first-screen__text {
+    margin-top: 50px;
+  }
+}
+
+.first-screen__text {
+  @include font(
+    var(--gray-400),
+    $text-weight-regular,
+    $text-l-bigger
+  );
+
+  + .first-screen__button {
+    margin-top: 34px;
+  }
+}
+
+.first-screen__advantages {
+  margin-top: 90px;
+}
+
+@import "advantages_list/advantages_list";
+/* ================ end first screen  */

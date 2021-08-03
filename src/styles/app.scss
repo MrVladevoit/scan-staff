@@ -25,9 +25,12 @@
 @import "./src/lib/components/form/checkbox/checkbox";
 @import "./src/lib/components/form/form";
 
+// Home Page
+@import "../lib/home_page_components/header/header";
+@import "../lib/home_page_components/first_screen/first_screen";
+
 // Other
 //@import "./src/lib/components/popup/popup";
-//@import "./src/lib/components/header/header";
 //@import "./src/lib/components/menu/menu";
 //@import "./src/lib/components/footer/footer";
 //@import "./src/lib/components/popup_countries/popup_countries";

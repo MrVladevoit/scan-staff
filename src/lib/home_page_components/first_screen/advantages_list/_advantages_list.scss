@@ -1,0 +1,37 @@
+/* Advantages list ================ */
+.advantages-list__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0 30px;
+}
+
+.advantages-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 40px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+  background-color: var(--white-200);
+}
+
+.advantages-list__title {
+  @include font(
+    var(--primary-500),
+    $text-weight-bold,
+    24px
+  );
+}
+
+.advantages-list__text {
+  margin-top: 8px;
+
+  @include font(
+    var(--gray-300),
+    $text-weight-regular,
+    $text-l
+  );
+}
+
+/* ================ end advantages list  */

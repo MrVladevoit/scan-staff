@@ -72,6 +72,22 @@
       spinner.find("input").trigger("change");
     });
   });
+  /*----------------------------------------
+    FIXED HEADER
+  ----------------------------------------*/
+
+  function initStickyHeader() {
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 1){
+        $('.page__header--fixed').addClass("page__header--scrolled");
+      }
+      else{
+        $('.page__header--fixed').removeClass("page__header--scrolled");
+      }
+    });
+  }
+
+  initStickyHeader();
 
   /*----------------------------------------
    CAROUSELS

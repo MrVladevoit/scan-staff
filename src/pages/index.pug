@@ -5,8 +5,13 @@ block variables
   - var title = PAGES.home.title;
   - var pageClass = "";
 
+//- header = first screen
+block header
+  include ../lib/home_page_components/header/header
+
 //- content
 block content
+  include ../lib/home_page_components/first_screen/first_screen
 
 //-popups
 block popups
