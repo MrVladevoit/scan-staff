@@ -1,4 +1,6 @@
 /* stylelint-disable */
+@use "sass:math";
+
 .icon {
   position: relative;
   display: inline-block;
@@ -8,71 +10,83 @@
 }
 
 .icon-arrow-left {
-  font-size:(53/10)*1rem;
-  width:(53/53)*1em;
+  font-size: math.div(8, 10) * 1rem;
+  width: math.div(7, 8) * 1em ;
 }
-.icon-arrow-right {
-  font-size:(53/10)*1rem;
-  width:(53/53)*1em;
+.icon-arrow-round-right {
+  font-size: math.div(23, 10) * 1rem;
+  width: math.div(23, 23) * 1em ;
 }
-.icon-caret {
-  font-size:(12/10)*1rem;
-  width:(22/12)*1em;
+.icon-check {
+  font-size: math.div(25, 10) * 1rem;
+  width: math.div(26, 25) * 1em ;
 }
-.icon-caret-left {
-  font-size:(22/10)*1rem;
-  width:(12/22)*1em;
+.icon-checkbox_mark {
+  font-size: math.div(17, 10) * 1rem;
+  width: math.div(23, 17) * 1em ;
 }
-.icon-caret-right {
-  font-size:(22/10)*1rem;
-  width:(12/22)*1em;
+.icon-copy-paste {
+  font-size: math.div(23, 10) * 1rem;
+  width: math.div(23, 23) * 1em ;
 }
-.icon-close {
-  font-size:(16/10)*1rem;
-  width:(16/16)*1em;
+.icon-doc {
+  font-size: math.div(23, 10) * 1rem;
+  width: math.div(19, 23) * 1em ;
 }
-.icon-currency {
-  font-size:(26/10)*1rem;
-  width:(10/26)*1em;
-}
-.icon-entrance {
-  font-size:(27/10)*1rem;
-  width:(27/27)*1em;
-}
-.icon-facebook {
-  font-size:(27/10)*1rem;
-  width:(15/27)*1em;
-}
-.icon-heart {
-  font-size:(27/10)*1rem;
-  width:(30/27)*1em;
-}
-.icon-info {
-  font-size:(25/10)*1rem;
-  width:(25/25)*1em;
+.icon-download {
+  font-size: math.div(24, 10) * 1rem;
+  width: math.div(24, 24) * 1em ;
 }
 .icon-instagram {
-  font-size:(29/10)*1rem;
-  width:(29/29)*1em;
+  font-size: math.div(41, 10) * 1rem;
+  width: math.div(41, 41) * 1em ;
 }
-.icon-local {
-  font-size:(30/10)*1rem;
-  width:(21/30)*1em;
+.icon-mail {
+  font-size: math.div(33, 10) * 1rem;
+  width: math.div(34, 33) * 1em ;
 }
-.icon-map {
-  font-size:(27/10)*1rem;
-  width:(27/27)*1em;
+.icon-nike {
+  font-size: math.div(62, 10) * 1rem;
+  width: math.div(173, 62) * 1em ;
 }
-.icon-menu {
-  font-size:(29/10)*1rem;
-  width:(47/29)*1em;
+.icon-pepsico {
+  font-size: math.div(63, 10) * 1rem;
+  width: math.div(269, 63) * 1em ;
 }
 .icon-phone {
-  font-size:(27/10)*1rem;
-  width:(27/27)*1em;
+  font-size: math.div(19, 10) * 1rem;
+  width: math.div(19, 19) * 1em ;
 }
-.icon-vk {
-  font-size:(20/10)*1rem;
-  width:(36/20)*1em;
+.icon-question {
+  font-size: math.div(15, 10) * 1rem;
+  width: math.div(15, 15) * 1em ;
+}
+.icon-rocket {
+  font-size: math.div(28, 10) * 1rem;
+  width: math.div(29, 28) * 1em ;
+}
+.icon-search {
+  font-size: math.div(20, 10) * 1rem;
+  width: math.div(20, 20) * 1em ;
+}
+.icon-telegram {
+  font-size: math.div(33, 10) * 1rem;
+  width: math.div(37, 33) * 1em ;
+}
+.icon-viber {
+  font-size: math.div(33, 10) * 1rem;
+  width: math.div(33, 33) * 1em ;
+}
+.icon-wallet {
+  font-size: math.div(33, 10) * 1rem;
+  width: math.div(33, 33) * 1em ;
+}
+.icon-watcap {
+  font-size: math.div(33, 10) * 1rem;
+  width: math.div(34, 33) * 1em ;
+}
+.icon-youtube {
+  font-size: math.div(29, 10) * 1rem;
+  width: math.div(41, 29) * 1em ;
 }
 /* stylelint-enable */

@@ -3,18 +3,18 @@
     "home": {
       "name": "home",
       "href": "./",
-      "title": "Loris | Home page",
+      "title": "Staff Scan | Home page",
       "description": "Home page"
     },
     "ui": {
       "name": "ui",
       "href": "ui.html",
-      "title": "Loris| UI page",
+      "title": "Staff Scan | UI page",
       "description": "UI page"
     }
   },
   "SECTIONS": {
-    "firstScreen": "#first-screen",
+    "firstScreen": "#first-screen"
   },
   "NAV": [
     {

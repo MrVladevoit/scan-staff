@@ -1,4 +1,5 @@
 let gcmq = require('gulp-group-css-media-queries'),
+    sass = require('gulp-sass')(require('sass')),
     stylesPath = {
       'src': 'src/styles/*.scss',
       'srcCSS': 'build/css/*.css',
@@ -10,7 +11,6 @@ let gcmq = require('gulp-group-css-media-queries'),
 // [1] - Generate normalize base on .browserlistrc
 // [2] - Generate boostrap grid 4
 // [3] - CSS Nano remove all spaces and comments
-// [4] - CSSNEXT enable autoprefixer
 
 const processors = [
   require('postcss-normalize'), // [1]
@@ -40,7 +40,7 @@ const processors = [
     autoprefixer: false,
     discardComments: { removeAll: true }
   }),
-  require('postcss-cssnext'), // [4]
+  require('autoprefixer')
 ];
 
 module.exports = () => {
@@ -63,7 +63,7 @@ module.exports = () => {
 
       .pipe($.plugins.sourcemaps.init())
 
-      .pipe($.plugins.sass().on('error', $.plugins.sass.logError))
+      .pipe(sass().on('error', sass.logError))
 
       .pipe($.plugins.postcss(processors))
 

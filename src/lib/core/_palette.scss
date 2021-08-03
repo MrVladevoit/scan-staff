@@ -32,36 +32,36 @@ $secondary-100: #ff516a;
 $secondary-200: #ff0000;
 
 // CSS VARIABLES
-@mixin cssVariables {
-  --black-100: $black-100;
-  --black-100-a25: $black-100-a25;
+@mixin cssVariables() {
+  --black-100: #{$black-100};
+  --black-100-a25: #{$black-100-a25};
 
-  --white-100: $white-100;
-  --white-200: $white-200;
-  --white-300: $white-300;
-  --white-400: $white-400;
-  --white-500: $white-500;
-  --white-600: $white-600;
-  --white-700: $white-700;
+  --white-100: #{$white-100};
+  --white-200: #{$white-200};
+  --white-300: #{$white-300};
+  --white-400: #{$white-400};
+  --white-500: #{$white-500};
+  --white-600: #{$white-600};
+  --white-700: #{$white-700};
 
-  --gray-100: $gray-100;
-  --gray-200: $gray-200;
-  --gray-300: $gray-300;
-  --gray-400: $gray-400;
-  --gray-500: $gray-500;
-  --gray-600: $gray-600;
-  --gray-700: $gray-700;
-  --gray-800: $gray-800;
+  --gray-100: #{$gray-100};
+  --gray-200: #{$gray-200};
+  --gray-300: #{$gray-300};
+  --gray-400: #{$gray-400};
+  --gray-500: #{$gray-500};
+  --gray-600: #{$gray-600};
+  --gray-700: #{$gray-700};
+  --gray-800: #{$gray-800};
 
-  --primary-100: $primary-100;
-  --primary-200: $primary-200;
-  --primary-300: $primary-300;
-  --primary-400: $primary-400;
-  --primary-500: $primary-500;
-  --primary-600: $primary-600;
-  --primary-700: $primary-700;
-  --primary-800: $primary-800;
+  --primary-100: #{$primary-100};
+  --primary-200: #{$primary-200};
+  --primary-300: #{$primary-300};
+  --primary-400: #{$primary-400};
+  --primary-500: #{$primary-500};
+  --primary-600: #{$primary-600};
+  --primary-700: #{$primary-700};
+  --primary-800: #{$primary-800};
 
-  --secondary-100: $secondary-100;
-  --secondary-200: $secondary-200;
+  --secondary-100: #{$secondary-100};
+  --secondary-200: #{$secondary-200};
 }

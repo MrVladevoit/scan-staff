@@ -1,6 +1,6 @@
 // ! Base styles --------------------------------
 
-$body-background: $white-400;
+$body-background: var(--white-400);
 
 :root {
   @include cssVariables();

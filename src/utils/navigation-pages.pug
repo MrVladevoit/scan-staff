@@ -7,7 +7,7 @@
     i#gp-close-panel.pages-navigations__icon-close
   //- body
   ul.pages-navigations__body
-    - for(var i = 0; i < NAV.length; i++)
+    - for (let i = 0; i < NAV.length; i++)
       li.pages-navigations__item: a(href= NAV[i].href)= NAV[i].name
 //- styles for panel
 style.
@@ -24,7 +24,6 @@ style.
     transition: all .7s ease;
     transform: translateY(400px);
   }
-
 
   .pages-navigations__header {
     flex-shrink: 0;
@@ -156,7 +155,10 @@ style.
   }
 
 script.
-  $('#gp-toogle').on('click', function (event) {
-    event.preventDefault();
-    $('#gp-panel-pages').toggleClass('open');
+  const gpPanelPages = document.querySelector("#gp-panel-pages"),
+      gpButtonToggle = gpPanelPages.querySelector("#gp-toogle");
+
+  gpButtonToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    gpPanelPages.classList.toggle('open');
   });
