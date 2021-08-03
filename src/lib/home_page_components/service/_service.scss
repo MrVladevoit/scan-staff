@@ -1,0 +1,72 @@
+/* Service ================ */
+
+.service {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.service__title {
+  @include font(
+    $title-color,
+    $text-weight-light,
+    $text-xxl,
+    $line-height-title
+  );
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.service__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 390px;
+  gap: 0 70px;
+}
+
+.service__num {
+  margin-top: 16px;
+  @include font(
+    var(--primary-500),
+    $text-weight-extraBold,
+    90px,
+    1.1
+  );
+}
+
+.service__text {
+  padding-left: 68px;
+  color: var(--black-100);
+}
+
+.service__link {
+  align-self: center;
+  margin-top: 12px;
+}
+
+.you-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 182px;
+  padding-top: 30px;
+  border: 1px solid var(--secondary-200);
+  text-decoration: none;
+  background-color: var(--white-500);
+}
+
+.you-link__icon {
+  width: 74px;
+  height: 51px;
+}
+
+.you-link__text {
+  margin-top: 8px;
+  @include font(
+    var(--secondary-200),
+    $text-weight-bold,
+    $text-l
+  );
+}
+
+/* ================ end service  */
