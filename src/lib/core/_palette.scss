@@ -29,6 +29,8 @@ $primary-700: #304557;
 $primary-800: #2d383d;
 
 $secondary-100: #ff516a;
+$secondary-110: darken($secondary-100, 5%);
+$secondary-120: darken($secondary-100, 10%);
 $secondary-200: #ff0000;
 
 // CSS VARIABLES
@@ -64,4 +66,6 @@ $secondary-200: #ff0000;
 
   --secondary-100: #{$secondary-100};
   --secondary-200: #{$secondary-200};
+  --secondary-110: #{$secondary-110};
+  --secondary-120: #{$secondary-120};
 }
