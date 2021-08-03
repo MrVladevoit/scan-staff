@@ -26,7 +26,6 @@
       "href": "ui.html"
     }
   ],
-
   "ICONS": [
     "arrow-left",
     "arrow-round-right",
@@ -43,10 +42,10 @@
     "telegram",
     "viber",
     "wallet",
-    "watcap",
+    "whatsapp",
     "youtube",
     "check",
-    "checkbox_mark",
+    "checkbox-mark",
     "copy-paste"
   ]
 }
