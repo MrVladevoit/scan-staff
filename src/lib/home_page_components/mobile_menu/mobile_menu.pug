@@ -1,0 +1,23 @@
+#mobile-menu.mobile-menu
+  .mobile-menu__body
+    //- button
+    button(class="mobile-menu__button-close" data-mobile-menu-close)
+      +icon('close', 'mobile-menu__icon-close')
+    //- list
+    ul.mobile-menu__list
+      li.mobile-menu__item: a(href="#" class="mobile-menu__link") О сервисе
+      li.mobile-menu__item: a(href="#" class="mobile-menu__link") Как работает
+      li.mobile-menu__item: a(href="#" class="mobile-menu__link") Тарифы
+      li.mobile-menu__item: a(href="#" class="mobile-menu__link") Кого проверять
+      li.mobile-menu__item: a(href="#" class="mobile-menu__link") Источники
+      li.mobile-menu__item: a(href="#" class="mobile-menu__link") Отчёт
+      li.mobile-menu__item: a(href="#" class="mobile-menu__link") Клиенты
+      li.mobile-menu__item: a(href="#" class="mobile-menu__link") Контакты
+    //- list
+    ul.mobile-menu__list
+      li.mobile-menu__item: a(href="#" class="mobile-menu__link mobile-menu__link--small") Политика конфиденциальности
+      li.mobile-menu__item: a(href="#" class="mobile-menu__link mobile-menu__link--small") Пользовательское соглашение
+      li.mobile-menu__item: a(href="#" class="mobile-menu__link mobile-menu__link--small") Доставка и оплата
+      li.mobile-menu__item: a(href="#" class="mobile-menu__link mobile-menu__link--small") Публичная оферта
+      li.mobile-menu__item: a(href="#" class="mobile-menu__link mobile-menu__link--small") Банковские реквизиты
+#mobile-menu-overlay.page-overlay
