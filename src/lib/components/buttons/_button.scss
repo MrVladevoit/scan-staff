@@ -99,6 +99,13 @@ $button-third-color-hover: var(--white-100);
     padding-left: 30px;
     font-size: $text-m;
   }
+
+  @include mq("phone", "max") {
+    height: 40px;
+    font-size: $text-s;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .button__text {

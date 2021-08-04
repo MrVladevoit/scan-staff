@@ -8,6 +8,11 @@
     padding-top: 45px;
     padding-bottom: 45px;
   }
+
+  @include mq("phone-large", "max") {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .service__title {
@@ -23,6 +28,11 @@
   @include mq("desktop", "max") {
     font-size: $text-xl;
   }
+
+  @include mq("phone-large", "max") {
+    font-size: 28px;
+    line-height: 1.2;
+  }
 }
 
 .service__list {
@@ -35,9 +45,23 @@
     gap: 0 24px;
   }
 
-  @include mq("tablet", "max") {
+  @include mq("laptop-small", "max") {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px 12px;
+  }
+
+  @include mq("phone-large", "max") {
+    grid-template-columns: 1fr;
+    gap: 10px 0;
+    margin-top: 16px;
+  }
+}
+
+.service__item {
+
+  @include mq("phone-large", "max") {
+    display: flex;
+    padding-left: 10px;
   }
 }
 
@@ -53,6 +77,15 @@
   @include mq("desktop", "max") {
     font-size: 70px;
   }
+
+  @include mq("tablet-small", "max") {
+    font-size: 60px;
+  }
+
+  @include mq("phone-large", "max") {
+    margin-top: 0;
+    font-size: $text-l-bigger;
+  }
 }
 
 .service__text {
@@ -62,13 +95,17 @@
   @include mq("desktop", "max") {
     padding-left: 10px;
   }
+
+  @include mq("phone-large", "max") {
+    padding-left: 20px;
+  }
 }
 
 .service__link {
   align-self: center;
   margin-top: 12px;
 
-  @include mq("tablet", "max") {
+  @media screen and (max-width: 1279px) and (min-width: 600px) {
     grid-row: 2;
     grid-column: 1/4;
   }
@@ -97,6 +134,10 @@
     flex-direction: row;
     height: 70px;
   }
+
+  @include mq("phone-large", "max") {
+    height: 40px;
+  }
 }
 
 .you-link__icon {
@@ -106,6 +147,11 @@
   @include mq("tablet", "max") {
     width: 50px;
     height: 35px;
+  }
+
+  @include mq("phone-large", "max") {
+    width: 25px;
+    height: 18px;
   }
 }
 
@@ -120,6 +166,10 @@
   @include mq("tablet", "max") {
     margin-top: 0;
     margin-left: 20px;
+  }
+
+  @include mq("phone-large", "max") {
+    margin-left: 10px;
   }
 }
 

@@ -12,12 +12,22 @@
 
   @include mq("tablet", "max") {
     padding-top: 120px;
-
   }
 
   @media (max-width: 780px) {
     background: url("../images/magnifying-glass-768.jpg") no-repeat top;
     background-size: cover;
+  }
+
+  @include mq("phone-large", "max") {
+    min-height: 420px;
+    padding-top: 80px;
+    background-position: -90px -110px;
+  }
+
+  @include mq("phone", "max") {
+    background-position: -290px -90px;
+    background-size: 190%;
   }
 }
 
@@ -39,6 +49,10 @@
     font-size: 50px;
   }
 
+  @include mq("phone-large", "max") {
+    font-size: 32px;
+  }
+
   + .first-screen__text {
     margin-top: 50px;
 
@@ -48,6 +62,10 @@
 
     @include mq("tablet", "max") {
       margin-top: 60px;
+    }
+
+    @include mq("phone-large", "max") {
+      margin-top: 20px;
     }
   }
 }
@@ -63,6 +81,11 @@
     font-size: $text-m;
   }
 
+  @include mq("phone-large", "max") {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
   + .first-screen__button {
     margin-top: 34px;
 
@@ -73,6 +96,10 @@
     @include mq("tablet", "max") {
       margin-top: 40px;
     }
+
+    @include mq("phone", "max") {
+      margin-top: 100px;
+    }
   }
 }
 
@@ -81,6 +108,10 @@
 
   @include mq("tablet", "max") {
     margin-top: 50px;
+  }
+
+  @include mq("phone-large", "max") {
+    margin-top: 44px;
   }
 }
 

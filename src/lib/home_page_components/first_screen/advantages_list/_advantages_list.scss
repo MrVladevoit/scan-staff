@@ -3,6 +3,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0 30px;
+
+  @include mq("phone-large", "max") {
+    grid-template-columns: 1fr;
+    gap: 10px 0;
+  }
 }
 
 .advantages-list__item {
@@ -21,6 +26,10 @@
     padding-bottom: 24px;
     padding-left: 24px;
   }
+
+  @include mq("phone-large", "max") {
+    padding: 20px 26px;
+  }
 }
 
 .advantages-list__title {
@@ -32,6 +41,10 @@
 
   @include mq("desktop", "max") {
     font-size: $text-l;
+  }
+
+  @include mq("phone-large", "max") {
+    font-size: $text-m;
   }
 }
 
@@ -46,6 +59,11 @@
 
   @include mq("desktop", "max") {
     font-size: $text-s;
+  }
+
+  @include mq("phone-large", "max") {
+    font-size: $text-s - 2px;
+    line-height: 1.2;
   }
 }
 
