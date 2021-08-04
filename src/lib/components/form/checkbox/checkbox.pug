@@ -1,8 +1,8 @@
-mixin checkboxCompomnent(labelText, name, chackedAttr= false)
+mixin checkboxCompomnent(labelText, name)
   label(
     class="checkbox"
   )&attributes(attributes)
-    input(type="checkbox" class="checkbox__input" required="required", name, chacked= chackedAttr)
+    input(type="checkbox" class="checkbox__input" required="required", name, checked)
     span.checkbox__icon
       +icon('checkbox-mark')
     span.checkbox__label= labelText

@@ -1,0 +1,47 @@
+section.free-report
+  .free-report__container.container
+    .free-report__content
+      h2.free-report__title Бесплатный отчет
+      p.free-report__text
+        |Предлагаем Вам провести тест-драйв StaffScan на примере минимального отчета по ФИО физического лица.
+        br
+        | Вы получите на почту минимальный краткий отчет по открытым базам данных в направлениях Розыск и Долги. Попробуем?
+      //- form
+      form.free-report__form.form.form--free-report
+        //- group
+        .form__group
+          //- type,id, placeholder, requiredAttr
+          +inputComponent(
+            "text",
+            "#free-report-lastname",
+            "Введите Фамилию"
+          )
+        //- group
+        .form__group
+          //- type,id, placeholder, requiredAttr
+          +inputComponent(
+            "text",
+            "#free-report-firstname",
+            "Введите Имя"
+          )
+        //- group
+        .form__group
+            //- type,id, placeholder, requiredAttr
+            +inputComponent(
+              "text",
+              "#free-report-middlename",
+              "Введите Отчество"
+            )
+        //- group
+        .form__group.form__group--2columns
+          +checkboxCompomnent(
+            "Отправляя данную форму, я подтверждаю, что согласие проверяемого на получение его персональных данных у меня имеется. Я ознакомился с Политикой  обработки персональных данных StaffScan и обязуюсь не передавать персональные данные проверяемых персон третьим лицам",
+            "free-report-checkbox"
+          )
+        //- group
+        .form__group.form__group--button
+          //- text, iconLeft
+          +buttonComponent(
+            "Запустить проверку",
+            "doc"
+          )(type="submit")

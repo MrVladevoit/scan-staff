@@ -1,5 +1,5 @@
 /* INPUT ================ */
-$input-height: 50px;
+$input-height: 60px;
 $input-padding-horizontal: 20px;
 $input-border-radius: 0;
 $input-font-size: $text-l;
@@ -31,6 +31,14 @@ $input-placeholder-color: var(--black-90);
     &::placeholder {
       color: transparent;
     }
+  }
+
+  @include mq("desktop", "max") {
+    height: 50px;
+  }
+
+  @include mq("tablet-small", "max") {
+    height: 45px;
   }
 }
 
