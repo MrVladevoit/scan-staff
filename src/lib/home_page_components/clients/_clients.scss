@@ -1,0 +1,64 @@
+// Clients =========================
+
+.clients {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: var(--white-100);
+  text-align: center;
+  background-color: var(--primary-650);
+
+  @media screen and (max-width: 979px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @include mq("tablet-small", "max") {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.clients__list {
+  margin-top: 50px;
+
+  @include mq("desktop", "max") {
+    margin-top: 30px;
+  }
+
+  @media screen and (max-width: 979px) {
+    max-width: 480px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include mq("tablet-small", "max") {
+    margin-top: 10px;
+  }
+}
+
+.clients__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 230px;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  @include mq("desktop", "max") {
+    height: 160px;
+    padding: 0 40px;
+  }
+}
+
+.clients__item + .clients__item {
+
+  .clients__image {
+    border-left: 1px solid var(--white-500);
+
+    @include mq("tablet-small", "max") {
+      border-left: 0;
+    }
+  }
+}
+
+// ========================= end clients

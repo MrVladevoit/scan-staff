@@ -182,71 +182,49 @@
   slick_on_mobile($tariffs, settings_slider);
   slick_on_mobile($sources, settings_sources_slider);
 
-  // $('.simple-tabs__item').click(function () {
-  //   $sources.resize();;
-  // });
 
   /*----------------------------------------
-   SPECIAL CAROUSEL
+   Clients Carousel
   ----------------------------------------*/
 
-  // $(".js-carousel-cards").slick({
-  //   rows: 0,
-  //   dots: true,
-  //   arrows: true,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 1,
-  //   infinite: false,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1300,
-  //       settings: {
-  //         arrows: false
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 1280,
-  //       settings: {
-  //         slidesToShow: 3
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 1200,
-  //       settings: {
-  //         slidesToShow: 3,
-  //         arrows: false
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 1024,
-  //       settings: {
-  //         slidesToShow: 2
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 980,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         arrows: false
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 768,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         arrows: false
-  //       }
-  //     }
-  //   ]
-  // });
+  $(".js-clients").slick({
+    rows: 0,
+    dots: false,
+    arrows: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 980,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          dots: true
+        }
+      }
+    ]
+  });
 
   /*----------------------------------------
    NEWS CAROUSEL
   ----------------------------------------*/
 
-  // $(".js-carousel-news").slick({
+  // $(".js-clients").slick({
   //   rows: 0,
-  //   dots: true,
+  //   dots: false,
   //   arrows: true,
   //   initialSlide: 1,
   //   centerMode: true,

@@ -1,0 +1,18 @@
+mixin clientComponent(src, alt)
+  .clients__item
+    .clients__image
+      img(src="images/" + src, alt= alt)
+
+.clients
+  .container.clients__container
+    h2.section-title.section-title--white Наши клиенты:
+    .clients__list.js-clients
+      +clientComponent("dhl.svg", "DHL logo")
+      +clientComponent("unilever.svg", "Unilever logo")
+      +clientComponent("pepsico.svg", "Pepsico logo")
+      +clientComponent("nike.svg", "Nike logo")
+      +clientComponent("dhl.svg", "DHL logo")
+      +clientComponent("unilever.svg", "Unilever logo")
+      +clientComponent("pepsico.svg", "Pepsico logo")
+      +clientComponent("nike.svg", "Nike logo")
+    .slick-controls

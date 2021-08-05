@@ -175,7 +175,10 @@
 .js-sources {
 
   @include mq("tablet-small", "max") {
-    margin-bottom: 55px;
+
+    &.slick-dotted {
+      margin-bottom: 55px;
+    }
 
     .slick-dots {
       bottom: -35px;
