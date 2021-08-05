@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // Start Mobile Menu ---------------------------
   const mobileMenu = document.querySelector("#mobile-menu"),
         mobileMenuOverlay = document.querySelector('#mobile-menu-overlay'),
-        buttonCloseMobileMenu = document.querySelector('[data-mobile-menu-close]'),
+        buttonCloseMobileMenu = document.querySelectorAll('[data-mobile-menu-close]'),
         buttonOpenMobileMenu = document.querySelectorAll('[data-mobile-menu-open]');
 
   function openMobileMenu() {
@@ -26,7 +26,13 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  buttonCloseMobileMenu.addEventListener('click', closeMenu);
+  buttonCloseMobileMenu.forEach(btn => {
+    btn.addEventListener('click', ()=> {
+      closeMenu();
+    });
+  });
+
+  // buttonCloseMobileMenu.addEventListener('click', closeMenu);
 
   mobileMenu.addEventListener('click', (e) => {
     if(e.target === mobileMenu) {
