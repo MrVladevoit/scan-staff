@@ -1,0 +1,230 @@
+/* Specialist ================ */
+
+.specialist {
+  border-bottom: 12px solid var(--secondary-100);
+  color: var(--white-100);
+  background-color: var(--primary-500);
+}
+
+.specialist__container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  padding-top: 130px;
+  padding-bottom: 160px;
+
+  @include mq("desktop", "max") {
+    padding-top: 95px;
+    padding-bottom: 85px;
+  }
+
+  @include mq("laptop-small", "max") {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  @include mq("tablet-small", "max") {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+.specialist__content {
+  max-width: 790px;
+
+  @include mq("desktop", "max") {
+    max-width: 480px;
+  }
+
+  @include mq("laptop-small", "max") {
+    max-width: 350px;
+  }
+
+  @include mq("tablet-small", "max") {
+    max-width: 250px;
+  }
+
+  @include mq("phone", "max") {
+    max-width: 150px;
+  }
+}
+
+.specialist__image {
+  position: absolute;
+  bottom: 0;
+  left: -40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: calc(100% + 150px);
+  overflow: hidden;
+
+  @include mq("desktop", "max") {
+    left: -100px;
+    max-width: 500px;
+    height: calc(100% + 110px);
+  }
+
+  @include mq("laptop-small", "max") {
+    left: -85px;
+    max-width: 410px;
+    height: calc(100% + 90px);
+  }
+
+  @include mq("tablet-small", "max") {
+    left: 0;
+    max-width: 284px;
+    height: calc(100% + 60px);
+  }
+
+  @include mq("phone-large", "max") {
+    left: -130px;
+  }
+}
+
+.specialist__message {
+  font-style: italic;
+  font-size: $text-l-bigger;
+  line-height: 1.4;
+
+  @include mq("desktop", "max") {
+    font-size: $text-l;
+  }
+
+  @include mq("laptop-small", "max") {
+    font-size: $text-s;
+  }
+
+  @include mq("tablet-small", "max") {
+    font-size: 12px;
+    line-height: 1.1;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    max-width: 780px;
+    height: 86px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: url("../images/line_message.svg") no-repeat;
+    background-size: cover;
+
+    @include mq("desktop", "max") {
+      height: 50px;
+      margin-top: 35px;
+      margin-bottom: 30px;
+    }
+
+    @include mq("laptop-small", "max") {
+      height: 42px;
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+
+    @include mq("tablet-small", "max") {
+      height: 26px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.specialist__wrapper {
+  display: flex;
+
+  @include mq("laptop-small", "max") {
+    flex-direction: column;
+  }
+}
+
+.specialist__person {
+  color: var(--primary-200);
+
+  & + .specialist__button {
+    margin-left: 60px;
+
+    @include mq("desktop", "max") {
+      margin-left: 20px;
+    }
+
+    @include mq("laptop-small", "max") {
+      margin-top: 20px;
+      margin-left: 0;
+    }
+  }
+}
+
+.specialist__name {
+  font-weight: $text-weight-bold;
+  font-size: $text-l-bigger;
+
+  @include mq("desktop", "max") {
+    font-size: $text-m;
+  }
+
+  @include mq("tablet-small", "max") {
+    font-size: 10px;
+  }
+}
+
+.specialist__role {
+
+  @include mq("desktop", "max") {
+    font-size: 12px;
+  }
+
+  @include mq("tablet-small", "max") {
+    font-size: 10px;
+  }
+}
+
+.specialist__footer {
+  margin-top: 60px;
+
+  @include mq("desktop", "max") {
+    margin-top: 15px;
+  }
+
+  @include mq("laptop-small", "max") {
+    margin-top: 30px;
+  }
+
+  @include mq("tablet-small", "max") {
+    margin-top: 10px;
+  }
+}
+
+.specialist__link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--white-100);
+  font-size: $text-l;
+  text-decoration: underline;
+  
+  &:hover {
+    color: var(--white-100);
+    text-decoration: none;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+
+    @include mq("tablet-small", "max") {
+      margin-right: 10px;
+    }
+  }
+
+  @include mq("desktop", "max") {
+    font-size: $text-m;
+  }
+
+  @include mq("tablet-small", "max") {
+    font-size: 12px;
+  }
+}
+
+/* ================ end specialist  */

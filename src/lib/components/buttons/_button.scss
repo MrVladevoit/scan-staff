@@ -143,9 +143,12 @@ $button-third-color-hover: var(--white-100);
 }
 
 // third
-.button--third {
+.button.button--third {
+  padding-right: 30px;
+  padding-left: 30px;
   border-color: $button-third-border-color;
   color: $button-third-color;
+  font-size: $text-s;
   background-color: $button-third-background-color;
 
   &:hover {
@@ -156,6 +159,28 @@ $button-third-color-hover: var(--white-100);
   &:active {
     border-color: $button-third-border-color-active;
     background-color: $button-third-background-color-active;
+  }
+
+  .button__icon {
+    max-height: 18px;
+
+    @include mq("tablet-small", "max") {
+      max-height: 10px;
+      margin-right: 0;
+    }
+  }
+
+  @include mq("desktop", "max") {
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: $text-s;
+  }
+
+  @include mq("tablet-small", "max") {
+    height: 30px;
+    padding-right: 4px;
+    padding-left: 4px;
+    font-size: 9px;
   }
 }
 

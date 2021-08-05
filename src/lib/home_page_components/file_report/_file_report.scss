@@ -43,11 +43,11 @@
 
   @include mq("laptop-small", "max") {
     padding-top: 60px;
-    padding-bottom: 0;
+    padding-bottom: 60px;
     padding-left: 0;
   }
 
-  @include mq("laptop-small", "max") {
+  @include mq("tablet-small", "max") {
     padding-top: 30px;
   }
 }
@@ -133,6 +133,8 @@
 }
 
 .file-report__button {
+  position: relative;
+  z-index: 4;
   margin-top: 60px;
 
   @include mq("desktop", "max") {

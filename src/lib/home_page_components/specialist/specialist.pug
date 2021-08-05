@@ -1,0 +1,21 @@
+.specialist
+  .container.specialist__container
+    .specialist__image
+      img(src="uploads/specialist.png" alt="Константин Александров")
+    .specialist__content
+      .specialist__message “Наш сервис позволяет оптимизировать работу HR-специалистов в несколько раз и сократить при этом затраты времени во столько же... Ряд компаний уже оценили пользу Staffscan на своём примере”
+      .specialist__wrapper
+        .specialist__person
+          .specialist__name Константин Александров
+          .specialist__role менеджер проекта Staffscan
+        .specialist__button
+          //- href, text, iconLeft
+          +buttonLinkComponent(
+            "#",
+            "@AlexKost_Staffscan",
+            "telegram"
+          )(class="button--third" target="_blank" rel="noreferrer nofollow")
+      .specialist__footer
+        a(href="#" class="specialist__link")
+          +icon("download")
+          | Скачать презентацию компании
