@@ -79,4 +79,17 @@
     }
   }
 }
+
+.button-menu--white {
+  color: var(--white-100);
+
+  .icon-menu__line {
+    background-color: var(--white-100);
+
+    &::after,
+    &::before {
+      background-color: var(--white-100);;
+    }
+  }
+}
 /* ================ end button menu */

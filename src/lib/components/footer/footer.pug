@@ -1,2 +1,52 @@
 // footer
 footer.page__footer.footer
+  //- top
+  .footer__top
+    .container.footer__container
+      .footer__panel
+        a(href="index.html" class="footer__logo"): img(src="images/logo_white.svg" alt="logo")
+        // menu button
+        button(class="footer__button-menu js-button-menu button-menu button-menu--white" aria-describedby="Menu" data-mobile-menu-open)
+          i.icon-menu
+            span.icon-menu__line
+    .container.footer__container
+      .footer__column
+        .footer__row
+          .footer__logo-wrapper
+            a(href="index.html" class="footer__logo"): img(src="images/logo_white.svg" alt="logo")
+          .footer__contacts
+            .footer__contacts-item Россия, Санкт-Петребург, Большой Сампсониевский пр-т, 106, оф. 407
+            .footer__contacts-item E-mail: info@staffscan.ru
+        .footer__row
+          a(href="tel:88005553322" class="footer__phone") 8-800-555-33-22
+      .footer__column
+        ul.footer__menu
+          li.footer__menu-item: a(href="#" class="footer__menu-link") О сервисе
+          li.footer__menu-item: a(href="#" class="footer__menu-link") Как работает
+          li.footer__menu-item: a(href="#" class="footer__menu-link") Тарифы
+          li.footer__menu-item: a(href="#" class="footer__menu-link") Кого проверять
+          li.footer__menu-item: a(href="#" class="footer__menu-link") Источники
+          li.footer__menu-item: a(href="#" class="footer__menu-link") Отчёт
+          li.footer__menu-item: a(href="#" class="footer__menu-link") Клиенты
+        .footer__subcolumn
+          .footer__external-info
+            a(href="#" class="footer__external-item" target="_blank" rel="noreferrer nofollow") Политика конфиденциальности
+            a(href="#" class="footer__external-item" target="_blank" rel="noreferrer nofollow") Пользовательское соглашение
+            a(href="#" class="footer__external-item" target="_blank" rel="noreferrer nofollow") Доставка и оплата
+            a(href="#" class="footer__external-item" target="_blank" rel="noreferrer nofollow") Публичная оферта
+            a(href="#" class="footer__external-item" target="_blank" rel="noreferrer nofollow") Банковские реквизиты
+          .footer__messengers
+            a(herf="#" class="footer__messengers-item" target="_blank" rel="noreferrer nofollow"): +icon("telegram")
+            a(herf="#" class="footer__messengers-item" target="_blank" rel="noreferrer nofollow"): +icon("instagram")
+            a(herf="#" class="footer__messengers-item" target="_blank" rel="noreferrer nofollow"): +icon("youtube")
+          //- href, text, iconLeft
+          +buttonLinkComponent(
+            "#",
+            "Запустить проверку",
+            "doc"
+          )(class="footer__button")
+  //- bottom
+  .footer__bottom
+    .container.footer__container
+      .footer__copyrite © 2021. StaffScan LLC. All rights reserved
+      a(href="https://masco.design/" class="footer__author" target="_blank" rel="noreferrer nofollow") Designed by Masco.design
