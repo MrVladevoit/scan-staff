@@ -1,0 +1,66 @@
+mixin infoBlockComponent(title)
+  .section-tabs__collapse-content.info-block
+    .info-block__title= title
+    .info-block__content
+      .info-block__column
+        ul.info-block__list
+          li.info-block__item Действителен ли паспорт
+          li.info-block__item Состоит ли  в федеральном  розыске
+          li.info-block__item Не обладает ли статусом банкрота и не находится ли в процессе банкротства
+      .info-block__column
+        ul.info-block__list
+          li.info-block__item Нет ли задолженностей по налогам
+          li.info-block__item Имеет ли статус предпринимателя
+          li.info-block__item На сколько сильно обременён кредитами
+      .info-block__column
+        ul.info-block__list
+          li.info-block__item Каков социальный статус и активность в социальных сетях
+          li.info-block__item Есть ли профессиональные отзывы и подтверждение профессиональных компетенций
+
+section.service-check
+  .container.service-check__container
+    h2.service-check__title Кого можно проверИть с помощью сервиса:
+    .service-check__content
+      //-tabs
+      .section-tabs
+        //-tabs header
+        .section-tabs__header
+          .section-tabs__list
+            button.section-tabs__item.section-tabs__item--active Привлекаемого специалиста
+            button.section-tabs__item кандидата на должность
+            button.section-tabs__item партнера по бизнесу
+            button.section-tabs__item клиента компании
+        //-tabs content
+        .section-tabs__content
+          //-item
+          .section-tabs__content-item.section-tabs__content-item--show
+            button.section-tabs__collapse.section-tabs__collapse--active
+              span Привлекаемого специалиста
+              +icon('arrow-round-down')
+            +infoBlockComponent("Какая информация проверяется:")
+          //-item
+          .section-tabs__content-item
+            button.section-tabs__collapse
+              span Кандидата на должность
+              +icon('arrow-round-down')
+            +infoBlockComponent("Tab Content 2")
+          //-item
+          .section-tabs__content-item
+            button.section-tabs__collapse
+              span Партнера по бизнесу
+              +icon('arrow-round-down')
+            +infoBlockComponent("Tab Content 3")
+          //-item
+          .section-tabs__content-item
+            button.section-tabs__collapse
+              span Клиента компании
+              +icon('arrow-round-down')
+            +infoBlockComponent("Tab Content 4")
+      // button
+      .service-check__button
+        //- href, text, iconLeft
+        +buttonLinkComponent(
+          "#",
+          "Запустить проверку",
+          "doc"
+        )
