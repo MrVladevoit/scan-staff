@@ -1,0 +1,64 @@
+// Section info =========================
+
+.section-info {
+  padding-top: 55px;
+  padding-bottom: 25px;
+
+  @include mq("desktop", "max") {
+    padding-top: 50px;
+  }
+
+  @include mq("laptop-small", "max") {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.section-info__container {
+  display: flex;
+  align-items: center;
+
+  @include mq("desktop") {
+    max-width: 1300px;
+  }
+}
+
+.section-info__content {
+  flex-grow: 1;
+}
+
+.section-info__text {
+  color: var(--gray-300);
+  font-weight: $text-weight-bold;
+  font-size: $text-l;
+
+  span {
+    color: var(--secondary-100);
+  }
+
+  @include mq("laptop-small", "max") {
+    font-size: 13px;
+  }
+}
+
+.section-info__link {
+  display: block;
+  width: 100%;
+  margin-top: 25px;
+
+  @include mq("laptop-small", "max") {
+    margin-top: 15px;
+  }
+}
+
+.section-info__image {
+  flex-shrink: 0;
+  margin-left: 45px;
+
+  @include mq("phone-large", "max") {
+    display: none;
+  }
+}
+
+
+// ========================= section info
