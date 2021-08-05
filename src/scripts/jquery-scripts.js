@@ -14,6 +14,26 @@
   });
 
   /*----------------------------------------
+  SCROLL BAR WIDTH
+----------------------------------------*/
+
+  //WIDTH SCROLL BAR
+  var scrollBar = document.createElement('div');
+
+  scrollBar.style.overflowY = 'scroll';
+  scrollBar.style.width = '50px';
+  scrollBar.style.height = '50px';
+
+  // при display:none размеры нельзя узнать
+  // нужно, чтобы элемент был видим,
+  // visibility:hidden - можно, т.к. сохраняет геометрию
+  scrollBar.style.visibility = 'hidden';
+
+  document.body.appendChild(scrollBar);
+  var scrollWidth = scrollBar.offsetWidth - scrollBar.clientWidth;
+  document.body.removeChild(scrollBar);
+
+  /*----------------------------------------
     INPUT MASK
   ----------------------------------------*/
   $(".js-mask-number").mask("0#");
@@ -22,7 +42,7 @@
   $(".js-mask-date").mask("00.00.0000");
 
   /*----------------------------------------
-    ABOUT ALPHABET
+    NUMERIC
   ----------------------------------------*/
 
   const
@@ -35,8 +55,8 @@
           <path fill="currentColor" d="M0 1.5C0 0.671573 0.671573 0 1.5 0H22.5C23.3284 0 24 0.671573 24 1.5C24 2.32843 23.3284 3 22.5 3H1.5C0.671573 3 0 2.32843 0 1.5Z"/>
       </svg>`;
 
-  jQuery('<div class="numeric__button numeric__button--down">' + iconMinus + '</div>').insertBefore('.numeric__input');
-  jQuery('<div class="numeric__button numeric__button--up">' + iconPlus + '</div>').insertAfter('.numeric__input');
+  jQuery('<button class="numeric__button numeric__button--down">' + iconMinus + '</button>').insertBefore('.numeric__input');
+  jQuery('<button class="numeric__button numeric__button--up">' + iconPlus + '</button>').insertAfter('.numeric__input');
 
   jQuery('.numeric').each(function() {
     var
@@ -72,6 +92,22 @@
       spinner.find("input").trigger("change");
     });
   });
+
+  // jQuery('[data-tariff]').each(function () {
+  //   var
+  //     block = jQuery(this),
+  //     blockPrice = block.attr('data-tariff'),
+  //     inputValue = block.find('.numeric__input').val(),
+  //     btnUp = block.find('.numeric__button--up'),
+  //     btnDown = block.find('.numeric__button--down'),
+  //     price = block.find('.tariff-block__value');
+  //
+  //   btnUp.click(function() {
+  //     var newPrice = blockPrice * inputValue;
+  //     console.log(inputValue);
+  //     // price.innerText(newPrice);
+  //   });
+  // });
   /*----------------------------------------
     FIXED HEADER
   ----------------------------------------*/
@@ -94,46 +130,35 @@
   ----------------------------------------*/
 
   // slider
-  // var $instruments = $(".js-carousel-instruments");
-  //
-  // settings_slider = {
-  //   rows: 0,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   dots: true,
-  //   arrows: false,
-  //   mobileFirst: true,
-  //   infinite: false,
-  //   responsive: [
-  //     {
-  //       breakpoint: 767,
-  //       settings: {
-  //         slidesToShow: 2
-  //       }
-  //     },
-  //   ]
-  // };
-  //
-  // // slick on mobile
-  // function slick_on_mobile(slider, settings){
-  //
-  //   $(window).on('load resize', function() {
-  //
-  //     if ($(window).width() > 1024 - scrollWidth) {
-  //
-  //       if (slider.hasClass('slick-initialized')) {
-  //         slider.slick('unslick');
-  //       }
-  //
-  //       return
-  //     }
-  //     if (!slider.hasClass('slick-initialized')) {
-  //       return slider.slick(settings);
-  //     }
-  //   });
-  // }
-  //
-  // slick_on_mobile($instruments, settings_slider);
+  var $tariffs = $(".js-tariffs");
+
+  settings_slider = {
+    rows: 0,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false,
+    mobileFirst: true,
+    infinite: true
+  };
+
+  // slick on mobile
+  function slick_on_mobile(slider, settings){
+
+    $(window).on('load resize', function() {
+      if ($(window).width() > 767 - scrollWidth) {
+        if (slider.hasClass('slick-initialized')) {
+          slider.slick('unslick');
+        }
+        return
+      }
+      if (!slider.hasClass('slick-initialized')) {
+        return slider.slick(settings);
+      }
+    });
+  }
+
+  slick_on_mobile($tariffs, settings_slider);
 
   /*----------------------------------------
    SPECIAL CAROUSEL

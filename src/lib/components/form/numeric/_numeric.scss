@@ -67,4 +67,93 @@ $numeric-button-background: linear-gradient(360deg, #eeeeee 0%, #d8d8d8 70%);
   max-width: 24px;
   max-height: 24px;
 }
+
+.numeric--middle {
+  width: 100%;
+  height: 60px;
+
+  @include mq("desktop", "max") {
+    height: 50px;
+  }
+
+  .numeric__button {
+    width: 110px;
+
+    @include mq("desktop", "max") {
+      width: 70px;
+    }
+  }
+
+  .numeric__icon {
+
+    @include mq("desktop", "max") {
+      max-width: 20px;
+      max-height: 20px;
+    }
+  }
+
+  .numeric__input {
+    font-size: 34px;
+
+    @include mq("desktop", "max") {
+      font-size: 24px;
+    }
+  }
+}
+
+.numeric--large {
+  width: 100%;
+  height: 80px;
+
+  @include mq("desktop", "max") {
+    height: 50px;
+  }
+
+  .numeric__button {
+    width: 140px;
+
+    @include mq("desktop", "max") {
+      width: 66px;
+    }
+  }
+
+  .numeric__input {
+    font-size: 48px;
+
+    @include mq("desktop", "max") {
+      font-size: 24px;
+    }
+  }
+
+  .numeric__icon {
+    max-width: 30px;
+    max-height: 30px;
+
+    @include mq("desktop", "max") {
+      max-width: 20px;
+      max-height: 20px;
+    }
+  }
+}
+
+.numeric--middle,
+.numeric--large {
+
+  @include mq("tablet", "max") {
+    height: 38px;
+
+    .numeric__button {
+      width: 60px;
+    }
+
+    .numeric__icon {
+      width: 15px;
+      height: 15px;
+    }
+
+    .numeric__input {
+      font-size: 24px;
+    }
+  }
+}
 /* ================ end custom input number */

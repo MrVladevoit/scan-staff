@@ -101,10 +101,10 @@ $button-third-color-hover: var(--white-100);
   }
 
   @include mq("phone", "max") {
-    height: 40px;
-    font-size: $text-s;
     width: 100%;
     max-width: 100%;
+    height: 40px;
+    font-size: $text-s;
   }
 }
 

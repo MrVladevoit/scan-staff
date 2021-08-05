@@ -1,0 +1,86 @@
+section.tariffs
+  .tariffs__header
+    .container
+      img(src="images/logo.svg" class="tariffs__logo" alt="Logo Staff Scan")
+      h2.tariffs__title Тарифные планы
+      p.tariffs__text Ullamco non quis commodo eu sint voluptate Lorem fugiat laboris eu excepteur ipsum ut. Ullamco ad ullamco sunt anim occaecat deserunt proident cillum eiusmod nulla velit. Aute dolor irure tempor sit mollit proident reprehenderit et. Ex sunt ex nulla nulla et labore mollit dolore fugiat aliquip. Elit non aute et proident esse proident minim minim labore eiusmod.
+  .tariffs__body
+    .container.tariffs__container
+      .tariffs__list.js-tariffs
+        //- item
+        .tariffs__item.tariff-block
+          .tariff-block__body
+            h3.tariff-block__title Базовый отчёт
+            .tariff-block__section
+              .tariff-block__label Необходимые данные:
+              .tariff-block__data ФИО, паспорт
+            .tariff-block__section
+              .tariff-block__label Мы проверим
+              ul.tariff-block__list
+                li.tariff-block__item Действительность  паспорта
+                li.tariff-block__item Статус банкрота
+                li.tariff-block__item Наличие ИП и ОКВЭДы
+                li.tariff-block__item Наличие арбитражных практик
+                li.tariff-block__item Правонарушения
+            .tariff-block__footer(data-tariff="1000")
+              .tariff-block__price
+                  span.tariff-block__value 1000
+                  span рублей
+              +numericComponent()(class="numeric--middle tariff-block__numeric" data-tarif-numeric)
+              //- text, iconLeft
+              +buttonComponent(
+                "Оплатить проверки",
+                "wallet"
+              )(class="button--full-width tariff-block__button")
+        //- item
+        .tariffs__item.tariff-block.tariff-block--blue
+          .tariff-block__body
+            .tariff-block__mark Рекомендуем
+            h3.tariff-block__title Полный отчёт
+            .tariff-block__section
+              .tariff-block__label Необходимые данные:
+              .tariff-block__data ФИО, паспорт, ИНН, ВУ
+            .tariff-block__section
+              .tariff-block__label Мы проверим
+              ul.tariff-block__list
+                li.tariff-block__item Действительность  паспорта
+                li.tariff-block__item Статус банкрота
+                li.tariff-block__item Наличие ИП и ОКВЭДы
+                li.tariff-block__item Наличие арбитражных практик
+                li.tariff-block__item Правонарушения и штрафы
+                li.tariff-block__item Кредитную историю
+                li.tariff-block__item Отзывы с места работы за 3 года
+                li.tariff-block__item Социальные профили
+                li.tariff-block__item Статус розыскных структур
+            .tariff-block__footer(data-tariff="2500")
+              .tariff-block__price
+                span.tariff-block__value 2500
+                span рублей
+              +numericComponent()(class="numeric--large tariff-block__numeric")
+              //- text, iconLeft
+              +buttonComponent(
+                "Оплатить проверки",
+                "wallet"
+              )(class="button--full-width tariff-block__button")
+        //- item
+        .tariffs__item.tariff-block
+          .tariff-block__body
+            h3.tariff-block__title Конструктор
+            .tariff-block__section
+              .tariff-block__label Необходимые данные:
+              .tariff-block__data ФИО, паспорт, ИНН, ВУ
+            .tariff-block__section
+              .tariff-block__label Мы проверим
+              ul.tariff-block__list
+                li.tariff-block__item Всё, что входит в полный отчет по персоне с учетом выбранных вами параметров
+            .tariff-block__footer
+              .tariff-block__price
+                span от
+                span.tariff-block__value 1000
+                span рублей
+              //- href, text, iconLeft
+              +buttonLinkComponent(
+                "#",
+                "Перейти в конструктор",
+                ""
+              )(class="tariff-block__button")

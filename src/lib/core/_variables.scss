@@ -25,8 +25,8 @@ $breakpoints: (
 $z-layers: (
   back: -1,
   default: 1,
-  header: 5,
+  header: 9,
+  poverlay: 9,
   menu: 10,
-  overlay: 9,
   popup: 12
 );

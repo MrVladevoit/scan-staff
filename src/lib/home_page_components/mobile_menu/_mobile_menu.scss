@@ -28,7 +28,7 @@
 }
 
 .page-overlay--show {
-  z-index: z(overlay);
+  z-index: 9;
   opacity: 1;
   pointer-events: auto;
 }

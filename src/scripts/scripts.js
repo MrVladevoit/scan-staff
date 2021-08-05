@@ -34,4 +34,10 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
   // End Start Mobile Menu ---------------------------
+
+  // NUMERIC
+
+  // Tariffs
+
+
 });

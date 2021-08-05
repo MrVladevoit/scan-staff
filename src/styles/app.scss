@@ -17,6 +17,10 @@
 
 @import "./src/lib/sprite/sprite";
 
+// vendors
+@import "./src/lib/vendors/slick/slick";
+@import "./src/lib/vendors/slick/slick_theme";
+
 // components
 @import "./src/lib/components/buttons/button";
 @import "./src/lib/components/form/label/label_form";
@@ -31,6 +35,7 @@
 @import "../lib/home_page_components/first_screen/first_screen";
 @import "../lib/home_page_components/service/service";
 @import "../lib/home_page_components/free_report/free_report";
+@import "../lib/home_page_components/tariffs/tariffs";
 
 // Other
 //@import "./src/lib/components/popup/popup";

@@ -1,0 +1,213 @@
+/* Slick Theme ================ */
+
+.slick-arrow {
+
+  &.slick-disabled {
+    opacity: .3;
+    pointer-events: none;
+  }
+}
+
+.slick-loading .slick-list {
+  background: #ffffff url("../images/ajax-loader.gif") center center no-repeat;
+}
+
+.slick-track,
+.slick-slider {
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+
+  display: block;
+
+  width: 53px;
+  height: 53px;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  font-size: 0;
+  line-height: 0;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  outline: none;
+  opacity: .36;
+
+  cursor: pointer;
+
+  transform: translateY(-50%);
+  transition: opacity $transition-time $transition-type;
+
+  &.slick-disabled {
+    //opacity: .24;
+    display: none !important;
+  }
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  color: transparent;
+  outline: none;
+  opacity: .56;
+}
+
+.slick-prev {
+  left: -73px;
+  background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='53' height='53' fill='%233e3d40'%3E%3Cpath d='M26.5 53C41.066 53 53 41.16 53 26.5S41.16 0 26.5 0 0 11.84 0 26.5C0 41.066 11.84 53 26.5 53zm0-49.336c12.594 0 22.742 10.242 22.742 22.742C49.242 38.902 39 49.242 26.5 49.242S3.664 39 3.664 26.5 13.906 3.664 26.5 3.664zm0 0'/%3E%3Cpath d='M16.914 27.629c-.375-.379-.562-.754-.562-1.317 0-.562.187-.94.562-1.316l12.027-12.121c.754-.754 1.977-.754 2.633 0 .754.75.754 1.973 0 2.629l-10.71 10.809 10.804 10.804c.754.754.754 1.977 0 2.633a1.853 1.853 0 01-1.316.563 1.85 1.85 0 01-1.313-.563zm0 0'/%3E%3C/svg%3E");
+}
+
+
+.slick-next {
+  right: -73px;
+  background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='53' height='53' fill='%233e3d40'%3E%3Cpath d='M26.5 0C11.934 0 0 11.84 0 26.5S11.84 53 26.5 53 53 41.16 53 26.5C53 11.934 41.16 0 26.5 0zm0 49.336c-12.594 0-22.742-10.242-22.742-22.742C3.758 14.098 14 3.758 26.5 3.758S49.336 14 49.336 26.5 39.094 49.336 26.5 49.336zm0 0'/%3E%3Cpath d='M36.086 25.371c.375.379.562.754.562 1.317 0 .562-.187.94-.562 1.316L24.059 40.125c-.754.754-1.977.754-2.633 0-.754-.75-.754-1.973 0-2.629l10.71-10.809-10.804-10.804c-.754-.754-.754-1.977 0-2.633a1.853 1.853 0 011.316-.563c.47 0 .938.188 1.313.563zm0 0'/%3E%3C/svg%3E");
+}
+
+.slick-controls {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mq("tablet", "max") {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .slick-dots {
+    position: relative;
+    bottom: auto;
+    flex-grow: 1;
+    order: 2;
+    display: flex;
+    align-items: center;
+    width: auto;
+  }
+}
+
+.slick-controls__arrows {
+  display: flex;
+  align-items: center;
+}
+
+a.slick-controls__button {
+  order: 3;
+  min-width: 200px;
+
+  @include mq("tablet", "max") {
+    margin-top: 30px;
+  }
+}
+
+.slick-prev.slick-prev--small,
+.slick-next.slick-next--small {
+  position: static;
+  top: auto;
+  right: auto;
+  left: auto;
+  width: 35px;
+  height: 35px;
+  transform: translate(0);
+}
+
+.slick-prev--small + .slick-next--small {
+  margin-left: 20px;
+}
+
+[dir = "rtl"] .slick-prev {
+  right: -25px;
+  left: auto;
+}
+
+[dir = "rtl"] .slick-next {
+  right: auto;
+  left: -25px;
+}
+
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+
+  text-align: center;
+
+  list-style: none;
+}
+
+.slick-dots li {
+  position: relative;
+
+  display: inline-block;
+
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+
+  cursor: pointer;
+
+  &.slick-active {
+
+    button {
+      border-color: var(--primary-300);
+      background-color: var(--primary-300);
+      opacity: 1;
+    }
+  }
+}
+
+.slick-dots li button {
+
+  display: block;
+
+  width: 8px;
+  height: 8px;
+  padding: 0;
+
+  border: 1px solid var(--white-600);
+  border-radius: 50%;
+
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+  background-color: transparent;
+
+  outline: none;
+  opacity: .32;
+
+  cursor: pointer;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+/* ================ end slick theme */

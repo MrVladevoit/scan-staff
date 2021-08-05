@@ -1,4 +1,4 @@
 mixin numericComponent(minNum="1", maxNum="100", stepNum="1", value="1")
-  .numeric
+  .numeric&attributes(attributes)
     input(type="number", min= minNum, max= maxNum, step= stepNum, value= value, class="numeric__input")
 
