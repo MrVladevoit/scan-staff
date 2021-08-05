@@ -32,45 +32,18 @@
 }
 
 .free-report__title {
-  margin: 0;
-  color: var(--white-100);
-  font-weight: $text-weight-light;
-  font-size: $text-xxl;
   text-align: center;
-  text-transform: uppercase;
-
-  @include mq("desktop", "max") {
-    font-size: $text-xl;
-  }
-
-  @include mq("tablet-small", "max") {
-    font-size: 28px;
-  }
-
-  + .free-report__text {
-    margin-top: 24px;
-
-    @include mq("desktop", "max") {
-      margin-top: 10px;
-    }
-  }
 }
 
 .free-report__text {
   margin-bottom: 0;
-  font-size: $text-l;
   text-align: center;
 
   @include mq("desktop", "max") {
-    font-size: $text-m;
 
     br {
       display: none;
     }
-  }
-
-  @include mq("tablet-small", "max") {
-    font-size: 12px;
   }
 }
 

@@ -134,4 +134,66 @@ a {
     text-decoration: none;
   }
 }
+
+.section-title {
+  margin: 0;
+  text-transform: uppercase;
+  @include font(
+    $title-color,
+    $text-weight-light,
+    $text-xxl,
+    $line-height-title
+  );
+
+  @include mq("desktop", "max") {
+    font-size: $text-xl;
+  }
+
+  @include mq("tablet-small", "max") {
+    font-size: $text-l-bigger;
+  }
+
+  @include mq("phone-large", "max") {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  + .section-subtext {
+    margin-top: 20px;
+
+    @include mq("desktop", "max") {
+      margin-top: 15px;
+    }
+
+    @include mq("tablet-small", "max") {
+      margin-top: 10px;
+    }
+  }
+}
+
+.section-title--white {
+  color: var(--white-100);
+}
+
+.section-subtext {
+  max-width: 1300px;
+  margin: 0 auto;
+  @include font(
+    var(--gray-400),
+    $text-weight-regular,
+    $text-l
+  );
+
+  @include mq("desktop", "max") {
+    font-size: $text-m;
+  }
+
+  @include mq("tablet-small", "max") {
+    font-size: $text-s - 2px; // 12px
+  }
+}
+
+.section-subtext--white {
+  color: var(--white-100);
+}
 /* ================ end typography  */

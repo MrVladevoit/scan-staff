@@ -1,0 +1,54 @@
+mixin sourcesComponent(src, text)
+  li.sources-list__item
+    if(src)
+      .sources-list__image-wrapper
+        img(src="uploads/" + src, alt= text)
+    else
+      .sources-list__image-wrapper
+        img(src="images/cloud_data.svg", alt= text)
+    .sources-list__label!= text
+
+section.sources
+  .container.sources__container
+    h2.sources__title.section-title Наши источники информации
+    p.sources__text.section-subtext Первое, что вам необходимо запомнить, – это то, что мы берем всю информацию для отчетов из открытых источников без нарушения каких-либо законодательств или морально-этических норм. Так или иначе, пользователи везде в информационном мире оставляют о себе цифровые следы. Мы берем информацию из официальных источников и открытых баз данных.
+    .sources__content
+      //- tabs
+      .simple-tabs
+        //- header
+        .simple-tabs__header
+          button.simple-tabs__item.simple-tabs__item--active Ведомства
+          button.simple-tabs__item База данных
+        //- body
+        .simple-tabs__body
+          .simple-tabs__content.simple-tabs__content--show
+            ul.sources-list.js-sources
+              +sourcesComponent('source_info_1.png', 'Министерество Внутренних Дел <br/> Российской Федерации')
+              +sourcesComponent('source_info_2.png', 'Федеральная Служба <br/> по Финансовому <br/> Мониторингу')
+              +sourcesComponent('source_info_3.png', 'Федеральная Служба <br/> Судебных Приставов')
+              +sourcesComponent('source_info_4.png', 'Федеральная Налоговая <br/> Служба')
+              +sourcesComponent('source_info_5.png', 'Управление Государственной <br/> инспекции безопасности <br/> дорожного движения')
+              +sourcesComponent('source_info_6.png', 'Генеральная прокуратура <br/> Российской Федерации')
+              +sourcesComponent('source_info_7.png', 'Генеральная прокуратура <br/> Российской Федерации')
+              +sourcesComponent('source_info_8.png', 'Национальное Бюро <br/> Кредитных Историй')
+          .simple-tabs__content
+            ul.sources-list.js-sources
+              +sourcesComponent('', 'База недействительных паспортов МВД')
+              +sourcesComponent('', 'База данных Федеральной нотариальной палаты')
+              +sourcesComponent('', 'База данных Бюро <br/> кредитных историй')
+              +sourcesComponent('', 'База данных <br/> ГИБДД РФ')
+              +sourcesComponent('', 'База Росфинмониторинг')
+              +sourcesComponent('', 'База данных Налоговой службы, ЕГРЮЛ, ЕГРИП, ИНН')
+              +sourcesComponent('', 'БДИП <br/> ФССП')
+              li.sources-list__item
+                .sources-list__label.data-label
+                  span Еще более
+                  span.data-label__val 35
+                  span Различных баз данных, по которым сервис собирает информацию
+    .sources__footer
+      //- href, text, iconLeft
+      +buttonLinkComponent(
+        "#",
+        "Запустить проверку",
+        "doc"
+      )

@@ -17,22 +17,6 @@
   }
 }
 
-.service-check__title {
-  margin: 0;
-  color: var(--white-100);
-  font-weight: $text-weight-light;
-  font-size: $text-xxl;
-  text-transform: uppercase;
-
-  @include mq("desktop", "max") {
-    font-size: $text-xl - 2px;
-  }
-
-  @include mq("tablet-small", "max") {
-    font-size: 28px;
-  }
-}
-
 .service-check__content {
   margin-top: 45px;
 

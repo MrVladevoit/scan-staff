@@ -38,12 +38,11 @@ window.addEventListener("DOMContentLoaded", () => {
   // Service tabs ---------------------------
 
   const tabsServiceParent = document.querySelector('.section-tabs__list'),
-    tabsServiceParentContent = document.querySelector('.section-tabs__content'),
     tabsService = document.querySelectorAll('.section-tabs__item'),
     tabsServiceContent = document.querySelectorAll('.section-tabs__content-item'),
     tabsServiceButtonCollapse= document.querySelectorAll('.section-tabs__collapse');
 
-  function hideTabContent () {
+  function hideServiceTabContent () {
 
     tabsServiceContent.forEach(item => {
       item.classList.add('section-tabs__content-item--hide');
@@ -60,7 +59,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function showTabContent(i = 0) {
+  function showServiceTabContent(i = 0) {
     tabsServiceContent[i].classList.add('section-tabs__content-item--show');
     tabsServiceContent[i].classList.remove('section-tabs__content-item--hide');
     tabsService[i].classList.add('section-tabs__item--active');
@@ -68,8 +67,8 @@ window.addEventListener("DOMContentLoaded", () => {
     tabsServiceButtonCollapse[i].nextElementSibling.classList.add('section-tabs__collapse-content--show');
   }
 
-  hideTabContent();
-  showTabContent();
+  hideServiceTabContent();
+  showServiceTabContent();
 
   tabsServiceParent.addEventListener('click', (event) => {
     const target = event.target;
@@ -78,8 +77,8 @@ window.addEventListener("DOMContentLoaded", () => {
       // item = это элемент , i = номер по порядку
       tabsService.forEach((item, i) => {
         if(item == target) {
-          hideTabContent();
-          showTabContent(i);
+          hideServiceTabContent();
+          showServiceTabContent(i);
         }
       });
     }
@@ -103,26 +102,46 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
   });
-
-  // tabsServiceContent.forEach(item => {
-  //
-  //   item.addEventListener('click', (event) => {
-  //
-  //     const target = event.target;
-  //
-  //     if(target && target.classList.contains('section-tabs__collapse')) {
-  //       tabsServiceButtonCollapse.forEach((item, i) => {
-  //         if(item == target) {
-  //           hideTabContent();
-  //           showTabContent(i);
-  //         }
-  //       });
-  //     }
-  //   });
-  // });
-
-
-
   // End service tabs ---------------------------
 
+
+  // Simple tabs ---------------------------
+
+  const simpleTabsParent = document.querySelector('.simple-tabs'),
+    simpleTabsItem = document.querySelectorAll('.simple-tabs__item'),
+    simpleTabsContent = document.querySelectorAll('.simple-tabs__content');
+
+  function hideSimpleTabContent () {
+
+    simpleTabsContent.forEach(item => {
+      item.classList.remove('simple-tabs__content--show');
+    });
+
+    simpleTabsItem.forEach(item => {
+      item.classList.remove('simple-tabs__item--active');
+    });
+  }
+
+  function showSimpleTabContent(i = 0) {
+    simpleTabsContent[i].classList.add('simple-tabs__content--show');
+    simpleTabsItem[i].classList.add('simple-tabs__item--active');
+  }
+
+  hideSimpleTabContent();
+  showSimpleTabContent();
+
+  simpleTabsParent.addEventListener('click', (event) => {
+    const target = event.target;
+
+    if(target && target.classList.contains('simple-tabs__item')) {
+      // item = это элемент , i = номер по порядку
+      simpleTabsItem.forEach((item, i) => {
+        if(item == target) {
+          hideSimpleTabContent();
+          showSimpleTabContent(i);
+        }
+      });
+    }
+  });
+  // End service tabs ---------------------------
 });

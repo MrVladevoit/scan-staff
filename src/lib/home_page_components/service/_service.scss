@@ -15,26 +15,6 @@
   }
 }
 
-.service__title {
-  @include font(
-    $title-color,
-    $text-weight-light,
-    $text-xxl,
-    $line-height-title
-  );
-  margin: 0;
-  text-transform: uppercase;
-
-  @include mq("desktop", "max") {
-    font-size: $text-xl;
-  }
-
-  @include mq("phone-large", "max") {
-    font-size: 28px;
-    line-height: 1.2;
-  }
-}
-
 .service__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 390px;

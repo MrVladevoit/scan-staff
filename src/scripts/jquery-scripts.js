@@ -130,7 +130,9 @@
   ----------------------------------------*/
 
   // slider
-  var $tariffs = $(".js-tariffs");
+  const
+    $tariffs = $(".js-tariffs"),
+    $sources = $(".js-sources");
 
   settings_slider = {
     rows: 0,
@@ -140,6 +142,25 @@
     arrows: false,
     mobileFirst: true,
     infinite: true
+  };
+
+  settings_sources_slider = {
+    rows: 0,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false,
+    mobileFirst: true,
+    infinite: true,
+    adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 599,
+        settings: {
+          slidesToShow: 2
+        }
+      }
+    ],
   };
 
   // slick on mobile
@@ -159,6 +180,11 @@
   }
 
   slick_on_mobile($tariffs, settings_slider);
+  slick_on_mobile($sources, settings_sources_slider);
+
+  // $('.simple-tabs__item').click(function () {
+  //   $sources.resize();;
+  // });
 
   /*----------------------------------------
    SPECIAL CAROUSEL

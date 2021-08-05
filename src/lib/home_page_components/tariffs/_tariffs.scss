@@ -69,35 +69,6 @@
   }
 }
 
-.tariffs__title {
-  font-weight: $text-weight-light;
-  font-size: $text-xxl;
-  text-transform: uppercase;
-
-  @include mq("desktop", "max") {
-    font-size: $text-xl;
-  }
-
-  @include mq("tablet-small", "max") {
-    font-size: $text-l-bigger;
-  }
-}
-
-.tariffs__text {
-  max-width: 1300px;
-  margin: 0 auto;
-  color: var(--gray-400);
-  font-size: $text-l;
-
-  @include mq("desktop", "max") {
-    font-size: $text-m;
-  }
-
-  @include mq("tablet-small", "max") {
-    font-size: $text-s - 2px;
-  }
-}
-
 // Tariffs
 .tariffs__list {
   display: flex;
