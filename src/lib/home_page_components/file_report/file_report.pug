@@ -1,0 +1,24 @@
+section.file-report
+  .container.file-report__container
+    .file-report__content
+      h2.file-report__title.section-title Что из себя представляет файл отчёта
+      .file-report__text.section-subtext После того, как StaffScan проверит все запрошенные базы данных, система сформирует ПДФ-файл, который отправит на электронную почту, указанную при регистрации в сервисе. В этом файле вы найдете информацию из открытых баз данных в соответствии с оплаченным тарифом.
+      .file-report__messengers.list-messengers
+        .list-messengers__title Пришлём отчет куда Вам удобно:
+        .list-messengers__container
+          a(href="#" class="list-messengers__item" target="_blank" rel="noreferrer nofollow")
+            +icon('mail')
+          a(href="#" class="list-messengers__item" target="_blank" rel="noreferrer nofollow")
+            +icon('whatsapp')
+          a(href="#" class="list-messengers__item" target="_blank" rel="noreferrer nofollow")
+            +icon('telegram')
+          a(href="#" class="list-messengers__item" target="_blank" rel="noreferrer nofollow")
+            +icon('viber')
+      //- href, text, iconLeft
+      +buttonLinkComponent(
+        "#",
+        "Скачать пример отчета",
+        "download"
+      )(class="file-report__button button--secondary" target="_blank" rel="noreferrer nofollow")
+    .file-report__image
+      img(src="images/file_report.jpg" alt="Отчет о проверке")
