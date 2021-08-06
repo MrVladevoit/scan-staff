@@ -87,14 +87,14 @@
 // Phone
 .phone-block {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   text-decoration: none;
 
   + .header__button-menu {
     margin-left: 24px;
 
     @include mq("phone-large", "max") {
-      margin-left: 20px;
+      margin-left: 12px;
     }
   }
 }
@@ -176,7 +176,7 @@
 }
 
 // Button Menu
-@import "button_menu/button_menu";
+@import "src/lib/headers/button_menu/button_menu";
 
 .header__button-menu {
   margin-right: 20px;

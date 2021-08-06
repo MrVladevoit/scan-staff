@@ -1,0 +1,28 @@
+// header
+header.page__header.header.header--static
+  .header__top
+    .container.header__container
+      .header__group
+        //- link
+        a(href="index.html" class="header__link-back"): +icon('arrow-back')
+        //- logo
+        a(href="index.html" class="header__logo logo")
+          img(src="images/logo.svg")
+      .header__group
+        //- phone
+        a(href="tel:88005553322" class="header__phone phone-block")
+          .phone-block__icon
+            +icon('phone')
+          .phone-block__content
+            .phone-block__num 8-800-555-33-22
+            .phone-block__text бесплатно по рф
+        //- button menu
+        include ../button_menu/button_menu
+  //- bottom
+  .header__bottom
+    .container.header__container
+      //- link
+      a(href="index.html" class="header__link-back")
+        +icon('arrow-left')
+        span На главную
+      h1.header__title Информационный раздел

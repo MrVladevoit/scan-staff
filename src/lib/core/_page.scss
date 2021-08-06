@@ -1,0 +1,19 @@
+// PAGE
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.page__header {
+  flex-shrink: 0;
+}
+
+.page__footer {
+  flex-shrink: 0;
+}
+
+.page__wrapper {
+  position: relative;
+  z-index: z(default);
+  flex-grow: 1;
+}

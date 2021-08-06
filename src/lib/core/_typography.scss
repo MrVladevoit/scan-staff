@@ -3,6 +3,7 @@
 $font-family-main: "Montserrat";
 
 $text-xs: 10px;
+$text-s-small: 12px;
 $text-s: 14px;
 $text-m: 16px;
 $text-l: 18px;
@@ -56,6 +57,14 @@ h1,
     $text-xxl,
     $line-height-title
   );
+
+  @include mq("desktop", "max") {
+    font-size: $text-xl;
+  }
+
+  @include mq("tablet-small", "max") {
+    font-size: $text-l;
+  }
 
   @include mq("phone-large", "max") {
     line-height: 1.2;

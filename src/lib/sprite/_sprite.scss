@@ -9,6 +9,10 @@
   fill: currentColor;
 }
 
+.icon-arrow-back {
+  font-size: math.div(15, 10) * 1rem;
+  width: math.div(8, 15) * 1em ;
+}
 .icon-arrow-left {
   font-size: math.div(8, 10) * 1rem;
   width: math.div(7, 8) * 1em ;

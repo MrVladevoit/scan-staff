@@ -1,5 +1,6 @@
 // SASS VARIABLES
 $black-100: #000000;
+$black-100-a50: rgba(0, 0, 0, .5);
 $black-100-a30: rgba(0, 0, 0, .3);
 $black-100-a25: rgba(0, 0, 0, .25);
 
@@ -47,6 +48,7 @@ $success-100: #26a559;
   --black-100: #{$black-100};
   --black-100-a25: #{$black-100-a25};
   --black-100-a30: #{$black-100-a30};
+  --black-100-a50: #{$black-100-a50};
 
   --white-100: #{$white-100};
   --white-200: #{$white-200};

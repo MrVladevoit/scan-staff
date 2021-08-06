@@ -7,11 +7,19 @@ doctype html
 html(lang="ru")
   include modules/head
   body(class="page " + pageClass)
-    block header
+    //- header
+    include ../../lib/headers/header_static/header_static
+    include ../../lib/home_page_components/mobile_menu/mobile_menu
 
-    //- page content
-    main.page__wrapper
-      block content
+    .page__wrapper.page__wrapper--collumns
+
+      //-sidebar
+      aside.page__sidebar
+        block sidebar
+
+      //- page content
+      main.page__content
+        block content
 
     //- footer
     include ../../lib/components/footer/footer

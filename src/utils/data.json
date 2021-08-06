@@ -2,9 +2,15 @@
   "PAGES": {
     "home": {
       "name": "home",
-      "href": "./",
+      "href": "index.html",
       "title": "Staff Scan | Home page",
       "description": "Home page"
+    },
+    "privacy_policy": {
+      "name": "privacy_policy",
+      "href": "privacy_policy_page.html",
+      "title": "Staff Scan | Privacy Policy",
+      "description": "Privacy Policy"
     },
     "ui": {
       "name": "ui",
@@ -13,13 +19,14 @@
       "description": "UI page"
     }
   },
-  "SECTIONS": {
-    "firstScreen": "#first-screen"
-  },
   "NAV": [
     {
       "name": "Home",
-      "href": "./"
+      "href": "index.html"
+    },
+    {
+      "name": "Privacy Policy",
+      "href": "privacy_policy_page.html"
     },
     {
       "name": "UI",
