@@ -1,0 +1,135 @@
+//- layout/page.pug
+extends ../lib/layouts/info.template.pug
+
+block variables
+  - var title = PAGES.bank_details.title;
+  - var pageClass = "";
+
+//- sidebar
+block sidebar
+  .page__sidebar-navigation.sidebar-nav
+    //- panel
+    .sidebar-nav__panel
+      //- button
+      button(class="sidebar-nav__button-menu button-sidebar" data-sidepanel-close)
+        +icon('close')
+        span.button-sidebar__text Меню
+    //-list
+    //-list
+    ul.sidebar-nav__list
+      li.sidebar-nav__item
+        a(href= PAGES.privacy_policy.href, class="sidebar-nav__link") Политика конфиденциальности
+          +icon('arrow-round-right', 'sidebar-nav__icon')
+      li.sidebar-nav__item
+        a(href= PAGES.user_agreement.href, class="sidebar-nav__link") Пользовательское соглашение
+          +icon('arrow-round-right', 'sidebar-nav__icon')
+      li.sidebar-nav__item
+        a(href= PAGES.shipping_payment.href, class="sidebar-nav__link") Доставка и оплата
+          +icon('arrow-round-right', 'sidebar-nav__icon')
+      li.sidebar-nav__item
+        a(href=PAGES.public_offer.href, class="sidebar-nav__link") Публичная оферта
+          +icon('arrow-round-right', 'sidebar-nav__icon')
+      li.sidebar-nav__item.sidebar-nav__item--active Банковские реквизиты
+        +icon('arrow-round-right', 'sidebar-nav__icon')
+
+//- content
+block content
+  .content__section
+    h2 Банковские реквизиты Staffscan
+    .contacts
+      .contacts__list
+        .contacts__item
+          p: b Полное наименование юридического лица:
+          p Общество с ограниченной ответственностью “ЭКОСТУДИО”
+        .contacts__item
+          p: b Сокращенное наименование организации:
+          p ООО “ЭКОСТУДИО”
+        .contacts__item
+          p: b Фактический адрес:
+          p 194156, г. Санкт-Петербург, пр. Большой Сампсониевский, 106 литер А, пом. 8-Н, офис 404
+        .contacts__item
+          p: b Юридический адрес:
+          p 194156, г. Санкт-Петербург, пр. Большой Сампсониевский, 106 литер А, пом. 8-Н, офис 404
+        .contacts__item
+          p: b Банк:
+          p Филиал Точка Публичного акционерного общества Банка «Финансовая Корпорация Открытие»
+  .content__section
+    .contacts
+      .contacts__column
+        .contacts__list
+          .contacts__item
+            p: b Расчетный счет:
+            p 40702810703270000686
+          .contacts__item
+            p: b Корреспондентский счет:
+            p 301 018 108 452 500 00 999
+          .contacts__item
+            p
+              b ИНН:
+              |
+              | 7810822731
+          .contacts__item
+            p
+              b БИК:
+              |
+              | 044525999
+          .contacts__item
+            p
+              b КПП:
+              |
+              | 781001001
+          .contacts__item
+            p
+              b ОКПО:
+              |
+              | 90838439
+          .contacts__item
+            p
+              b ОГРН:
+              |
+              | 1117847124757
+      .contacts__column
+        .contacts__list
+          .contacts__item
+            p
+              b ОКАТО:
+              |
+              | 40284561000
+          .contacts__item
+            p
+              b ОКТМО:
+              |
+              | 40373000
+          .contacts__item
+            p
+              b ОКОГУ:
+              |
+              | 49013
+          .contacts__item
+            p
+              b ОКФС:
+              |
+              | 16
+          .contacts__item
+            p
+              b ОКОПФ:
+              |
+              | 65
+          .contacts__item
+            p
+              b Директор:
+              |
+              | Гомон Денис Юрьевич, действующий на основании Устава
+          .contacts__item
+            p: b Главный бухгалтер:
+            p Гомон Денис Юрьевич
+  .content__section
+    //- href, text, iconLeft
+    +buttonLinkComponent(
+      "#",
+      "Скачать  реквизиты компании Staffscan",
+      "download"
+    )(class="button--secondary")
+
+//- scripts
+block scripts

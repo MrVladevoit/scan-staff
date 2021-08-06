@@ -2,7 +2,7 @@
 extends ../lib/layouts/info.template.pug
 
 block variables
-  - var title = PAGES.privacy_policy.title;
+  - var title = PAGES.public_offer.title;
   - var pageClass = "";
 
 //- sidebar
@@ -16,25 +16,25 @@ block sidebar
         span.button-sidebar__text Меню
     //-list
     ul.sidebar-nav__list
-      li.sidebar-nav__item.sidebar-nav__item--active Политика конфиденциальности
+      li.sidebar-nav__item
+        a(href= PAGES.privacy_policy.href, class="sidebar-nav__link") Политика конфиденциальности
+          +icon('arrow-round-right', 'sidebar-nav__icon')
+      li.sidebar-nav__item
+        a(href= PAGES.user_agreement.href, class="sidebar-nav__link") Пользовательское соглашение
+          +icon('arrow-round-right', 'sidebar-nav__icon')
+      li.sidebar-nav__item
+        a(href= PAGES.shipping_payment.href, class="sidebar-nav__link") Доставка и оплата
+          +icon('arrow-round-right', 'sidebar-nav__icon')
+      li.sidebar-nav__item.sidebar-nav__item--active Публичная оферта
         +icon('arrow-round-right', 'sidebar-nav__icon')
       li.sidebar-nav__item
-        a(href="#" class="sidebar-nav__link") Пользовательское соглашение
-          +icon('arrow-round-right', 'sidebar-nav__icon')
-      li.sidebar-nav__item
-        a(href="#" class="sidebar-nav__link") Доставка и оплата
-          +icon('arrow-round-right', 'sidebar-nav__icon')
-      li.sidebar-nav__item
-        a(href="#" class="sidebar-nav__link") Публичная оферта
-          +icon('arrow-round-right', 'sidebar-nav__icon')
-      li.sidebar-nav__item
-        a(href="#" class="sidebar-nav__link") Банковские реквизиты
+        a(href=PAGES.bank_details.href, class="sidebar-nav__link") Банковские реквизиты
           +icon('arrow-round-right', 'sidebar-nav__icon')
 
 //- content
 block content
   .content__section
-    h2 Политика конфиденциальности Staffscan
+    h2 Договор публичной оферты
     p: b Labore qui esse qui laboris. Aute ullamco tempor proident Lorem et ad pariatur laborum tempor ex irure voluptate exercitation nulla. Occaecat adipisicing mollit dolore cupidatat ipsum magna id nisi ipsum nulla excepteur tempor voluptate nulla.
     ol
       li Adipisicing laboris excepteur cillum consequat reprehenderit minim qui in est dolore esse eiusmod. Id qui voluptate nisi qui dolor aute ex nisi laborum duis anim ipsum pariatur labore. Occaecat commodo qui esse voluptate nostrud labore enim anim.

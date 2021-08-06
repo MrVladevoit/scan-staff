@@ -8,9 +8,33 @@
     },
     "privacy_policy": {
       "name": "privacy_policy",
-      "href": "privacy_policy_page.html",
+      "href": "privacy_policy.html",
       "title": "Staff Scan | Privacy Policy",
       "description": "Privacy Policy"
+    },
+    "user_agreement": {
+      "name": "user_agreement",
+      "href": "user_agreement.html",
+      "title": "Staff Scan | Staffscan User Agreement",
+      "description": "Staffscan User Agreement"
+    },
+    "shipping_payment": {
+      "name": "shipping_payment",
+      "href": "shipping_and_payment.html",
+      "title": "Staff Scan | Shipping and payment",
+      "description": "Shipping and payment"
+    },
+    "public_offer": {
+      "name": "public_offer",
+      "href": "public_offer.html",
+      "title": "Staff Scan | Public offer agreement",
+      "description": "Public offer agreement"
+    },
+    "bank_details": {
+      "name": "bank_details",
+      "href": "bank_details.html",
+      "title": "Staff Scan | Staffscan bank details",
+      "description": "Staffscan bank details"
     },
     "ui": {
       "name": "ui",
@@ -27,6 +51,22 @@
     {
       "name": "Privacy Policy",
       "href": "privacy_policy_page.html"
+    },
+    {
+      "name": "Staffscan User Agreement",
+      "href": "user_agreement.html"
+    },
+    {
+      "name": "Shipping and payment",
+      "href": "shipping_and_payment.html"
+    },
+    {
+      "name": "Public offer agreement",
+      "href": "public_offer.html"
+    },
+    {
+      "name": "Staffscan bank details",
+      "href": "bank_details.html"
     },
     {
       "name": "UI",
