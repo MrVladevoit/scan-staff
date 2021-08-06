@@ -11,16 +11,25 @@ html(lang="ru")
     include ../../lib/headers/header_static/header_static
     include ../../lib/home_page_components/mobile_menu/mobile_menu
 
-    .page__wrapper.page__wrapper--collumns
+    //- wrapper
+    .page__wrapper.page__wrapper--columns
+      //- mobile panel
+      .page__panel
+        //- button
+        button(class="button-sidebar" data-sidepanel-open)
+          +icon('menu')
+          span.button-sidebar__text Меню
+      .page__container
+        //-sidebar
+        aside.page__sidebar.js-sidebar
+          block sidebar
 
-      //-sidebar
-      aside.page__sidebar
-        block sidebar
+        //- page content
+        main.page__content.content
+          block content
 
-      //- page content
-      main.page__content
-        block content
-
+      //- mobile overlay
+      #sidebar-overlay.page-overlay
     //- footer
     include ../../lib/components/footer/footer
 

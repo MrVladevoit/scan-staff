@@ -70,66 +70,71 @@ window.addEventListener("DOMContentLoaded", () => {
     tabsServiceContent = document.querySelectorAll('.section-tabs__content-item'),
     tabsServiceButtonCollapse= document.querySelectorAll('.section-tabs__collapse');
 
-  function hideServiceTabContent () {
+  if (tabsServiceParent) {
 
-    tabsServiceContent.forEach(item => {
-      item.classList.add('section-tabs__content-item--hide');
-      item.classList.remove('section-tabs__content-item--show');
-    });
+    function hideServiceTabContent () {
 
-    tabsService.forEach(item => {
-      item.classList.remove('section-tabs__item--active');
-    });
+      tabsServiceContent.forEach(item => {
+        item.classList.add('section-tabs__content-item--hide');
+        item.classList.remove('section-tabs__content-item--show');
+      });
 
-    tabsServiceButtonCollapse.forEach(item => {
-      item.classList.remove('section-tabs__collapse--active');
-      item.nextElementSibling.classList.remove('section-tabs__collapse-content--show');
-    });
-  }
+      tabsService.forEach(item => {
+        item.classList.remove('section-tabs__item--active');
+      });
 
-  function showServiceTabContent(i = 0) {
-    tabsServiceContent[i].classList.add('section-tabs__content-item--show');
-    tabsServiceContent[i].classList.remove('section-tabs__content-item--hide');
-    tabsService[i].classList.add('section-tabs__item--active');
-    tabsServiceButtonCollapse[i].classList.add('section-tabs__collapse--active');
-    tabsServiceButtonCollapse[i].nextElementSibling.classList.add('section-tabs__collapse-content--show');
-  }
-
-  hideServiceTabContent();
-  showServiceTabContent();
-
-  tabsServiceParent.addEventListener('click', (event) => {
-    const target = event.target;
-
-    if(target && target.classList.contains('section-tabs__item')) {
-      // item = это элемент , i = номер по порядку
-      tabsService.forEach((item, i) => {
-        if(item == target) {
-          hideServiceTabContent();
-          showServiceTabContent(i);
-        }
+      tabsServiceButtonCollapse.forEach(item => {
+        item.classList.remove('section-tabs__collapse--active');
+        item.nextElementSibling.classList.remove('section-tabs__collapse-content--show');
       });
     }
-  });
 
-  tabsServiceButtonCollapse.forEach(btn =>{
+    function showServiceTabContent(i = 0) {
+      tabsServiceContent[i].classList.add('section-tabs__content-item--show');
+      tabsServiceContent[i].classList.remove('section-tabs__content-item--hide');
+      tabsService[i].classList.add('section-tabs__item--active');
+      tabsServiceButtonCollapse[i].classList.add('section-tabs__collapse--active');
+      tabsServiceButtonCollapse[i].nextElementSibling.classList.add('section-tabs__collapse-content--show');
+    }
 
-    btn.addEventListener('click', function () {
+    hideServiceTabContent();
+    showServiceTabContent();
 
-      if(this.classList.contains('section-tabs__collapse--active')) {
-        this.classList.remove('section-tabs__collapse--active');
-        this.nextElementSibling.classList.remove('section-tabs__collapse-content--show');
-      } else {
-        tabsServiceButtonCollapse.forEach(item => {
-          item.classList.remove('section-tabs__collapse--active');
-          item.nextElementSibling.classList.remove('section-tabs__collapse-content--show');
+    tabsServiceParent.addEventListener('click', (event) => {
+      const target = event.target;
+
+      if(target && target.classList.contains('section-tabs__item')) {
+        // item = это элемент , i = номер по порядку
+        tabsService.forEach((item, i) => {
+          if(item == target) {
+            hideServiceTabContent();
+            showServiceTabContent(i);
+          }
         });
-        this.classList.add('section-tabs__collapse--active');
-        this.nextElementSibling.classList.add('section-tabs__collapse-content--show');
       }
     });
 
-  });
+    tabsServiceButtonCollapse.forEach(btn =>{
+
+      btn.addEventListener('click', function () {
+
+        if(this.classList.contains('section-tabs__collapse--active')) {
+          this.classList.remove('section-tabs__collapse--active');
+          this.nextElementSibling.classList.remove('section-tabs__collapse-content--show');
+        } else {
+          tabsServiceButtonCollapse.forEach(item => {
+            item.classList.remove('section-tabs__collapse--active');
+            item.nextElementSibling.classList.remove('section-tabs__collapse-content--show');
+          });
+          this.classList.add('section-tabs__collapse--active');
+          this.nextElementSibling.classList.add('section-tabs__collapse-content--show');
+        }
+      });
+
+    });
+  }
+
+
   // End service tabs ---------------------------
 
 
@@ -139,38 +144,41 @@ window.addEventListener("DOMContentLoaded", () => {
     simpleTabsItem = document.querySelectorAll('.simple-tabs__item'),
     simpleTabsContent = document.querySelectorAll('.simple-tabs__content');
 
-  function hideSimpleTabContent () {
+  if (simpleTabsParent) {
 
-    simpleTabsContent.forEach(item => {
-      item.classList.remove('simple-tabs__content--show');
-    });
+    function hideSimpleTabContent () {
 
-    simpleTabsItem.forEach(item => {
-      item.classList.remove('simple-tabs__item--active');
-    });
-  }
+      simpleTabsContent.forEach(item => {
+        item.classList.remove('simple-tabs__content--show');
+      });
 
-  function showSimpleTabContent(i = 0) {
-    simpleTabsContent[i].classList.add('simple-tabs__content--show');
-    simpleTabsItem[i].classList.add('simple-tabs__item--active');
-  }
-
-  hideSimpleTabContent();
-  showSimpleTabContent();
-
-  simpleTabsParent.addEventListener('click', (event) => {
-    const target = event.target;
-
-    if(target && target.classList.contains('simple-tabs__item')) {
-      // item = это элемент , i = номер по порядку
-      simpleTabsItem.forEach((item, i) => {
-        if(item == target) {
-          hideSimpleTabContent();
-          showSimpleTabContent(i);
-        }
+      simpleTabsItem.forEach(item => {
+        item.classList.remove('simple-tabs__item--active');
       });
     }
-  });
+
+    function showSimpleTabContent(i = 0) {
+      simpleTabsContent[i].classList.add('simple-tabs__content--show');
+      simpleTabsItem[i].classList.add('simple-tabs__item--active');
+    }
+
+    hideSimpleTabContent();
+    showSimpleTabContent();
+
+    simpleTabsParent.addEventListener('click', (event) => {
+      const target = event.target;
+
+      if(target && target.classList.contains('simple-tabs__item')) {
+        // item = это элемент , i = номер по порядку
+        simpleTabsItem.forEach((item, i) => {
+          if(item == target) {
+            hideSimpleTabContent();
+            showSimpleTabContent(i);
+          }
+        });
+      }
+    });
+  }
   // End service tabs ---------------------------
 
 
@@ -243,5 +251,33 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   });
   // End Tariff Block ---------------------------
+
+  // Start sidebar on mobile --------------------
+
+  const sidebarMobile = document.querySelector('.js-sidebar'),
+    sidebarButtonsOpen = document.querySelector('[data-sidepanel-open]'),
+    sidebarButtonsClose = document.querySelector('[data-sidepanel-close]'),
+    sidebarOverlay = document.querySelector('#sidebar-overlay');
+
+  if(sidebarMobile) {
+
+    function openSidebar() {
+      sidebarMobile.classList.add('page__sidebar--show');
+      sidebarOverlay.classList.add('page-overlay--show');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeSidebar() {
+      sidebarMobile.classList.remove('page__sidebar--show');
+      sidebarOverlay.classList.remove('page-overlay--show');
+      document.body.style.overflow = 'auto';
+    }
+
+    sidebarButtonsOpen.addEventListener('click', openSidebar);
+    sidebarButtonsClose.addEventListener('click', closeSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+  }
+
+  // End sidebar on mobile ---------------------
 
 });
