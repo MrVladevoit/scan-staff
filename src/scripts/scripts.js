@@ -2,6 +2,28 @@
 
 window.addEventListener("DOMContentLoaded", () => {
 
+  // Transition Scroll ---------------------------
+  const scrollLinks = document.querySelectorAll('.js-link-scroll');
+
+  scrollLinks.forEach(anchor => {
+
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const anchorHref = anchor.getAttribute('href'),
+        elementPosition = document.querySelector(anchorHref).offsetTop,
+        headerHeight = document.querySelector('.header').clientHeight;
+
+      window.scrollTo({
+        top: elementPosition - headerHeight, //add your necessary value
+        behavior: "smooth"  //Smooth transition to roll
+      });
+    });
+  });
+
+  // End Transition Scroll ---------------------------
+
+
   // Start Mobile Menu ---------------------------
   const mobileMenu = document.querySelector("#mobile-menu"),
         mobileMenuOverlay = document.querySelector('#mobile-menu-overlay'),
@@ -150,4 +172,76 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
   // End service tabs ---------------------------
+
+
+  // NUMERIC ---------------------------
+  const btnUp = document.querySelectorAll('.numeric__button--up'),
+        btnDown = document.querySelectorAll('.numeric__button--down');
+
+  btnUp.forEach(btn => {
+    btn.addEventListener('click', function () {
+      this.parentNode.querySelector('input[type=number]').stepUp();
+      // console.log(event.target.parentNode.querySelector('input[type=number]').value);
+    });
+  });
+
+  btnDown.forEach(btn => {
+    btn.addEventListener('click', function () {
+      this.parentNode.querySelector('input[type=number]').stepDown();
+      // console.log(event.target.parentNode.querySelector('input[type=number]').value);
+    });
+  });
+  // End NUMERIC ---------------------------
+
+  // Tariff Block ---------------------------
+  const tariffBlock = document.querySelectorAll('[data-tariff]');
+
+  tariffBlock.forEach(item => {
+
+    const buttonUP = item.querySelector('.numeric__button--up'),
+          buttonDown = item.querySelector('.numeric__button--down'),
+          input = item.querySelector('input[type=number]'),
+          price = item.querySelector('.tariff-block__value'),
+          constValue = Number(price.textContent);
+
+    buttonUP.addEventListener('click', function () {
+      let inputValue = item.querySelector('input[type=number]').value,
+          priceValue = Number(price.textContent);
+
+      if(inputValue > 1) {
+        priceValue = constValue + priceValue;
+        price.innerHTML = priceValue;
+      } else {
+        price.innerHTML = constValue;
+      }
+    });
+
+    buttonDown.addEventListener('click', function () {
+      let inputValue = item.querySelector('input[type=number]').value,
+          priceValue = Number(price.textContent);
+
+      if(inputValue <= 1) {
+        price.innerHTML = constValue;
+      } else {
+        priceValue = priceValue - constValue;
+        price.innerHTML = priceValue;
+      }
+    });
+
+    input.addEventListener('input', function () {
+      let
+        inputValue = item.querySelector('input[type=number]').value,
+        priceValue = Number(price.textContent);
+
+      if(inputValue >= 1) {
+        priceValue = constValue * inputValue; // 1000 * 4000
+        price.innerHTML = priceValue;
+      } else {
+        price.innerHTML = constValue;
+        input.value = 1;
+      }
+    });
+  });
+  // End Tariff Block ---------------------------
+
 });
