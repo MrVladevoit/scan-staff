@@ -15,6 +15,7 @@
 @import "./src/lib/core/base";
 @import "./src/lib/core/typography";
 @import "./src/lib/core/page";
+@import "./src/lib/core/link_back";
 
 @import "./src/lib/sprite/sprite";
 
@@ -50,9 +51,14 @@
 @import "../lib/info_page_components/sidebar_nav/sidebar_nav";
 @import "../lib/info_page_components/contacts";
 
+// Check page
+@import "../lib/check_page_component/breadcrumbs/breadcrumbs";
+@import "../lib/check_page_component/check_forms/check_forms";
+@import "../lib/check_page_component/check_forms/form_basic_report/form_basic_report";
+
 // Other
 //@import "./src/lib/components/popup/popup";
 //@import "./src/lib/components/menu/menu";
 //@import "./src/lib/components/footer/footer";
 //@import "./src/lib/components/popup_countries/popup_countries";
-//@import "./src/lib/components/breadcrumb/breadcrumb";
+//@import "./src/lib/components/breadcrumbs/breadcrumbs";

@@ -1,5 +1,6 @@
 // header
-header.page__header.header.header--static
+header.page__header.header.header--simple
+  //- top
   .header__top
     .container.header__container
       .header__group
@@ -18,9 +19,3 @@ header.page__header.header.header--static
             .phone-block__text бесплатно по рф
         //- button menu
         include ../button_menu/button_menu
-  //- bottom
-  .header__bottom
-    .container.header__container
-      //- link
-      +linkBackComponent("arrow-left")(class="header__link-back")
-      h1.header__title Информационный раздел

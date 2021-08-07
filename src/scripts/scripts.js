@@ -133,8 +133,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     });
   }
-
-
   // End service tabs ---------------------------
 
 
@@ -201,57 +199,6 @@ window.addEventListener("DOMContentLoaded", () => {
   });
   // End NUMERIC ---------------------------
 
-  // Tariff Block ---------------------------
-  const tariffBlock = document.querySelectorAll('[data-tariff]');
-
-  tariffBlock.forEach(item => {
-
-    const buttonUP = item.querySelector('.numeric__button--up'),
-          buttonDown = item.querySelector('.numeric__button--down'),
-          input = item.querySelector('input[type=number]'),
-          price = item.querySelector('.tariff-block__value'),
-          constValue = Number(price.textContent);
-
-    buttonUP.addEventListener('click', function () {
-      let inputValue = item.querySelector('input[type=number]').value,
-          priceValue = Number(price.textContent);
-
-      if(inputValue > 1) {
-        priceValue = constValue + priceValue;
-        price.innerHTML = priceValue;
-      } else {
-        price.innerHTML = constValue;
-      }
-    });
-
-    buttonDown.addEventListener('click', function () {
-      let inputValue = item.querySelector('input[type=number]').value,
-          priceValue = Number(price.textContent);
-
-      if(inputValue <= 1) {
-        price.innerHTML = constValue;
-      } else {
-        priceValue = priceValue - constValue;
-        price.innerHTML = priceValue;
-      }
-    });
-
-    input.addEventListener('input', function () {
-      let
-        inputValue = item.querySelector('input[type=number]').value,
-        priceValue = Number(price.textContent);
-
-      if(inputValue >= 1) {
-        priceValue = constValue * inputValue; // 1000 * 4000
-        price.innerHTML = priceValue;
-      } else {
-        price.innerHTML = constValue;
-        input.value = 1;
-      }
-    });
-  });
-  // End Tariff Block ---------------------------
-
   // Start sidebar on mobile --------------------
 
   const sidebarMobile = document.querySelector('.js-sidebar'),
@@ -279,5 +226,120 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   // End sidebar on mobile ---------------------
+
+  // Form Tabs ---------------------------
+
+  const formTabsParent = document.querySelector('.form-tabs'),
+    formTabsItem = document.querySelectorAll('.form-tabs__item'),
+    formTabsContent = document.querySelectorAll('.form-tabs__content-item');
+
+  if (formTabsParent) {
+
+    function hideFormTabContent () {
+
+      formTabsContent.forEach(item => {
+        item.classList.remove('form-tabs__content-item--show');
+      });
+
+      formTabsItem.forEach(item => {
+        item.classList.remove('form-tabs__item--active');
+      });
+    }
+
+    function showFormTabContent(i = 0) {
+      formTabsContent[i].classList.add('form-tabs__content-item--show');
+      formTabsItem[i].classList.add('form-tabs__item--active');
+    }
+
+    hideFormTabContent();
+    showFormTabContent();
+
+    formTabsParent.addEventListener('click', (event) => {
+      const target = event.target;
+
+      if(target && target.classList.contains('form-tabs__item')) {
+
+        formTabsItem.forEach((item, i) => {
+          if(item == target) {
+            hideFormTabContent();
+            showFormTabContent(i);
+          }
+        });
+      }
+    });
+  }
+  // End form tabs ---------------------------
+
+  // Price ---------------------------
+
+  function initPrice(element) {
+
+    element.forEach(item => {
+
+      const buttonUP = item.querySelector('.numeric__button--up'),
+        buttonDown = item.querySelector('.numeric__button--down'),
+        input = item.querySelector('input[type=number]'),
+        price = item.querySelector('[data-value]'),
+        constValue = Number(price.textContent);
+
+      buttonUP.addEventListener('click', function () {
+        let inputValue = item.querySelector('input[type=number]').value,
+          priceValue = Number(price.textContent);
+
+        if(inputValue > 1) {
+          priceValue = constValue + priceValue;
+          price.innerHTML = priceValue;
+        } else {
+          price.innerHTML = constValue;
+        }
+      });
+
+      buttonDown.addEventListener('click', function () {
+        let inputValue = item.querySelector('input[type=number]').value,
+          priceValue = Number(price.textContent);
+
+        if(inputValue <= 1) {
+          price.innerHTML = constValue;
+        } else {
+          priceValue = priceValue - constValue;
+          price.innerHTML = priceValue;
+        }
+      });
+
+      input.addEventListener('input', function () {
+        let
+          inputValue = item.querySelector('input[type=number]').value,
+          priceValue = Number(price.textContent);
+
+        if(inputValue >= 1) {
+          priceValue = constValue * inputValue; // 1000 * 4000
+          price.innerHTML = priceValue;
+        } else {
+          price.innerHTML = constValue;
+        }
+      });
+
+      input.addEventListener('change', function () {
+        let inputValue = item.querySelector('input[type=number]').value;
+
+        if(inputValue < 1) {
+          input.value = 1;
+        }
+      });
+    });
+  }
+
+  const formSum = document.querySelectorAll('[data-sum]'),
+        tarrifBlock = document.querySelectorAll('[data-tariff]');
+
+  if(formSum) {
+    initPrice(formSum);
+  }
+
+  if(tarrifBlock) {
+    initPrice(tarrifBlock);
+  }
+
+  // --------------------------- END Price
 
 });

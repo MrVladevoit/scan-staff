@@ -6,6 +6,12 @@
       "title": "Staff Scan | Home page",
       "description": "Home page"
     },
+    "check": {
+      "name": "check",
+      "href": "check_page.html",
+      "title": "Staff Scan | Проверка физических лиц",
+      "description": "Проверка физических лиц"
+    },
     "privacy_policy": {
       "name": "privacy_policy",
       "href": "privacy_policy.html",
@@ -49,8 +55,12 @@
       "href": "index.html"
     },
     {
+      "name": "Check Page",
+      "href": "check_page.html"
+    },
+    {
       "name": "Privacy Policy",
-      "href": "privacy_policy_page.html"
+      "href": "privacy_policy.html"
     },
     {
       "name": "Staffscan User Agreement",

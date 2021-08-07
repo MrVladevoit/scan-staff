@@ -1,0 +1,65 @@
+// Check forms --------------
+
+.check-section {
+  padding-bottom: 65px;
+}
+
+// Tabs
+.form-tabs {
+  background-color: var(--white-300);
+}
+
+.form-tabs__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-tabs__item {
+  position: relative;
+  flex-grow: 1;
+  @include buttonReset();
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 96px;
+  font-weight: $text-weight-bold;
+  font-size: $text-l-bigger;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--white-400);
+
+  span {
+    position: relative;
+    display: inline-block;
+  }
+
+  .icon {
+    position: absolute;
+    top: -4px;
+    right: -20px;
+    width: 14px;
+    height: 14px;
+    fill: var(--white-600);
+  }
+
+  & + .form-tabs__item {
+    border-left: 2px solid var(--white-300);
+  }
+}
+
+.form-tabs__item--active {
+  color: var(--primary-500);
+  background-color: var(--white-300);
+  box-shadow: 0 5px 0 0 var(--primary-300) inset;
+}
+
+.form-tabs__content-item {
+  display: none;
+}
+
+.form-tabs__content-item--show {
+  display: block;
+}
+
+// -------------- check forms

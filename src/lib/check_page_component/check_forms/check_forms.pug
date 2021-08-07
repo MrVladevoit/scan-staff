@@ -1,0 +1,20 @@
+.check-section
+  .container
+    .check-section__tabs.form-tabs
+      //- header
+      .form-tabs__header
+        button.form-tabs__item.form-tabs__item--active
+          span Базовый отчет
+            +icon('question')
+        button.form-tabs__item
+          span Полный отчет
+            +icon('question')
+        button.form-tabs__item
+          span Конструктор отчета
+            +icon('question')
+      //- body
+      .form-tabs__content
+        .form-tabs__content-item.form-tabs__content-item--show
+          include form_basic_report/form_basic_report
+        .form-tabs__content-item 2
+        .form-tabs__content-item 3

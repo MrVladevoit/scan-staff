@@ -8,12 +8,22 @@
   background-size: cover;
 }
 
-.header__bottom {
+.header__top {
 
   @include mq("tablet-small") {
 
     .header__link-back {
       display: none;
+    }
+  }
+}
+
+.header__link-back {
+
+  @include mq("tablet-small", "max") {
+
+    & + .header__logo {
+      margin-left: 12px;
     }
   }
 }
@@ -44,46 +54,6 @@
   }
 }
 
-// LINK BACK
-.header__link-back {
-  display: inline-flex;
-  align-items: center;
-  color: var(--black-100-a50);
-  font-size: $text-s;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-
-  .icon-arrow-left {
-    width: 8px;
-    height: 8px;
-    margin-right: 8px;
-  }
-
-  .icon-arrow-back {
-    width: 8px;
-    height: 14px;
-  }
-
-  & + .header__logo {
-    margin-left: 12px;
-  }
-
-  @include mq("laptop-small", "max") {
-    font-size: $text-s-small;
-  }
-
-  @include mq("tablet-small", "max") {
-    color: var(--black-100);
-    
-    &:hover {
-      text-decoration: none;
-    }
-  }
-}
-
 .header__title {
   margin-top: 30px;
   margin-bottom: 0;
@@ -99,16 +69,6 @@
 
   @include mq("tablet-small", "max") {
     margin-top: 0;
-  }
-}
-
-.header__top {
-
-  @include mq("tablet-small") {
-
-    .header__link-back {
-      display: none;
-    }
   }
 }
 

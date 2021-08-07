@@ -24,9 +24,9 @@ section#tariffs.tariffs
                 li.tariff-block__item Правонарушения
             .tariff-block__footer(data-tariff="1000")
               .tariff-block__price
-                  span.tariff-block__value 1000
+                  span.tariff-block__value(data-value) 1000
                   span рублей
-              +numericComponent()(class="numeric--middle tariff-block__numeric" data-tarif-numeric)
+              +numericComponent()(class="numeric--middle tariff-block__numeric")
               //- text, iconLeft
               +buttonComponent(
                 "Оплатить проверки",
@@ -54,7 +54,7 @@ section#tariffs.tariffs
                 li.tariff-block__item Статус розыскных структур
             .tariff-block__footer(data-tariff="2500")
               .tariff-block__price
-                span.tariff-block__value 2500
+                span.tariff-block__value(data-value) 2500
                 span рублей
               +numericComponent()(class="numeric--large tariff-block__numeric")
               //- text, iconLeft

@@ -1,0 +1,70 @@
+form(class="form-report")
+  .form-report__container
+    //- row
+    .form-report__row
+      .form-report__label Потребуется предоставить:
+      ul.form-report__line-list
+        li ФИО
+        li Год рождения
+        li Согласие на обработку персональных данных
+    //- row
+    .form-report__row
+      .form-report__label Будет проверено:
+      ul.form-report__list
+        li Действительность  паспорта
+        li Розыск по долгам
+        li Розыск по правонарушениям
+    //- row
+    .form-report__row.row
+      .col-lg-5
+        //- id, text
+        +labelComponent('#basic-report-email', "E-mail (обязательно)")(class="form-report__label")
+        //- type,id, placeholder, requiredAttr
+        +inputComponent(
+          "text",
+          "#report-email",
+          "yourmail@mailserver.ru"
+        )(class="form-report__input input--text-center")
+      .col-lg-5
+        label(for='#basic-report-phone', class="label-form form-report__label")
+          | Телефон
+          +icon('viber', 'label-form__icon')
+          +icon('telegram', 'label-form__icon')
+        //- type,id, placeholder, requiredAttr
+        +inputComponent(
+          "text",
+          "#report-phone",
+          "+7 (___) ___ - ___"
+        )(class="js-mask-phone form-report__input input--text-center")
+      .col-lg-2
+        //- id, text
+        +labelComponent('#basic-report-promo', "Промо-код:")(class="form-report__label")
+        //- type,id, placeholder, requiredAttr
+        +inputComponent(
+          "text",
+          "#report-promo",
+          ""
+        )(class="form-report__input input--text-center")
+    //- row
+    .form-report__row.row
+      .col-lg-5.form-report__sum(data-sum="2000")
+        // numeric
+        .form-report__input-number
+          .form-report__label Кол-во отчетов:
+          +numericComponent()(data-numeric)
+        // price
+        .form-report__total-price
+          .form-report__label К оплате:
+          .form-report__price
+            span.form-report__price-value(data-value) 2000
+            |
+            span рублей
+      .col-lg-7
+        //- text, iconLeft
+        +buttonComponent(
+          "Оплатить проверку и перейти к вводу данных",
+          "wallet"
+        )(type="submit" class="button--large button--full-width")
+    //- row
+    .form-report__row
+      .form-report__bottom-text После нажатия на кнопку ”Оплатить проверку...” Вы будете перенаправлены на страницу платежной системы, где сможете выбрать любой, удобный для Вас способ: с банковской карты, электронными деньгами или по выставленному счету. После оплаты Вы получите на свою электронную почту письмо с указанием количества приобретенных проверок и алгоритмом проведения проверки.

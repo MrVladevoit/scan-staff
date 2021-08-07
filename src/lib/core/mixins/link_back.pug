@@ -1,0 +1,5 @@
+mixin linkBackComponent(icon, text = "На главную")
+  a(href="index.html" class="link-back")&attributes(attributes)
+    +icon(icon)
+    if(text)
+      span= text

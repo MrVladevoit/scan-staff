@@ -184,6 +184,15 @@ $button-third-color-hover: var(--white-100);
   }
 }
 
+.button--large {
+  height: 88px;
+
+  .icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
 /* disabled styles */
 .button--disabled,
 .button[disabled],

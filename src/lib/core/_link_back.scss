@@ -1,0 +1,38 @@
+// Link back --------------
+
+.link-back {
+  display: inline-flex;
+  align-items: center;
+  color: var(--black-100-a50);
+  font-size: $text-s;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  .icon-arrow-left {
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+  }
+
+  .icon-arrow-back {
+    width: 8px;
+    height: 14px;
+  }
+
+  @include mq("laptop-small", "max") {
+    font-size: $text-s-small;
+  }
+
+  @include mq("tablet-small", "max") {
+    color: var(--black-100);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+// -------------- end link back
