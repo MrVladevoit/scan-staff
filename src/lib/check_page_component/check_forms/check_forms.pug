@@ -32,7 +32,10 @@
             .form-subtabs__content(role="tabpanel")
               .form-subtabs__content-item(data-subtab-content)
                 include form_driver_report/form_driver_report
-              .form-subtabs__content-item(data-subtab-content) 2
-              .form-subtabs__content-item(data-subtab-content) 3
-              .form-subtabs__content-item(data-subtab-content) 4
+              .form-subtabs__content-item(data-subtab-content)
+                include form_foreign_report/form_foreign_report
+              .form-subtabs__content-item(data-subtab-content)
+                include form_contractor_report/form_foreign_report
+              .form-subtabs__content-item(data-subtab-content)
+              include form_partner_report/form_partner_report
 
