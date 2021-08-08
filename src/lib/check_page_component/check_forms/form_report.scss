@@ -13,28 +13,6 @@
   }
 }
 
-.form-report__container {
-  max-width: 1330px;
-  padding-top: 30px;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin: 0 auto;
-
-  @include mq("desktop", "max") {
-    max-width: 810px;
-  }
-
-  @include mq("laptop-small", "max") {
-    max-width: 630px;
-    padding-top: 25px;
-  }
-
-  @include mq("tablet-small", "max") {
-    max-width: 400px;
-    padding-top: 20px;
-  }
-}
-
 .form-report__row {
 
   @include mq("tablet-small", "max") {

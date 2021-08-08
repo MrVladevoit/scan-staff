@@ -1,81 +1,80 @@
-form(class="form-full-report").form-report
-  .form-report__container
-    //- row
-    .form-report__row
-      .form-report__label Потребуется предоставить:
-      ul.form-report__line-list
-        li ФИО
-        li Паспорт
-        li Год рождения
-        li ИНН
-        li ВУ
-        li Город проживания
-        li Согласие на обработку персональных данных
-    //- row
-    .form-report__row
-      .form-report__label Будет проверено:
-      ul.form-report__list.form-report__list--3columns
-        li Действительность  паспорта
-        li Статус банкрота
-        li Наличие ИП и ОКВЭДы
-        li Наличие арбитражных практик
-        li Правонарушения и штрафы
-        li Кредитную историю
-        li Отзывы с места работы за 3 года
-        li Социальные профили
-        li Статус розыскных мероприятий контролирующих, исполнительных ведомств
-        li Проверяемый должен будет пройти развернутый психологический тест
-    //- row
-    .form-report__row.row
-      .col-sm-4.col-xl-5
-        //- id, text
-        +labelComponent('#full-report-email', "E-mail (обязательно)")(class="form-report__label")
-        //- type,id, placeholder, requiredAttr
-        +inputComponent(
-          "text",
-          "#full-report-email",
-          "yourmail@mailserver.ru"
-        )(class="form-report__input input--text-center")
-      .col-sm-4.col-xl-5
-        label(for='#full-report-phone', class="label-form form-report__label")
-          | Телефон
-          +icon('viber', 'label-form__icon')
-          +icon('telegram', 'label-form__icon')
-        //- type,id, placeholder, requiredAttr
-        +inputComponent(
-          "text",
-          "#full-report-phone",
-          "+7 (___) ___ - ___"
-        )(class="js-mask-phone form-report__input input--text-center")
-      .col-sm-4.col-xl-2
-        //- id, text
-        +labelComponent('#full-report-promo', "Промо-код:")(class="form-report__label")
-        //- type,id, placeholder, requiredAttr
-        +inputComponent(
-          "text",
-          "#full-report-promo",
-          ""
-        )(class="form-report__input input--text-center")
-    //- row
-    .form-report__row.row
-      .col-lg-5.form-report__sum(data-sum="2000")
-        // numeric
-        .form-report__input-number
-          .form-report__label Кол-во отчетов:
-          +numericComponent()(data-numeric)
-        // price
-        .form-report__total-price
-          .form-report__label К оплате:
-          .form-report__price
-            span.form-report__price-value(data-value) 2000
-            |
-            span рублей
-      .col-lg-7.form-report__submit
-        //- text, iconLeft
-        +buttonComponent(
-          "Оплатить проверку и перейти к вводу данных",
-          "wallet"
-        )(type="submit" class="button--large button--full-width")
-    //- row
-    .form-report__row
-      .form-report__bottom-text После нажатия на кнопку ”Оплатить проверку...” Вы будете перенаправлены на страницу платежной системы, где сможете выбрать любой, удобный для Вас способ: с банковской карты, электронными деньгами или по выставленному счету. После оплаты Вы получите на свою электронную почту письмо с указанием количества приобретенных проверок и алгоритмом проведения проверки.
+form(id="form-full-report" class="form-report")
+  //- row
+  .form-report__row
+    .form-report__label Потребуется предоставить:
+    ul.form-report__line-list
+      li ФИО
+      li Паспорт
+      li Год рождения
+      li ИНН
+      li ВУ
+      li Город проживания
+      li Согласие на обработку персональных данных
+  //- row
+  .form-report__row
+    .form-report__label Будет проверено:
+    ul.form-report__list.form-report__list--3columns
+      li Действительность  паспорта
+      li Статус банкрота
+      li Наличие ИП и ОКВЭДы
+      li Наличие арбитражных практик
+      li Правонарушения и штрафы
+      li Кредитную историю
+      li Отзывы с места работы за 3 года
+      li Социальные профили
+      li Статус розыскных мероприятий контролирующих, исполнительных ведомств
+      li Проверяемый должен будет пройти развернутый психологический тест
+  //- row
+  .form-report__row.row
+    .col-sm-4.col-xl-5
+      //- id, text
+      +labelComponent('#full-report-email', "E-mail (обязательно)")(class="form-report__label")
+      //- type,id, placeholder, requiredAttr
+      +inputComponent(
+        "text",
+        "#full-report-email",
+        "yourmail@mailserver.ru"
+      )(class="form-report__input input--text-center")
+    .col-sm-4.col-xl-5
+      label(for='#full-report-phone', class="label-form form-report__label")
+        | Телефон
+        +icon('viber', 'label-form__icon')
+        +icon('telegram', 'label-form__icon')
+      //- type,id, placeholder, requiredAttr
+      +inputComponent(
+        "text",
+        "#full-report-phone",
+        "+7 (___) ___ - ___"
+      )(class="js-mask-phone form-report__input input--text-center")
+    .col-sm-4.col-xl-2
+      //- id, text
+      +labelComponent('#full-report-promo', "Промо-код:")(class="form-report__label")
+      //- type,id, placeholder, requiredAttr
+      +inputComponent(
+        "text",
+        "#full-report-promo",
+        ""
+      )(class="form-report__input input--text-center")
+  //- row
+  .form-report__row.row
+    .col-lg-5.form-report__sum(data-sum="2000")
+      // numeric
+      .form-report__input-number
+        .form-report__label Кол-во отчетов:
+        +numericComponent()(data-numeric)
+      // price
+      .form-report__total-price
+        .form-report__label К оплате:
+        .form-report__price
+          span.form-report__price-value(data-value) 2000
+          |
+          span рублей
+    .col-lg-7.form-report__submit
+      //- text, iconLeft
+      +buttonComponent(
+        "Оплатить проверку и перейти к вводу данных",
+        "wallet"
+      )(type="submit" class="button--large button--full-width")
+  //- row
+  .form-report__row
+    .form-report__bottom-text После нажатия на кнопку ”Оплатить проверку...” Вы будете перенаправлены на страницу платежной системы, где сможете выбрать любой, удобный для Вас способ: с банковской карты, электронными деньгами или по выставленному счету. После оплаты Вы получите на свою электронную почту письмо с указанием количества приобретенных проверок и алгоритмом проведения проверки.

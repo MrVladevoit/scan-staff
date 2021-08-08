@@ -23,6 +23,7 @@
   align-items: center;
   justify-content: center;
   height: 96px;
+  color: var(--white-700);
   font-weight: $text-weight-bold;
   font-size: $text-l-bigger;
   text-align: center;
@@ -49,6 +50,13 @@
     padding-left: 4px;
     font-size: 10px;
   }
+
+  // active styles
+  &.active {
+    color: var(--primary-500);
+    background-color: var(--white-300);
+    box-shadow: 0 5px 0 0 var(--primary-300) inset;
+  }
 }
 
 .form-tabs__item-text {
@@ -74,18 +82,155 @@
   }
 }
 
-.form-tabs__item--active {
-  color: var(--primary-500);
-  background-color: var(--white-300);
-  box-shadow: 0 5px 0 0 var(--primary-300) inset;
+
+.form-tabs__content {
+  max-width: 1330px;
+  padding-top: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 0 auto;
+
+  @include mq("desktop", "max") {
+    max-width: 810px;
+  }
+
+  @include mq("laptop-small", "max") {
+    max-width: 630px;
+    padding-top: 25px;
+  }
+
+  @include mq("tablet-small", "max") {
+    max-width: 400px;
+    padding-top: 20px;
+  }
 }
 
 .form-tabs__content-item {
   display: none;
+
+  &.show {
+    display: block;
+  }
 }
 
-.form-tabs__content-item--show {
-  display: block;
+// SUBTABS
+.form-subtabs {
+  padding-top: 20px;
+
+  @include mq("desktop", "max") {
+    padding-top: 0;
+  }
+}
+
+.form-subtabs__header {
+  display: flex;
+
+  @include mq("tablet-small", "max") {
+    flex-direction: column;
+    
+    .form-subtabs__item {
+      display: none;
+      
+      &.active {
+        display: flex;
+      }
+    }
+    
+    &.active {
+      
+      .form-subtabs__item {
+        display: flex;
+      }
+    }
+  }
+}
+
+.form-subtabs__item {
+  @include buttonReset();
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 1px solid var(--white-600);
+  color: var(--gray-500);
+  font-size: $text-m;
+  text-align: center;
+  background-color: var(--white-400);
+  overflow-wrap: break-word;
+
+  @include mq("desktop", "max") {
+    font-size: $text-s;
+  }
+
+  @include mq("tablet-small", "max") {
+    justify-content: flex-start;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      width: 11px;
+      height: 18px;
+      background-image: url("data:image/svg+xml;charset=utf8, %3Csvg width='11' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.093 5.034 5.427.01.76 5.034l.94 1.012L5.427 2.04l3.726 4.005.94-1.012zM.76 12.21l4.667 5.023 4.666-5.023-.94-1.012-3.726 4.005L1.7 11.198.76 12.21z' fill='%23C4C4C4'/%3E%3C/svg%3E");
+      background-size: cover;
+      opacity: 0;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+  }
+
+  + .form-subtabs__item {
+
+    @include mq("tablet-small") {
+      border-left: 0;
+    }
+
+    @include mq("tablet-small", "max") {
+      //border-top: 0;
+    }
+  }
+
+  // ACTIVE TAB STYLES
+  &.active {
+
+    @include mq("tablet-small") {
+      color: var(--white-100);
+      background-color: var(--primary-500);
+    }
+
+    @include mq("tablet-small", "max") {
+      order: -1;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.form-subtabs__content-item {
+  display: none;
+
+  &.show {
+    display: block;
+  }
+}
+
+.form-subtabs__content {
+  padding-top: 30px;
+
+  @include mq("laptop-small", "max") {
+    padding-top: 25px;
+  }
+
+  @include mq("tablet-small", "max") {
+    padding-top: 20px;
+  }
 }
 
 // -------------- check forms

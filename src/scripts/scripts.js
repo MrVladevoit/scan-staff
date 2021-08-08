@@ -227,40 +227,73 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // End sidebar on mobile ---------------------
 
+
   // Form Tabs ---------------------------
 
-  const formTabsParent = document.querySelector('.form-tabs'),
-    formTabsItem = document.querySelectorAll('.form-tabs__item'),
-    formTabsContent = document.querySelectorAll('.form-tabs__content-item');
+  function initFormTabs(tabs, item, itemContent) {
 
-  if (formTabsParent) {
+    const tabsParent = tabs,
+      tabsItem = tabsParent.querySelectorAll(item),
+      tabsContent = tabsParent.querySelectorAll(itemContent);
 
     function hideFormTabContent () {
 
-      formTabsContent.forEach(item => {
-        item.classList.remove('form-tabs__content-item--show');
+      tabsItem.forEach(item => {
+        item.classList.remove('active');
       });
 
-      formTabsItem.forEach(item => {
-        item.classList.remove('form-tabs__item--active');
+      tabsContent.forEach(item => {
+        item.classList.remove('show');
       });
     }
 
     function showFormTabContent(i = 0) {
-      formTabsContent[i].classList.add('form-tabs__content-item--show');
-      formTabsItem[i].classList.add('form-tabs__item--active');
+      tabsItem[i].classList.add('active');
+      tabsContent[i].classList.add('show');
     }
 
     hideFormTabContent();
-    showFormTabContent()
+    showFormTabContent();
 
-    formTabsItem.forEach((item, i) => {
+    tabsItem.forEach((item, i) => {
       item.addEventListener('click', function () {
         hideFormTabContent();
         showFormTabContent(i);
       });
     });
   }
+
+  function activateSubTabPanel() {
+    const subtabPanel = document.querySelector('[data-subtab-header]'),
+          subtabItem = subtabPanel.querySelectorAll('[data-subtab-item]');
+
+    subtabItem.forEach(item => {
+      item.addEventListener('click', function () {
+
+        if(this.parentNode.classList.contains('active')) {
+          this.parentNode.classList.remove('active');
+        } else {
+          this.parentNode.classList.add('active');
+        }
+      });
+    });
+
+    window.addEventListener('resize', function () {
+      subtabPanel.classList.remove('active');
+    });
+  }
+
+  const formTabs = document.querySelector('.form-tabs'),
+        formSubtabs = document.querySelector('.form-subtabs');
+
+  if (formTabs && formSubtabs) {
+    initFormTabs(formTabs, '[data-tab-item]', '[data-tab-content]');
+    initFormTabs(formSubtabs, '[data-subtab-item]', '[data-subtab-content]');
+    activateSubTabPanel();
+  }
+
+
+
   // End form tabs ---------------------------
 
   // Price ---------------------------

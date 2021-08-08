@@ -1,47 +1,51 @@
-form(id="form-basic" class="form-report")
+form(id="form-driver-report" class="form-report")
   //- row
   .form-report__row
     .form-report__label Потребуется предоставить:
     ul.form-report__line-list
       li ФИО
+      li Паспорт
       li Год рождения
+      li ИНН
+      li ВУ
+      li Город проживания
       li Согласие на обработку персональных данных
   //- row
   .form-report__row
     .form-report__label Будет проверено:
     ul.form-report__list
-      li Действительность  паспорта
-      li Розыск по долгам
-      li Розыск по правонарушениям
+      li В порядке ли у него права
+      li Соответствуют ли они категории
+      li Как много у водителя нарушений и штрафов.
   //- row
   .form-report__row.row
     .col-sm-4.col-xl-5
       //- id, text
-      +labelComponent('#basic-report-email', "E-mail (обязательно)")(class="form-report__label")
+      +labelComponent('#driver-report-email', "E-mail (обязательно)")(class="form-report__label")
       //- type,id, placeholder, requiredAttr
       +inputComponent(
         "text",
-        "#basic-report-email",
+        "#driver-report-email",
         "yourmail@mailserver.ru"
       )(class="form-report__input input--text-center")
     .col-sm-4.col-xl-5
-      label(for='#basic-report-phone', class="label-form form-report__label")
+      label(for='#driver-report-phone', class="label-form form-report__label")
         | Телефон
         +icon('viber', 'label-form__icon')
         +icon('telegram', 'label-form__icon')
       //- type,id, placeholder, requiredAttr
       +inputComponent(
         "text",
-        "#basic-report-phone",
+        "#driver-report-phone",
         "+7 (___) ___ - ___"
       )(class="js-mask-phone form-report__input input--text-center")
     .col-sm-4.col-xl-2
       //- id, text
-      +labelComponent('#basic-report-promo', "Промо-код:")(class="form-report__label")
+      +labelComponent('#driver-report-promo', "Промо-код:")(class="form-report__label")
       //- type,id, placeholder, requiredAttr
       +inputComponent(
         "text",
-        "#basic-report-promo",
+        "#driver-report-promo",
         ""
       )(class="form-report__input input--text-center")
   //- row

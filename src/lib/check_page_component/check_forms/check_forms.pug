@@ -2,23 +2,37 @@
   .container
     .check-section__tabs.form-tabs
       //- header
-      .form-tabs__header
-        button.form-tabs__item.form-tabs__item--active
+      .form-tabs__header(role="tablist")
+        button(class="form-tabs__item" role="tab" data-tab-item)
           span.form-tabs__item-text Базовый отчет
             span.form-tabs__question(data-tippy-content="Подойдет, если нужно проверить человека быстро по минимальному количеству баз данных")
               +icon('question')
-        button.form-tabs__item
+        button(class="form-tabs__item" role="tab" data-tab-item)
           span.form-tabs__item-text Полный отчет
             span.form-tabs__question(data-tippy-content="Подойдет, если нужно проверить человека по макимальному количеству баз данных, а также с помощью развернутого тестирования")
               +icon('question')
-        button.form-tabs__item
+        button(class="form-tabs__item" role="tab" data-tab-item)
           span.form-tabs__item-text Конструктор отчета
             span.form-tabs__question(data-tippy-content="Подойдет, если нужно проверить человека по ограниченному набору баз данных для выяснения специфических данных")
               +icon('question')
       //- body
-      .form-tabs__content
-        .form-tabs__content-item.form-tabs__content-item--show
+      .form-tabs__content(role="tabpanel")
+        .form-tabs__content-item(data-tab-content)
           include form_basic_report/form_basic_report
-        .form-tabs__content-item
+        .form-tabs__content-item(data-tab-content)
           include form_full_report/form_full_report
-        .form-tabs__content-item 3
+        .form-tabs__content-item(data-tab-content)
+          //- another tabs
+          .form-subtabs
+            .form-subtabs__header(role="tablist" data-subtab-header)
+              button(class="form-subtabs__item" role="tab" data-subtab-item) Водитель
+              button(class="form-subtabs__item" role="tab" data-subtab-item) Иностранный гражданин
+              button(class="form-subtabs__item" role="tab" data-subtab-item) Подрядчик
+              button(class="form-subtabs__item" role="tab" data-subtab-item) Партнёр
+            .form-subtabs__content(role="tabpanel")
+              .form-subtabs__content-item(data-subtab-content)
+                include form_driver_report/form_driver_report
+              .form-subtabs__content-item(data-subtab-content) 2
+              .form-subtabs__content-item(data-subtab-content) 3
+              .form-subtabs__content-item(data-subtab-content) 4
+
