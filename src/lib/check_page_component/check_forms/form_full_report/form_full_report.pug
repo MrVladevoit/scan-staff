@@ -1,48 +1,59 @@
-form(class="form-report").form-report
+form(class="form-full-report").form-report
   .form-report__container
     //- row
     .form-report__row
       .form-report__label Потребуется предоставить:
       ul.form-report__line-list
         li ФИО
+        li Паспорт
         li Год рождения
+        li ИНН
+        li ВУ
+        li Город проживания
         li Согласие на обработку персональных данных
     //- row
     .form-report__row
       .form-report__label Будет проверено:
-      ul.form-report__list
+      ul.form-report__list.form-report__list--3columns
         li Действительность  паспорта
-        li Розыск по долгам
-        li Розыск по правонарушениям
+        li Статус банкрота
+        li Наличие ИП и ОКВЭДы
+        li Наличие арбитражных практик
+        li Правонарушения и штрафы
+        li Кредитную историю
+        li Отзывы с места работы за 3 года
+        li Социальные профили
+        li Статус розыскных мероприятий контролирующих, исполнительных ведомств
+        li Проверяемый должен будет пройти развернутый психологический тест
     //- row
     .form-report__row.row
       .col-sm-4.col-xl-5
         //- id, text
-        +labelComponent('#basic-report-email', "E-mail (обязательно)")(class="form-report__label")
+        +labelComponent('#full-report-email', "E-mail (обязательно)")(class="form-report__label")
         //- type,id, placeholder, requiredAttr
         +inputComponent(
           "text",
-          "#basic-report-email",
+          "#full-report-email",
           "yourmail@mailserver.ru"
         )(class="form-report__input input--text-center")
       .col-sm-4.col-xl-5
-        label(for='#basic-report-phone', class="label-form form-report__label")
+        label(for='#full-report-phone', class="label-form form-report__label")
           | Телефон
           +icon('viber', 'label-form__icon')
           +icon('telegram', 'label-form__icon')
         //- type,id, placeholder, requiredAttr
         +inputComponent(
           "text",
-          "#basic-report-phone",
+          "#full-report-phone",
           "+7 (___) ___ - ___"
         )(class="js-mask-phone form-report__input input--text-center")
       .col-sm-4.col-xl-2
         //- id, text
-        +labelComponent('#basic-report-promo', "Промо-код:")(class="form-report__label")
+        +labelComponent('#full-report-promo', "Промо-код:")(class="form-report__label")
         //- type,id, placeholder, requiredAttr
         +inputComponent(
           "text",
-          "#basic-report-promo",
+          "#full-report-promo",
           ""
         )(class="form-report__input input--text-center")
     //- row

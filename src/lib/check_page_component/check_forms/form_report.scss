@@ -127,6 +127,23 @@
   }
 }
 
+.form-report__list--3columns {
+  column-count: 3;
+
+  li {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  @include mq("laptop-small", "max") {
+    column-count: 2;
+  }
+
+  @include mq("tablet-small", "max") {
+    column-count: auto;
+  }
+}
+
 .form-report__sum {
   display: flex;
 
