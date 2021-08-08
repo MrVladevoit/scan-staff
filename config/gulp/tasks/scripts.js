@@ -4,7 +4,9 @@ let scriptsPath = {
   'srcLibs' : [
     './node_modules/jquery/dist/jquery.min.js',
     './node_modules/jquery-mask-plugin/dist/jquery.mask.js',
-    './node_modules/slick-carousel/slick/slick.js'
+    './node_modules/slick-carousel/slick/slick.js',
+    './node_modules/@popperjs/core/dist/umd/popper.js',
+    './node_modules/tippy.js/dist/tippy.umd.js'
   ]
 };
 

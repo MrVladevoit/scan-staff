@@ -1,0 +1,90 @@
+.tippy-box {
+
+  &[data-placement^="top"] > .tippy-backdrop {
+    border-radius: 40% 40% 0 0;
+    transform-origin: 0 25%;
+
+    &[data-state="visible"] {
+      transform: scale(1) translate(-50%, -55%);
+    }
+
+    &[data-state="hidden"] {
+      transform: scale(.2) translate(-50%, -45%);
+    }
+  }
+
+  &[data-placement^="bottom"] > .tippy-backdrop {
+    border-radius: 0 0 30% 30%;
+    transform-origin: 0 -50%;
+
+    &[data-state="visible"] {
+      transform: scale(1) translate(-50%, -45%);
+    }
+
+    &[data-state="hidden"] {
+      transform: scale(.2) translate(-50%);
+    }
+  }
+
+  &[data-placement^="left"] > .tippy-backdrop {
+    border-radius: 50% 0 0 50%;
+    transform-origin: 50% 0;
+
+    &[data-state="visible"] {
+      transform: scale(1) translate(-50%, -50%);
+    }
+
+    &[data-state="hidden"] {
+      transform: scale(.2) translate(-75%, -50%);
+    }
+  }
+
+  &[data-placement^="right"] > .tippy-backdrop {
+    border-radius: 0 50% 50% 0;
+    transform-origin: -50% 0;
+
+    &[data-state="visible"] {
+      transform: scale(1) translate(-50%, -50%);
+    }
+
+    &[data-state="hidden"] {
+      transform: scale(.2) translate(-25%, -50%);
+    }
+  }
+
+  &[data-animatefill] {
+    background-color: transparent !important;
+  }
+}
+
+.tippy-backdrop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: calc(110% + 32px);
+  border-radius: 50%;
+  background-color: #333333;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: all cubic-bezier(.46, .1, .52, .98);
+
+  &[data-state="hidden"] {
+    opacity: 0;
+  }
+
+  &::after {
+    content: "";
+    float: left;
+    padding-top: 100%;
+  }
+
+  + .tippy-content {
+    transition-property: opacity;
+    will-change: opacity;
+
+    &[data-state="hidden"] {
+      opacity: 0;
+    }
+  }
+}

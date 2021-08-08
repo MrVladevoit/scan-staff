@@ -16,9 +16,9 @@
 }
 
 .form-tabs__item {
+  @include buttonReset();
   position: relative;
   flex-grow: 1;
-  @include buttonReset();
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,22 +29,48 @@
   text-transform: uppercase;
   background-color: var(--white-400);
 
-  span {
-    position: relative;
-    display: inline-block;
-  }
-
-  .icon {
-    position: absolute;
-    top: -4px;
-    right: -20px;
-    width: 14px;
-    height: 14px;
-    fill: var(--white-600);
-  }
-
   & + .form-tabs__item {
     border-left: 2px solid var(--white-300);
+  }
+
+  @include mq("desktop", "max") {
+    height: 80px;
+    font-size: $text-l;
+  }
+
+  @include mq("laptop-small", "max") {
+    height: 70px;
+    font-size: $text-m;
+  }
+
+  @include mq("tablet-small", "max") {
+    height: 40px;
+    padding-right: 4px;
+    padding-left: 4px;
+    font-size: 10px;
+  }
+}
+
+.form-tabs__item-text {
+  position: relative;
+  display: inline-block;
+}
+
+.form-tabs__question {
+  position: absolute;
+  top: -8px;
+  right: -20px;
+  width: 14px;
+  height: 14px;
+  color: var(--white-600);
+
+  .icon {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include mq("tablet-small", "max") {
+    display: none;
   }
 }
 

@@ -252,20 +252,13 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     hideFormTabContent();
-    showFormTabContent();
+    showFormTabContent()
 
-    formTabsParent.addEventListener('click', (event) => {
-      const target = event.target;
-
-      if(target && target.classList.contains('form-tabs__item')) {
-
-        formTabsItem.forEach((item, i) => {
-          if(item == target) {
-            hideFormTabContent();
-            showFormTabContent(i);
-          }
-        });
-      }
+    formTabsItem.forEach((item, i) => {
+      item.addEventListener('click', function () {
+        hideFormTabContent();
+        showFormTabContent(i);
+      });
     });
   }
   // End form tabs ---------------------------
@@ -341,5 +334,10 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   // --------------------------- END Price
+
+  tippy('[data-tippy-content]', {
+    animation: 'fade',
+    theme: 'light-border',
+  });
 
 });

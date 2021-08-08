@@ -1,0 +1,95 @@
+.tippy-box[data-animation="fade"][data-state="hidden"] {
+  opacity: 0;
+}
+
+[data-tippy-root] {
+  max-width: calc(100vw - 10px);
+}
+
+.tippy-box {
+  position: relative;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.4;
+  background-color: #333333;
+  outline: 0;
+  transition-property: transform, visibility, opacity;
+
+  &[data-placement^="top"] > .tippy-arrow {
+    bottom: 0;
+
+    &::before {
+      bottom: -7px;
+      left: 0;
+      border-width: 8px 8px 0;
+      border-top-color: initial;
+      transform-origin: center top;
+    }
+  }
+
+  &[data-placement^="bottom"] > .tippy-arrow {
+    top: 0;
+
+    &::before {
+      top: -7px;
+      left: 0;
+      border-width: 0 8px 8px;
+      border-bottom-color: initial;
+      transform-origin: center bottom;
+    }
+  }
+
+  &[data-placement^="left"] > .tippy-arrow {
+    right: 0;
+
+    &::before {
+      right: -7px;
+      border-width: 8px 0 8px 8px;
+      border-left-color: initial;
+      transform-origin: center left;
+    }
+  }
+
+  &[data-placement^="right"] > .tippy-arrow {
+    left: 0;
+
+    &::before {
+      left: -7px;
+      border-width: 8px 8px 8px 0;
+      border-right-color: initial;
+      transform-origin: center right;
+    }
+  }
+
+  &[data-inertia][data-state="visible"] {
+    transition-timing-function: cubic-bezier(.54, 1.5, .38, 1.11);
+  }
+}
+
+.tippy-arrow {
+  width: 16px;
+  height: 16px;
+  color: #333333;
+
+  &::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: transparent;
+  }
+}
+
+.tippy-content {
+  position: relative;
+  z-index: 1;
+  padding: 16px;
+  color: var(--gray-500);
+  font-size: $text-s;
+  text-align: center;
+
+  @include mq("desktop", "max") {
+    padding: 8px;
+    font-size: 12px;
+  }
+}

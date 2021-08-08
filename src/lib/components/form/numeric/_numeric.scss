@@ -21,6 +21,14 @@ $numeric-button-background: linear-gradient(360deg, #eeeeee 0%, #d8d8d8 70%);
   height: $numeric-height;
   padding: 1px;
   text-align: center;
+
+  @include mq("desktop", "max") {
+    width: 150px;
+  }
+
+  @include mq("tablet-small", "max") {
+    width: 180px;
+  }
 }
 
 .numeric--full-width {

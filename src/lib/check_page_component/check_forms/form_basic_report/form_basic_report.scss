@@ -3,20 +3,68 @@
 .form-report {
   padding-bottom: 50px;
   color: var(--gray-500);
+
+  @include mq("laptop-small", "max") {
+    padding-bottom: 20px;
+  }
+
+  @include mq("tablet-small", "max") {
+    font-size: 11px;
+  }
 }
 
 .form-report__container {
   max-width: 1330px;
   padding-top: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
   margin: 0 auto;
+
+  @include mq("desktop", "max") {
+    max-width: 810px;
+  }
+
+  @include mq("laptop-small", "max") {
+    max-width: 630px;
+    padding-top: 25px;
+  }
+
+  @include mq("tablet-small", "max") {
+    max-width: 400px;
+    padding-top: 20px;
+  }
 }
 
 .form-report__row {
+
+  @include mq("tablet-small", "max") {
+    margin-right: 0;
+    margin-left: 0;
+
+    & > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+
+      & + [class*="col-"] {
+        margin-top: 10px;
+      }
+    }
+  }
 
   & + .form-report__row {
     padding-top: 30px;
     margin-top: 30px;
     border-top: 1px solid rgba($black-100, 9%);
+
+    @include mq("desktop", "max") {
+      padding-top: 20px;
+      margin-top: 20px;
+    }
+
+    @include mq("tablet-small", "max") {
+      padding-top: 12px;
+      margin-top: 12px;
+    }
   }
 }
 
@@ -25,20 +73,35 @@
   color: var(--primary-300);
   font-weight: $text-weight-bold;
   font-size: $text-l;
+
+  @include mq("laptop-small", "max") {
+    font-size: $text-m;
+  }
+
+  @include mq("tablet-small", "max") {
+    margin-bottom: 6px;
+    font-size: 10px;
+  }
 }
 
 .form-report__line-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   color: var(--gray-500);
 
   li {
+    margin-bottom: 2px;
 
     & + li {
 
       &::before {
         content: "|";
         margin: 0 8px;
+
+        @include mq("tablet-small", "max") {
+          margin: 0 4px;
+        }
       }
     }
   }
@@ -66,12 +129,48 @@
 
 .form-report__sum {
   display: flex;
+
+  @include mq("laptop-small", "max") {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  @include mq("tablet-small", "max") {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
 }
 
 .form-report__input-number {
 
+  @include mq("tablet-small", "max") {
+
+    .numeric {
+      width: 100%;
+      font-size: 24px;
+    }
+  }
+
   & + .form-report__total-price {
     margin-left: 50px;
+
+    @include mq("desktop", "max") {
+      margin-left: 30px;
+    }
+
+    @include mq("tablet-small", "max") {
+      margin-top: 10px;
+      margin-left: 0;
+    }
+  }
+}
+
+.form-report__total-price {
+
+  @include mq("tablet-small", "max") {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -80,12 +179,68 @@
   font-weight: $text-weight-bold;
   font-size: $text-l;
   line-height: 1;
+
+  @include mq("laptop-small", "max") {
+    text-align: center;
+  }
+
+  @include mq("tablet-small", "max") {
+    display: inline-flex;
+    align-items: center;
+  }
 }
 
 .form-report__price-value {
+  @include textTruncate();
   margin-right: 10px;
   font-size: 50px;
   text-transform: uppercase;
+
+  @include mq("desktop", "max") {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 5px;
+    font-size: 32px;
+  }
+
+  @include mq("tablet-small", "max") {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 0;
+  }
+}
+
+.form-report__submit {
+
+  @include mq("desktop", "max") {
+    display: flex;
+    align-items: center;
+  }
+
+  @include mq("tablet-small", "max") {
+
+    .button__text {
+      font-size: 12px;
+      white-space: break-spaces;
+      text-align: left;
+    }
+
+    .button__icon {
+      margin-right: 8px;
+    }
+  }
+}
+
+
+.form-report__bottom-text {
+
+  @include mq("laptop-small", "max") {
+    font-size: 12px;
+  }
+
+  @include mq("tablet-small", "max") {
+    font-size: 10px;
+  }
 }
 
 // -------------- end form report

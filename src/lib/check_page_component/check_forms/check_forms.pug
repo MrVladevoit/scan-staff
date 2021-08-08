@@ -4,14 +4,17 @@
       //- header
       .form-tabs__header
         button.form-tabs__item.form-tabs__item--active
-          span Базовый отчет
-            +icon('question')
+          span.form-tabs__item-text Базовый отчет
+            span.form-tabs__question(data-tippy-content="Подойдет, если нужно проверить человека быстро по минимальному количеству баз данных")
+              +icon('question')
         button.form-tabs__item
-          span Полный отчет
-            +icon('question')
+          span.form-tabs__item-text Полный отчет
+            span.form-tabs__question(data-tippy-content="Подойдет, если нужно проверить человека по макимальному количеству баз данных, а также с помощью развернутого тестирования")
+              +icon('question')
         button.form-tabs__item
-          span Конструктор отчета
-            +icon('question')
+          span.form-tabs__item-text Конструктор отчета
+            span.form-tabs__question(data-tippy-content="Подойдет, если нужно проверить человека по ограниченному набору баз данных для выяснения специфических данных")
+              +icon('question')
       //- body
       .form-tabs__content
         .form-tabs__content-item.form-tabs__content-item--show

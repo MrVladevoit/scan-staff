@@ -20,8 +20,15 @@
 @import "./src/lib/sprite/sprite";
 
 // vendors
+// slick
 @import "./src/lib/vendors/slick/slick";
 @import "./src/lib/vendors/slick/slick_theme";
+// tooltip tippy
+@import "../lib/vendors/tippy/tippy";
+@import "../lib/vendors/tippy/border";
+@import "../lib/vendors/tippy/backdrop";
+@import "../lib/vendors/tippy/svg-arrow";
+@import "../lib/vendors/tippy/light-border";
 
 // components
 @import "./src/lib/components/buttons/button";
