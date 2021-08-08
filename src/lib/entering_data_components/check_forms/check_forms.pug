@@ -1,0 +1,14 @@
+.check-section
+  .container
+    .check-section__tabs.form-tabs
+      //- header
+      .form-tabs__header(role="tablist")
+        button(class="form-tabs__item" role="tab" data-tab-item)
+          span.form-tabs__item-text Ввести данные самому
+        button(class="form-tabs__item" role="tab" data-tab-item)
+          span.form-tabs__item-text Отправить кандидату
+      //- body
+      .form-tabs__content(role="tabpanel")
+        .form-tabs__content-item(data-tab-content)
+          include form_entering_data/form_entering_data
+        .form-tabs__content-item(data-tab-content) Отправить кандидату

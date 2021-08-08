@@ -30,11 +30,11 @@ footer.page__footer#footer.footer
           li.footer__menu-item: a(href="#clients" class="footer__menu-link js-link-scroll") Клиенты
         .footer__subcolumn
           .footer__external-info
-            a(href="#" class="footer__external-item" target="_blank" rel="noreferrer nofollow") Политика конфиденциальности
-            a(href="#" class="footer__external-item" target="_blank" rel="noreferrer nofollow") Пользовательское соглашение
-            a(href="#" class="footer__external-item" target="_blank" rel="noreferrer nofollow") Доставка и оплата
-            a(href="#" class="footer__external-item" target="_blank" rel="noreferrer nofollow") Публичная оферта
-            a(href="#" class="footer__external-item" target="_blank" rel="noreferrer nofollow") Банковские реквизиты
+            a(href= PAGES.privacy_policy.href, class="footer__external-item") Политика конфиденциальности
+            a(href=PAGES.user_agreement.href, class="footer__external-item") Пользовательское соглашение
+            a(href=PAGES.shipping_payment.href, class="footer__external-item") Доставка и оплата
+            a(href=PAGES.public_offer.href, class="footer__external-item") Публичная оферта
+            a(href=PAGES.bank_details.href, class="footer__external-item") Банковские реквизиты
           .footer__messengers
             a(href="#" class="footer__messengers-item" target="_blank" rel="noreferrer nofollow"): +icon("telegram")
             a(href="#" class="footer__messengers-item" target="_blank" rel="noreferrer nofollow"): +icon("instagram")

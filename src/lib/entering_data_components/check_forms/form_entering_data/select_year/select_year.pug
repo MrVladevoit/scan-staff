@@ -1,0 +1,7 @@
+select#year.selectbox
+  option(value="hide") Год
+  - var n = 2000;
+  while n < 2021
+    - var number = n++
+    option(value= number)= number
+  option(value="2021") 2021

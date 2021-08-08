@@ -286,8 +286,11 @@ window.addEventListener("DOMContentLoaded", () => {
   const formTabs = document.querySelector('.form-tabs'),
         formSubtabs = document.querySelector('.form-subtabs');
 
-  if (formTabs && formSubtabs) {
+  if (formTabs) {
     initFormTabs(formTabs, '[data-tab-item]', '[data-tab-content]');
+  }
+
+  if (formSubtabs) {
     initFormTabs(formSubtabs, '[data-subtab-item]', '[data-subtab-content]');
     activateSubTabPanel();
   }

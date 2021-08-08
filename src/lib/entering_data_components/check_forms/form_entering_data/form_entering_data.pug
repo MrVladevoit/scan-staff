@@ -1,0 +1,78 @@
+form(id="form-entering-data" class="form-report")
+  //- row
+  .form-report__row.row
+    .col-sm-4
+      //- id, text
+      +labelComponent('#lastname', "Фамилия:")(class="form-report__label")
+      //- type,id, placeholder, requiredAttr
+      +inputComponent(
+        "text",
+        "#lastname",
+        "Например, Иванов"
+      )(class="form-report__input")
+    .col-sm-4
+      //- id, text
+      +labelComponent('#lastname', "Имя:")(class="form-report__label")
+      //- type,id, placeholder, requiredAttr
+      +inputComponent(
+        "text",
+        "#firstname",
+        "Например, Иван"
+      )(class="form-report__input")
+    .col-sm-4
+      //- id, text
+      +labelComponent('#middlename', "Отчество:")(class="form-report__label")
+      //- type,id, placeholder, requiredAttr
+      +inputComponent(
+        "text",
+        "#middlename",
+        "Например, Иванович"
+      )(class="form-report__input")
+  //- row
+  .form-report__row.row
+    .col-sm-4
+      //- id, text
+      +labelComponent('#birthday-year', "Год рождения:")(class="form-report__label")
+      //- select
+      include select_year/select_year
+    .col-sm-8
+      //- id, text
+      +labelComponent('#city', "Год проживания:")(class="form-report__label")
+      //- type,id, placeholder, requiredAttr
+      +inputComponent(
+        "text",
+        "#city",
+        "например, Александровск-Сахалинский"
+      )(class="form-report__input")
+  //- row
+  .form-report__row.row
+    .col-sm-8
+      .row
+        .col-sm-3
+          //- id, text
+          +labelComponent('#series', "Серия паспорта:")(class="form-report__label")
+          //- type,id, placeholder, requiredAttr
+          +inputComponent(
+            "text",
+            "#series",
+            "0"
+          )(class="form-report__input")
+        .col-sm-7
+          //- id, text
+          +labelComponent('#password-number', "Номер паспорта:")(class="form-report__label")
+          //- type,id, placeholder, requiredAttr
+          +inputComponent(
+            "text",
+            "#password-number",
+            "0"
+          )(class="form-report__input js-mask-number")
+    .col-sm-4
+      //- id, text
+      +labelComponent('#date-issue', "Дата выдачи:")(class="form-report__label")
+      //- type,id, placeholder, requiredAttr
+      +inputComponent(
+        "text",
+        "#date-issue",
+        "0"
+      )(class="form-report__input js-mask-number")
+

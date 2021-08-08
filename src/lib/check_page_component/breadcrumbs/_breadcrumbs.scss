@@ -9,4 +9,12 @@
   margin-bottom: 0;
   text-transform: uppercase;
 }
+
+.breadcrumbs__text {
+  margin-top: 10px;
+  color: var(--gray-500);
+  font-weight: $text-weight-bold;
+  font-size: $text-l;
+  opacity: .7;
+}
 // -------------- end breadcrumbs

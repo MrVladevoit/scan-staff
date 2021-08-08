@@ -12,6 +12,12 @@
       "title": "Staff Scan | Проверка физических лиц",
       "description": "Проверка физических лиц"
     },
+    "entering_data": {
+      "name": "entering_data",
+      "href": "entering_data.html",
+      "title": "Staff Scan | Проверка физических лиц",
+      "description": "Проверка физических лиц"
+    },
     "privacy_policy": {
       "name": "privacy_policy",
       "href": "privacy_policy.html",
@@ -57,6 +63,10 @@
     {
       "name": "Check Page",
       "href": "check_page.html"
+    },
+    {
+      "name": "Entering data",
+      "href": "entering_data.html"
     },
     {
       "name": "Privacy Policy",

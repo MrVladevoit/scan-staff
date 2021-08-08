@@ -1,6 +1,8 @@
-mixin breadcrumbsComponent(text)
+mixin breadcrumbsComponent(title, text)
   .breadcrumbs
     .container.breadcrumbs__container
       //- link
       +linkBackComponent("arrow-left")(class="breadcrumbs__link-back")
-      h1.breadcrumbs__title= text
+      h1.breadcrumbs__title= title
+      if(text)
+        .breadcrumbs__text= text
