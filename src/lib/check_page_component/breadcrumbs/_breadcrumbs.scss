@@ -8,6 +8,10 @@
   margin-top: 20px;
   margin-bottom: 0;
   text-transform: uppercase;
+
+  @include mq("tablet-small", "max") {
+    margin-top: 0;
+  }
 }
 
 .breadcrumbs__text {
@@ -23,6 +27,13 @@
 
   @include mq("tablet-small", "max") {
     font-size: $text-xs;
+  }
+}
+
+.breadcrumbs__link-back {
+
+  @include mq("tablet-small", "max") {
+    display: none;
   }
 }
 // -------------- end breadcrumbs
