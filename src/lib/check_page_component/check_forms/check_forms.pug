@@ -5,15 +5,15 @@
       .form-tabs__header(role="tablist")
         button(class="form-tabs__item" role="tab" data-tab-item)
           span.form-tabs__item-text Базовый отчет
-            span.form-tabs__question(data-tippy-content="Подойдет, если нужно проверить человека быстро по минимальному количеству баз данных")
+            span.form-tabs__question(data-question data-tippy-content="Подойдет, если нужно проверить человека быстро по минимальному количеству баз данных")
               +icon('question')
         button(class="form-tabs__item" role="tab" data-tab-item)
           span.form-tabs__item-text Полный отчет
-            span.form-tabs__question(data-tippy-content="Подойдет, если нужно проверить человека по макимальному количеству баз данных, а также с помощью развернутого тестирования")
+            span.form-tabs__question(data-question data-tippy-content="Подойдет, если нужно проверить человека по макимальному количеству баз данных, а также с помощью развернутого тестирования")
               +icon('question')
         button(class="form-tabs__item" role="tab" data-tab-item)
           span.form-tabs__item-text Конструктор отчета
-            span.form-tabs__question(data-tippy-content="Подойдет, если нужно проверить человека по ограниченному набору баз данных для выяснения специфических данных")
+            span.form-tabs__question(data-question data-tippy-content="Подойдет, если нужно проверить человека по ограниченному набору баз данных для выяснения специфических данных")
               +icon('question')
       //- body
       .form-tabs__content(role="tabpanel")

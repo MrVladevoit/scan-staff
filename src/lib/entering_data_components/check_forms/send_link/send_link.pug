@@ -1,0 +1,42 @@
+form(id="form-send-link" class="form-report form-report--send-link")
+  //- row
+  .form-report__block
+    label(class="label-form form-report__label") Короткая ссылка на заполнение формы:
+    .clipboard
+      input(id="shorturl" readonly type="text" value="https://staffscan.ru/ch2349058/entering" class="input clipboard__input")
+      button(class="clipboard__button" data-clipboard-target="#shorturl" type="button" data-tippy-content="Ссылка скопирована"): +icon("clipboard")
+  //- row
+  .form-report__block
+    label(for="email-candidate", class="label-form form-report__label") Отправить ссылку на эту страницу на e-mail кандидата:
+    .form-report__send-email
+      input(id="email-candidate" type="email" class="input" placeholder="Введите e-mail кандидата")
+      +buttonComponent(
+        "Отправить",
+        "rocket"
+      )
+  //- row
+  .form-report__block
+    div(class="form-report__label") Оправить ссылку на эту страницу в мессенджер кандидату:
+    ul.share-list
+      li.share-list__item
+        a(href="#" class="share-list__link" target="_blank" rel="noreferrer nofollow")
+          img(src="images/messenger_whatsapp.svg" alt="icon whatsapp")
+      li.share-list__item
+        a(href="#" class="share-list__link" target="_blank" rel="noreferrer nofollow")
+          img(src="images/messenger_telegram.svg" alt="icon telegram")
+      li.share-list__item
+        a(href="#" class="share-list__link" target="_blank" rel="noreferrer nofollow")
+          img(src="images/messenger_viber.svg" alt="icon viber")
+      li.share-list__item
+        a(href="#" class="share-list__link" target="_blank" rel="noreferrer nofollow")
+          img(src="images/messenger_instagram.svg" alt="icon instagram")
+      li.share-list__item
+        a(href="#" class="share-list__link" target="_blank" rel="noreferrer nofollow")
+          img(src="images/messenger_vk.svg" alt="icon vk")
+      li.share-list__item
+        a(href="#" class="share-list__link" target="_blank" rel="noreferrer nofollow")
+          img(src="images/messenger_twitter.svg" alt="icon twitter")
+      li.share-list__item
+        a(href="#" class="share-list__link" target="_blank" rel="noreferrer nofollow")
+          img(src="images/messenger_facebook.svg" alt="icon facebook")
+

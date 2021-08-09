@@ -369,8 +369,20 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // --------------------------- END Price
 
-  tippy('[data-tippy-content]', {
+  // TOOLTIP
+  tippy('[data-question]', {
     animation: 'fade',
+    theme: 'light-border',
+  });
+
+  // Clipboard
+  new ClipboardJS('.clipboard__button');
+
+  // clipboard.on('success', function(e) {
+  // });
+
+  tippy('[data-clipboard-target]', {
+    trigger: 'click',
     theme: 'light-border',
   });
 
