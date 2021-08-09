@@ -295,8 +295,6 @@ window.addEventListener("DOMContentLoaded", () => {
     activateSubTabPanel();
   }
 
-
-
   // End form tabs ---------------------------
 
   // Price ---------------------------

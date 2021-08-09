@@ -1,0 +1,78 @@
+.form-report--entering-data {
+
+  .form-report__row {
+    border-top: none;
+
+    + .form-report__row {
+      padding-top: 0;
+      margin-top: 20px;
+
+      @include mq("tablet-small", "max") {
+        margin-top: 0;
+      }
+    }
+
+    .row > .col-xs-12 {
+      margin-bottom: 20px;
+
+      @include mq("tablet-small", "max") {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include mq("tablet-small", "max") {
+
+    [class*="col-"] {
+      margin-top: 10px;
+    }
+  }
+}
+
+.form-report__checkbox {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  background-color: var(--white-500);
+
+  @include mq("desktop", "max") {
+    height: auto;
+    margin-top: 20px;
+    background-color: transparent;
+  }
+
+  @include mq("tablet-small", "max") {
+    padding: 10px 0;
+    margin-top: 0;
+  }
+
+  .checkbox__label {
+    color: var(--black-100);
+    font-size: 13px;
+
+    @include mq("tablet-small", "max") {
+      font-size: 10px;
+    }
+  }
+}
+
+.form-report__row--passport {
+
+  @include mq("desktop", "max") {
+
+    & > [class*="col-"] + [class*="col-"] {
+      margin-top: 20px;
+    }
+  }
+}
+
+.form-report__row--organization {
+
+  @include mq("laptop-small", "max") {
+
+    & > [class*="col-"] + [class*="col-"] {
+      margin-top: 20px;
+    }
+  }
+}

@@ -16,5 +16,13 @@
   font-weight: $text-weight-bold;
   font-size: $text-l;
   opacity: .7;
+
+  @include mq("desktop", "max") {
+    font-size: $text-s;
+  }
+
+  @include mq("tablet-small", "max") {
+    font-size: $text-xs;
+  }
 }
 // -------------- end breadcrumbs

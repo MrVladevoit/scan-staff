@@ -37,6 +37,7 @@
 @import "./src/lib/components/form/numeric/numeric";
 @import "./src/lib/components/form/checkbox/checkbox";
 @import "../lib/components/form/select/select";
+@import "../lib/components/form/select/select_list";
 @import "./src/lib/components/form/form";
 @import "./src/lib/components/footer/footer";
 
@@ -63,6 +64,8 @@
 @import "../lib/check_page_component/breadcrumbs/breadcrumbs";
 @import "../lib/check_page_component/check_forms/check_forms";
 @import "../lib/check_page_component/check_forms/form_report";
+@import "../lib/entering_data_components/check_forms/form_entering_data/form_entering_data";
+@import "../lib/entering_data_components/check_forms/form_entering_data/fieldset/fieldset";
 
 // Other
 //@import "./src/lib/components/popup/popup";

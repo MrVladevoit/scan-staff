@@ -60,7 +60,7 @@ $checkbox-icon-size: 44px;
   color: var(--success-100);
   background-color: var(--white-400);
 
-  @include mq("phone-large", "max") {
+  @include mq("tablet-small", "max") {
     width: 35px;
     height: 35px;
   }
@@ -70,7 +70,7 @@ $checkbox-icon-size: 44px;
     height: 16px;
     opacity: 0;
 
-    @include mq("phone-large", "max") {
+    @include mq("tablet-small", "max") {
       width: 18px;
       height: 12px;
     }
@@ -87,7 +87,7 @@ $checkbox-icon-size: 44px;
     font-size: $text-s - 2px;
   }
 
-  @include mq("phone-large", "max") {
+  @include mq("tablet-small", "max") {
     font-size: $text-xs;
     line-height: 1;
   }
