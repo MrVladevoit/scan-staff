@@ -1,0 +1,21 @@
+.checking-message
+  .checking-message__container.container
+    .checking-message__content
+      .checking-message__title Благодарим Вас за использование нашего сервиса!
+      .checking-message__text В ближайшее время на e-mail, указанные при оплате проверки, придет файл отчета в формате PDF
+      .checking-message__block
+        .checking-message__promocode.promocode
+          .promocode__text Ваш промо-код:
+          .promocode__number 09489J
+        .checking-message__info
+          | Этот промо-код позволяет получить <b>бонусные бесплатные проверки</b> вашим друзьям или партнерам. Tакже Вы сами можете использовать его при последующих проверках.
+      .checking-message__button
+        //- href, text, iconLeft, iconRight
+        +buttonLinkComponent(
+          PAGES.check.href,
+          "Запустить еще одну проверку",
+          "",
+          "search"
+        )(class="button--icon-right button--blue")
+    .checking-message__image
+      img(src="images/report_thx.png" alt="Report")

@@ -18,6 +18,18 @@
       "title": "Staff Scan | Проверка физических лиц",
       "description": "Проверка физических лиц"
     },
+    "thx_1": {
+      "name": "thx_page",
+      "href": "thx_1.html",
+      "title": "Staff Scan | Проверка запущена",
+      "description": "Благодарим Вас за использование нашего сервиса!"
+    },
+    "thx_2": {
+      "name": "thx_page",
+      "href": "thx_page_2.html",
+      "title": "Staff Scan | Форма отправлена",
+      "description": "Благодарим Вас за использование нашего сервиса!"
+    },
     "privacy_policy": {
       "name": "privacy_policy",
       "href": "privacy_policy.html",
@@ -67,6 +79,14 @@
     {
       "name": "Entering data",
       "href": "entering_data.html"
+    },
+    {
+      "name": "Thanks Page 1",
+      "href": "thx_1.html"
+    },
+    {
+      "name": "Thanks Page 2",
+      "href": "thx_2.html"
     },
     {
       "name": "Privacy Policy",

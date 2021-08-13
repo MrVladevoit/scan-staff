@@ -1,7 +1,10 @@
-mixin buttonLinkComponent(href, text, iconLeft)
+mixin buttonLinkComponent(href, text, iconLeft, iconRight)
   a(href= href, class="button")&attributes(attributes)
     //- left icon
-    if(iconLeft)
+    if(iconLeft && iconLeft !== "")
       +icon(iconLeft, "button__icon")
     //- button text
     span(class="button__text")= text
+    //- right icon
+    if(iconRight && iconRight !== "")
+      +icon(iconRight, "button__icon")

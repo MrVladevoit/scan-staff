@@ -33,7 +33,7 @@ $button-secondary-border-color-active: var(--primary-500);
 $button-secondary-color: var(--primary-300);
 $button-secondary-color-hover: var(--white-100);
 
-// Hinted
+// Third
 $button-third-background-color: transparent;
 $button-third-background-color-hover: var(--primary-200);
 $button-third-background-color-active: var(--primary-300);
@@ -43,6 +43,17 @@ $button-third-border-color-active: var(--primary-300);
 
 $button-third-color: var(--primary-200);
 $button-third-color-hover: var(--white-100);
+
+// BLUE
+$button-blue-background-color: var(--primary-500);
+$button-blue-background-color-hover: var(--primary-600);
+$button-blue-background-color-active: var(--primary-650);
+
+$button-blue-border-color: $button-blue-background-color;
+$button-blue-border-color-hover: $button-blue-background-color-hover;
+$button-blue-border-color-active: $button-blue-background-color-active;
+
+$button-blue-color: var(--white-100);
 
 .button {
   position: relative; // for button__icon
@@ -181,6 +192,35 @@ $button-third-color-hover: var(--white-100);
     padding-right: 4px;
     padding-left: 4px;
     font-size: 9px;
+  }
+}
+
+// blue
+.button--blue {
+  border-color: $button-blue-border-color;
+  color: $button-blue-color;
+  background-color: $button-blue-background-color;
+
+  &:hover {
+    border-color: $button-blue-border-color-hover;
+    background-color: $button-blue-background-color-hover;
+  }
+
+  &:active {
+    border-color: $button-blue-border-color-active;
+    background-color: $button-blue-background-color-active;
+  }
+}
+
+.button--icon-right {
+
+  .button__icon {
+    margin-right: 0;
+    margin-left: 20px;
+
+    @include mq("desktop", "max") {
+      margin-left: 16px;
+    }
   }
 }
 

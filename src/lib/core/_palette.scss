@@ -40,6 +40,8 @@ $secondary-120: darken($secondary-100, 10%);
 $secondary-200: #ff0000;
 
 $success-100: #26a559;
+$success-200: #1cc54b;
+$success-200-a16: rgba($success-200, 16%);
 
 // CSS VARIABLES
 @mixin cssVariables() {
@@ -84,4 +86,6 @@ $success-100: #26a559;
   --secondary-120: #{$secondary-120};
 
   --success-100: #{$success-100};
+  --success-200: #{$success-200};
+  --success-200-a16: #{$success-200-a16};
 }

@@ -1,0 +1,24 @@
+//- layout/page.pug
+extends ../lib/layouts/index.template.pug
+include ../lib/check_page_component/breadcrumbs/breadcrumbs
+
+block variables
+  - var title = PAGES.thx_1.title;
+  - var pageClass = "page--white-bg";
+
+//- header = first screen
+block header
+  include ../lib/headers/header_simple/header_simple
+  include ../lib/home_page_components/mobile_menu/mobile_menu
+
+//- content
+block content
+  //- breadcrumbs
+  +breadcrumbsComponent(
+    "Проверка запущена"
+  )
+  include ../lib/thx_page_components/checking_started/checking_started
+
+
+//- scripts
+block scripts
