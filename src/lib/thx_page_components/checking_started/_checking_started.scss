@@ -38,6 +38,18 @@
     margin-top: 8px;
   }
 
+  & + .checking-message__text--large-gap {
+    margin-top: 40px;
+
+    @include mq("tablet", "max") {
+      margin-top: 20px;
+    }
+
+    @include mq("tablet-small", "max") {
+      margin-top: 8px;
+    }
+  }
+
   @include mq("tablet", "max") {
     font-size: $text-l;
   }

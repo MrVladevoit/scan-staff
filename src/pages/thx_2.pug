@@ -1,0 +1,24 @@
+//- layout/page.pug
+extends ../lib/layouts/index.template.pug
+include ../lib/check_page_component/breadcrumbs/breadcrumbs
+
+block variables
+  - var title = PAGES.thx_2.title;
+  - var pageClass = "page--white-bg";
+
+//- header = first screen
+block header
+  include ../lib/headers/header_simple/header_simple
+  include ../lib/home_page_components/mobile_menu/mobile_menu
+
+//- content
+block content
+  //- breadcrumbs
+  +breadcrumbsComponent(
+    "Форма отправлена"
+  )
+  include ../lib/thx_page_components/form_sent/form_sent
+
+
+//- scripts
+block scripts

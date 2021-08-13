@@ -1,0 +1,15 @@
+.checking-message
+  .checking-message__container.container
+    .checking-message__content
+      .checking-message__title Благодарим Вас за использование нашего сервиса!
+      .checking-message__text.checking-message__text--large-gap В ближайшее время кандидат получит ссылку на форму заполнения персональных данных выбранным Вами способом. Посе того, как он заполнит все необходимые поля формы, Вам на e-mail, указанный при оплате проверки, придет файл отчета в формате PDF
+      .checking-message__button
+        //- href, text, iconLeft, iconRight
+        +buttonLinkComponent(
+          PAGES.check.href,
+          "Запустить еще одну проверку",
+          "",
+          "search"
+        )(class="button--icon-right button--blue")
+    .checking-message__image
+      img(src="images/report_thx.png" alt="Report")
